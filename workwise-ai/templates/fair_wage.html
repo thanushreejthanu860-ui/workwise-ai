@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Fair Wage Check{% endblock %}
+{% block content %}
+<div class="page-head">
+  <img src="{{ url_for('static', filename='images/tool-wage.png') }}"
+       class="page-head-img" alt="Fair Wage Check illustration" width="160" height="109">
+  <h1>Fair Wage Check</h1>
+  <p class="muted">Indicative daily wages for informal workers, estimated by a trained regression model (RandomForest vs GradientBoosting).</p>
+</div>
+
+<section class="panel wage-panel">
+  <form id="wage-form" class="wage-form">
+    <div class="form-group">
+      <label for="w-trade">Trade</label>
+      <select id="w-trade" required>
+        <option value="">Select trade</option>
+        {% for t in ["Mason","Painter","Electrician","Domestic Worker","Driver","Delivery Partner"] %}
+          <option>{{ t }}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="w-city">City type</label>
+      <select id="w-city" required>
+        <option value="">Select city type</option>
+        <option>Metro</option>
+        <option>Tier-2</option>
+        <option>Rural</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="w-exp">Years of experience</label>
+      <input type="number" id="w-exp" min="0" max="50" value="5" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Estimate my wage</button>
+  </form>
+
+  <div id="wage-result" class="wage-result" hidden aria-live="polite">
+    <div class="wage-hero">
+      <span class="wage-num" id="wage-num">₹—</span>
+      <span class="wage-per">per day (estimated)</span>
+    </div>
+    <div class="wage-range">
+      <span>Typical range:</span>
+      <strong>₹<span id="wage-low">—</span> – ₹<span id="wage-high">—</span></strong>
+    </div>
+    <span class="pill" id="wage-verdict">—</span>
+    <p id="wage-explanation" class="muted"></p>
+  </div>
+
+  <div id="wage-error" class="alert alert-error" role="alert" hidden></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><h2>Reference wages <span class="muted">(model-based, synthetic)</span></h2></div>
+  <div class="table-wrap">
+    <table class="data-table" id="wage-table">
+      <thead><tr><th>Trade</th><th>Metro</th><th>Tier-2</th><th>Rural</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<div class="alert alert-info disclaimer-box" role="note">
+  <strong>Disclaimer:</strong> Minimum wages vary by Indian state, occupation,
+  experience, employment type and applicable regulations (e.g. the Code on
+  Wages, 2019 and state minimum wage notifications). WorkWise AI provides
+  general guidance only — this is <strong>not legal or wage-law advice</strong>.
+  Estimates come from a model trained on SYNTHETIC sample data.
+</div>
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/wage.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,641 @@
+role,skills,experience,city,salary
+Data Analyst,Statistics;R;Power BI,0,Tier-2,22622
+HR Specialist,Recruitment;Communication,11,Tier-2,28297
+Sales Executive,Sales;Customer Service;Presentation,6,Tier-2,24207
+Web Developer,React;MongoDB;Node.js,8,Tier-2,41737
+Business Analyst,Process Mapping;Documentation,10,Tier-2,51592
+Web Developer,JavaScript;MySQL,7,Metro,46310
+Business Analyst,Excel;Requirements Gathering;Power BI;Documentation,8,Rural,33435
+Sales Executive,Lead Generation;Communication;Presentation;Sales,9,Tier-2,28415
+Sales Executive,Sales;Communication;CRM;Excel;Presentation,2,Metro,28216
+Sales Executive,Communication;Lead Generation;CRM;Negotiation;Customer Service,6,Metro,35275
+Data Analyst,Tableau;DAX;Statistics,7,Rural,24202
+Digital Marketing Specialist,SEM;Email Marketing;Content Writing,2,Tier-2,24902
+Web Developer,Node.js;PHP;Git;JavaScript;CSS,5,Rural,30503
+Data Scientist,TensorFlow;Deep Learning;Pandas;Statistics,10,Tier-2,76899
+HR Specialist,Onboarding;Training;Communication,3,Tier-2,26859
+HR Specialist,Onboarding;Recruitment;Employee Relations;HR Policies;MS Office,8,Tier-2,31238
+Data Analyst,R;SQL;Tableau;Statistics,12,Tier-2,44785
+HR Specialist,Onboarding;Communication;Employee Relations;Payroll,11,Tier-2,31671
+Data Analyst,R;Tableau,6,Tier-2,34701
+Web Developer,CSS;PHP;JavaScript;Git,0,Metro,36793
+Data Scientist,Deep Learning;SQL;NLP;Machine Learning,9,Metro,96510
+Data Analyst,Statistics;Excel;R;DAX,0,Tier-2,27513
+Digital Marketing Specialist,SEO;Social Media,3,Metro,34274
+Digital Marketing Specialist,Google Analytics;Canva;SEO;Content Writing,1,Rural,17778
+Data Analyst,Power BI;DAX,5,Rural,23025
+Business Analyst,Python;Communication;Requirements Gathering,4,Rural,31288
+Business Analyst,Python;Requirements Gathering;SQL,8,Rural,30202
+Digital Marketing Specialist,Social Media;PPC;SEO;SEM;Email Marketing,9,Metro,48449
+Data Scientist,Python;Machine Learning;NumPy;Statistics,10,Tier-2,69808
+Sales Executive,Lead Generation;Customer Service;Presentation;Excel,3,Metro,31424
+Software Developer,SQL;Testing;Algorithms,2,Rural,33861
+HR Specialist,Communication;Employee Relations;HR Policies,2,Metro,30599
+Software Developer,Testing;Git;Java;Data Structures,3,Rural,32336
+Business Analyst,SQL;Requirements Gathering;Excel,10,Rural,35807
+Sales Executive,CRM;Presentation;Sales;Negotiation,11,Tier-2,30446
+HR Specialist,Employee Relations;Communication;Onboarding;MS Office;Recruitment,6,Tier-2,28721
+Web Developer,HTML;React;Node.js;MySQL,9,Metro,60219
+Data Analyst,Data Visualization;Excel;R;Python;Statistics,9,Tier-2,42839
+Digital Marketing Specialist,Canva;SEO;Google Analytics,0,Tier-2,22999
+Business Analyst,Power BI;Python;Requirements Gathering;Communication,0,Tier-2,34411
+Digital Marketing Specialist,Social Media;PPC;SEM;Email Marketing;Content Writing,2,Metro,36775
+Web Developer,MySQL;PHP;JavaScript;Node.js,0,Rural,22082
+Digital Marketing Specialist,Email Marketing;Content Writing;SEO;PPC;Google Analytics,10,Rural,27862
+Business Analyst,Python;Documentation,5,Metro,58161
+Web Developer,HTML;MySQL;Git;PHP,1,Tier-2,28669
+Data Analyst,Python;Excel;R;Data Visualization,0,Metro,37011
+Data Analyst,Excel;DAX,4,Rural,21444
+Sales Executive,Negotiation;Sales;Presentation,7,Tier-2,24540
+Sales Executive,Customer Service;CRM;Lead Generation;Excel;Communication,12,Metro,43219
+Software Developer,Algorithms;SQL;Spring,5,Metro,64924
+Web Developer,JavaScript;PHP;MongoDB;Git,6,Rural,23985
+Data Scientist,Python;Statistics;SQL;Machine Learning,0,Tier-2,48922
+Web Developer,PHP;HTML;React;Git;CSS,10,Metro,62967
+Business Analyst,Excel;SQL,6,Tier-2,48696
+Software Developer,Algorithms;Java,7,Rural,40193
+Web Developer,HTML;JavaScript;MySQL;MongoDB;React,12,Tier-2,48123
+Data Scientist,Pandas;NumPy;Statistics;NLP,7,Tier-2,70935
+Software Developer,Data Structures;C++;Python;Java;Algorithms,1,Rural,28000
+Software Developer,SQL;Python,12,Rural,41973
+Data Analyst,Python;DAX,10,Tier-2,38135
+Web Developer,MongoDB;JavaScript;MySQL;Git,0,Tier-2,28064
+Web Developer,PHP;CSS;JavaScript;HTML,7,Rural,28948
+Digital Marketing Specialist,SEM;Canva;SEO,4,Metro,36556
+HR Specialist,Training;Communication,2,Metro,29742
+Data Scientist,Python;TensorFlow,4,Metro,75479
+HR Specialist,MS Office;Recruitment;Employee Relations;Training,9,Tier-2,29690
+Data Analyst,Power BI;Python,4,Metro,41298
+Data Analyst,SQL;Tableau,7,Tier-2,34301
+HR Specialist,Training;Onboarding,7,Metro,37957
+Business Analyst,Requirements Gathering;Documentation;Python;Process Mapping,4,Tier-2,37091
+Data Analyst,Excel;Data Visualization;DAX;R,9,Tier-2,43125
+Web Developer,PHP;MongoDB,0,Metro,33857
+Software Developer,Algorithms;Spring;Data Structures,3,Rural,35071
+HR Specialist,Employee Relations;Onboarding;HR Policies,2,Metro,28815
+Sales Executive,Presentation;Lead Generation;Sales,10,Rural,20957
+Digital Marketing Specialist,Email Marketing;SEM;Google Analytics,7,Tier-2,32653
+Web Developer,JavaScript;Node.js;Git;HTML,7,Tier-2,37389
+Sales Executive,Presentation;Sales;Negotiation;Excel,9,Rural,21675
+Data Analyst,Tableau;DAX;Power BI,1,Rural,18462
+Data Scientist,Deep Learning;Machine Learning;SQL,8,Metro,92457
+Software Developer,Algorithms;Git;Java,1,Tier-2,38781
+Data Scientist,Machine Learning;TensorFlow,1,Rural,37420
+Data Scientist,Machine Learning;Python;Statistics,8,Metro,94614
+Digital Marketing Specialist,SEM;SEO,9,Tier-2,30803
+Sales Executive,Communication;Presentation,8,Rural,16864
+HR Specialist,HR Policies;Onboarding;Payroll;MS Office;Employee Relations,12,Tier-2,36233
+Data Scientist,NLP;Python;TensorFlow,8,Metro,91857
+Business Analyst,Requirements Gathering;Process Mapping;Communication;Excel;Power BI,7,Metro,69501
+Data Scientist,Pandas;Deep Learning,10,Metro,89145
+Software Developer,Testing;Algorithms;Python;Spring,5,Metro,71466
+Sales Executive,CRM;Communication;Negotiation,12,Rural,21932
+Data Scientist,Deep Learning;Statistics;NLP;SQL,4,Rural,42317
+HR Specialist,MS Office;Recruitment;HR Policies;Payroll,10,Metro,46224
+Web Developer,PHP;MongoDB;CSS;Git;MySQL,3,Metro,47232
+Business Analyst,SQL;Requirements Gathering,7,Rural,29744
+Digital Marketing Specialist,Content Writing;SEO;SEM,1,Rural,16843
+Data Analyst,DAX;Excel;Data Visualization;Tableau;Power BI,5,Rural,24837
+HR Specialist,Employee Relations;HR Policies;Recruitment;Onboarding;Payroll,6,Tier-2,28130
+Business Analyst,Communication;Process Mapping;SQL;Excel,4,Tier-2,39714
+HR Specialist,Recruitment;Payroll,2,Tier-2,21769
+HR Specialist,Payroll;Communication;Onboarding;Employee Relations;HR Policies,4,Tier-2,28069
+Web Developer,JavaScript;PHP;Node.js;React,5,Rural,27485
+Sales Executive,CRM;Communication,2,Rural,13743
+Web Developer,JavaScript;CSS;MySQL;Git;MongoDB,1,Metro,38744
+Digital Marketing Specialist,SEM;Content Writing;Social Media;SEO;Email Marketing,3,Rural,18404
+Business Analyst,SQL;Documentation;Excel;Python;Process Mapping,11,Metro,76447
+HR Specialist,Onboarding;Payroll;Communication,7,Tier-2,29475
+Business Analyst,Excel;Process Mapping,11,Metro,72515
+Data Scientist,Statistics;SQL;Pandas;NumPy;Machine Learning,2,Metro,78494
+Sales Executive,CRM;Lead Generation;Sales;Excel,3,Metro,29963
+Digital Marketing Specialist,Social Media;Google Analytics,0,Tier-2,22365
+Digital Marketing Specialist,Social Media;SEM;Canva;SEO,0,Metro,31008
+Business Analyst,Communication;Python;Excel,11,Metro,74040
+Data Analyst,Tableau;Python;SQL,9,Metro,54763
+Web Developer,Node.js;React;HTML;PHP;CSS,6,Metro,54566
+Software Developer,Algorithms;Git;SQL,1,Rural,27410
+Sales Executive,Customer Service;Lead Generation;Negotiation;Sales,2,Metro,26993
+Software Developer,Algorithms;Git;SQL;Java,10,Metro,81510
+Business Analyst,Documentation;Excel;Requirements Gathering;Process Mapping,2,Tier-2,39719
+Web Developer,PHP;CSS;React;JavaScript,12,Tier-2,45698
+Business Analyst,Python;Documentation;Excel,4,Metro,54568
+Software Developer,Git;Data Structures;Algorithms;C++,1,Metro,60220
+Web Developer,CSS;React,3,Rural,20000
+Data Analyst,Statistics;Excel;Data Visualization;SQL,5,Tier-2,36443
+Data Analyst,Data Visualization;Excel;DAX;R,7,Metro,48168
+HR Specialist,Employee Relations;MS Office;Onboarding;Payroll,5,Rural,16698
+Digital Marketing Specialist,Google Analytics;Canva;Email Marketing;Social Media;SEO,10,Rural,30091
+Digital Marketing Specialist,Content Writing;PPC;Email Marketing;SEO,12,Tier-2,39506
+Sales Executive,Communication;Customer Service;Negotiation,1,Metro,26135
+Sales Executive,Negotiation;Excel;Presentation;Customer Service,11,Rural,21535
+Software Developer,Spring;Testing;SQL;C++;Git,6,Tier-2,52155
+Sales Executive,Sales;Negotiation;CRM;Excel,12,Rural,25877
+Data Scientist,Pandas;Deep Learning;NumPy;TensorFlow,6,Metro,86198
+Software Developer,Data Structures;Testing,10,Tier-2,55778
+Software Developer,SQL;Git;C++,11,Metro,84159
+Digital Marketing Specialist,SEM;SEO;Content Writing;Canva,11,Rural,29436
+Digital Marketing Specialist,Canva;SEM;Email Marketing;PPC;Social Media,4,Tier-2,27411
+HR Specialist,MS Office;HR Policies;Payroll;Recruitment;Training,12,Metro,46966
+HR Specialist,Communication;Training;Onboarding;Employee Relations,9,Tier-2,27932
+Business Analyst,Process Mapping;Excel,12,Metro,72432
+Software Developer,C++;Testing;Algorithms;SQL;Java,1,Tier-2,44036
+HR Specialist,Employee Relations;Payroll;Communication,9,Rural,20126
+Software Developer,Java;Testing;Python,10,Rural,45104
+Data Scientist,Deep Learning;Statistics;Python,8,Metro,89426
+Web Developer,HTML;MySQL,1,Rural,20050
+Web Developer,MongoDB;PHP;MySQL,9,Metro,52904
+Data Analyst,Tableau;Data Visualization;R,12,Metro,57713
+Data Scientist,Machine Learning;Pandas;NLP,10,Metro,99669
+HR Specialist,Onboarding;Recruitment;MS Office;Employee Relations;HR Policies,11,Tier-2,32916
+Sales Executive,Communication;Lead Generation,6,Tier-2,22167
+Data Scientist,Deep Learning;Machine Learning;Python;SQL,5,Tier-2,59411
+HR Specialist,HR Policies;Recruitment,1,Metro,28360
+Sales Executive,Customer Service;Communication;Lead Generation,0,Tier-2,17736
+Data Scientist,Pandas;TensorFlow;SQL;Statistics,2,Tier-2,60865
+Business Analyst,Excel;Power BI,12,Rural,35093
+Business Analyst,Process Mapping;Requirements Gathering,8,Rural,31783
+HR Specialist,Employee Relations;Payroll,6,Metro,34368
+Data Scientist,Machine Learning;Deep Learning;SQL;NumPy;Statistics,12,Tier-2,86620
+HR Specialist,Onboarding;Payroll,1,Tier-2,20899
+HR Specialist,Recruitment;Onboarding;Communication,12,Rural,21053
+Software Developer,Spring;Python;Data Structures,2,Rural,25045
+Data Analyst,Python;R,10,Tier-2,41790
+Digital Marketing Specialist,Social Media;SEO;Canva;Google Analytics;PPC,4,Tier-2,27401
+HR Specialist,Recruitment;HR Policies;Communication;Payroll;MS Office,11,Metro,46545
+Business Analyst,Process Mapping;Python;SQL;Requirements Gathering;Excel,3,Tier-2,42041
+Digital Marketing Specialist,SEO;Google Analytics;PPC;SEM;Content Writing,11,Rural,27711
+Sales Executive,Communication;Negotiation;Presentation,9,Rural,20424
+Digital Marketing Specialist,Social Media;SEO,10,Metro,44709
+Software Developer,Spring;Git,11,Tier-2,59329
+Data Analyst,Power BI;Python;DAX,3,Tier-2,28909
+Data Scientist,Python;Statistics;Deep Learning,12,Metro,111260
+Web Developer,Git;MySQL;CSS;MongoDB;HTML,7,Metro,55588
+Web Developer,HTML;MongoDB;CSS;Node.js,2,Tier-2,30704
+Data Scientist,Deep Learning;SQL;Machine Learning;NLP,1,Tier-2,57400
+Software Developer,Testing;Data Structures,5,Tier-2,46471
+Business Analyst,Documentation;Excel;Requirements Gathering;Python;Communication,10,Metro,69222
+Business Analyst,Process Mapping;SQL;Power BI;Requirements Gathering,3,Tier-2,40575
+Business Analyst,Communication;Documentation,8,Metro,62645
+Business Analyst,SQL;Communication;Excel;Process Mapping;Python,0,Rural,22901
+Digital Marketing Specialist,Google Analytics;Social Media;PPC;Email Marketing;SEM,12,Rural,28053
+HR Specialist,Training;Communication;HR Policies;Payroll,12,Rural,22982
+Web Developer,MySQL;MongoDB,3,Metro,44537
+Sales Executive,Lead Generation;Excel;Negotiation;Presentation;Communication,11,Tier-2,30914
+Web Developer,MongoDB;Node.js;HTML;React;PHP,5,Metro,50296
+Web Developer,MongoDB;CSS;HTML,8,Metro,51711
+HR Specialist,Communication;Onboarding,1,Metro,28927
+HR Specialist,HR Policies;Communication;Training,7,Rural,19263
+Data Scientist,NumPy;NLP,2,Rural,32977
+Data Scientist,Python;Deep Learning;SQL;NumPy;Pandas,0,Rural,35671
+Digital Marketing Specialist,PPC;Email Marketing;Content Writing;Social Media,10,Metro,48660
+Business Analyst,Python;Process Mapping,9,Tier-2,51194
+Sales Executive,Customer Service;Lead Generation;Sales,5,Tier-2,22627
+Data Analyst,DAX;R;SQL,5,Tier-2,33124
+Software Developer,Testing;Git;SQL;Data Structures,8,Rural,43207
+Digital Marketing Specialist,Social Media;Google Analytics;Email Marketing;Canva;Content Writing,12,Tier-2,36911
+Data Scientist,TensorFlow;Deep Learning,9,Rural,47890
+Data Scientist,Statistics;Pandas;NumPy;SQL,11,Rural,53008
+Business Analyst,SQL;Process Mapping;Python;Power BI,1,Metro,51716
+Digital Marketing Specialist,Social Media;SEO;SEM;Canva,1,Tier-2,23850
+Web Developer,PHP;CSS,9,Tier-2,37938
+Web Developer,Git;HTML;CSS;Node.js,10,Metro,60757
+Sales Executive,Communication;Negotiation;Sales;Customer Service,1,Tier-2,20616
+Digital Marketing Specialist,Canva;SEM;PPC;SEO;Content Writing,4,Rural,21082
+Business Analyst,SQL;Documentation;Power BI,12,Tier-2,52306
+Data Scientist,SQL;Pandas;Machine Learning,1,Rural,39513
+Sales Executive,Lead Generation;Sales;CRM;Customer Service,1,Rural,13103
+Software Developer,Testing;Spring,6,Metro,70521
+HR Specialist,Training;Recruitment;Onboarding;Communication,9,Rural,23049
+Data Scientist,Deep Learning;Machine Learning,9,Metro,90879
+Software Developer,C++;SQL;Java;Git,1,Metro,60008
+Web Developer,MySQL;JavaScript;React;PHP;HTML,11,Tier-2,45674
+Web Developer,Node.js;Git;HTML;React;MySQL,8,Metro,57438
+Business Analyst,Python;SQL;Excel,10,Rural,37735
+Digital Marketing Specialist,Canva;SEO;SEM,11,Tier-2,37772
+HR Specialist,Recruitment;Payroll;Onboarding;HR Policies,10,Rural,23782
+Software Developer,Testing;C++;Java,4,Tier-2,50369
+Data Scientist,NLP;NumPy,4,Tier-2,52128
+HR Specialist,Onboarding;Payroll;Recruitment,11,Metro,46025
+Software Developer,Java;Spring;Testing,11,Metro,85859
+Sales Executive,Negotiation;Communication;Excel;Customer Service;Lead Generation,1,Rural,14344
+Software Developer,Java;SQL,6,Metro,67174
+Sales Executive,Presentation;Negotiation;Customer Service,5,Rural,18394
+Data Analyst,Statistics;SQL;Excel,3,Tier-2,31885
+Digital Marketing Specialist,Email Marketing;Social Media;PPC;Canva,8,Metro,44307
+Data Analyst,DAX;Data Visualization;Python,1,Metro,37085
+Software Developer,Algorithms;Spring;Python,2,Rural,31146
+Data Scientist,Pandas;NLP;Machine Learning,11,Rural,56988
+HR Specialist,Onboarding;MS Office;Payroll;Training,11,Rural,22285
+Digital Marketing Specialist,SEM;Canva;Social Media;SEO;Google Analytics,10,Metro,48801
+Business Analyst,Requirements Gathering;Documentation;Excel;SQL,11,Metro,77682
+Data Scientist,NLP;Python;Statistics;Pandas,5,Metro,87812
+Data Scientist,Statistics;SQL;Machine Learning;TensorFlow;Pandas,6,Tier-2,66281
+Business Analyst,Process Mapping;Requirements Gathering;Documentation;Excel,11,Rural,38564
+Web Developer,Node.js;JavaScript;CSS;Git;React,5,Rural,27162
+Data Analyst,R;Statistics;Python;DAX,3,Metro,40913
+Web Developer,HTML;React,3,Metro,40207
+Business Analyst,Documentation;Communication;Excel,10,Rural,34223
+Data Scientist,Pandas;Machine Learning;Python;TensorFlow,1,Tier-2,53847
+Digital Marketing Specialist,Google Analytics;SEO;SEM;PPC,2,Tier-2,25374
+Sales Executive,Communication;Negotiation;Excel;Presentation;CRM,0,Rural,14493
+Data Analyst,Python;Statistics;DAX;Tableau,3,Tier-2,34291
+Sales Executive,Negotiation;Excel;Customer Service,3,Tier-2,20929
+Software Developer,Java;Spring;Testing,9,Rural,43573
+Data Scientist,Deep Learning;TensorFlow;NumPy,7,Tier-2,64409
+HR Specialist,HR Policies;Onboarding;Payroll;Communication;Employee Relations,11,Rural,23092
+Sales Executive,Communication;Lead Generation;Sales;Negotiation,8,Rural,19283
+Digital Marketing Specialist,SEM;Google Analytics,7,Tier-2,27748
+Data Analyst,R;DAX;Data Visualization;Power BI;Excel,0,Rural,20683
+Data Scientist,NumPy;TensorFlow,0,Rural,36628
+Data Analyst,R;Tableau;Python,5,Metro,45833
+Sales Executive,CRM;Sales;Customer Service;Presentation,6,Tier-2,25316
+Digital Marketing Specialist,Content Writing;Canva;SEM;Social Media,12,Metro,51732
+Sales Executive,Communication;Sales,6,Tier-2,24571
+Software Developer,SQL;Testing;Spring,3,Rural,30806
+Sales Executive,CRM;Negotiation;Sales,10,Tier-2,25702
+Sales Executive,CRM;Presentation;Lead Generation;Communication,0,Rural,13128
+Sales Executive,Communication;CRM;Negotiation;Excel,6,Metro,33320
+Web Developer,MySQL;MongoDB;Git;React,7,Tier-2,37543
+Digital Marketing Specialist,SEM;SEO,10,Metro,43413
+Data Analyst,Tableau;SQL,0,Tier-2,24097
+HR Specialist,Recruitment;Communication;Training,2,Tier-2,21147
+Sales Executive,Negotiation;Customer Service,5,Tier-2,23310
+Web Developer,PHP;MongoDB;JavaScript;Git,1,Rural,18667
+Software Developer,Python;Algorithms,0,Rural,25327
+Software Developer,Algorithms;Python;Data Structures,1,Tier-2,40038
+Data Analyst,DAX;R;Tableau;Python,9,Rural,31929
+Data Scientist,SQL;Statistics;TensorFlow;Machine Learning,11,Metro,106723
+Software Developer,Python;Spring;C++,0,Tier-2,36560
+Business Analyst,SQL;Python;Process Mapping;Requirements Gathering,1,Tier-2,42240
+Data Scientist,Machine Learning;TensorFlow;Pandas;SQL;Deep Learning,3,Metro,81845
+Data Scientist,NLP;SQL;Python;Pandas,2,Rural,38599
+Web Developer,React;MongoDB;HTML,9,Metro,54081
+Data Analyst,Statistics;R;Tableau;SQL,3,Tier-2,33703
+HR Specialist,Recruitment;Payroll;HR Policies;Communication,3,Rural,16623
+Business Analyst,Requirements Gathering;Process Mapping,8,Metro,62342
+Sales Executive,Presentation;Communication,11,Metro,40071
+Software Developer,Testing;Python,0,Rural,25938
+Digital Marketing Specialist,Social Media;SEO;Google Analytics,6,Rural,20872
+Data Analyst,Tableau;Data Visualization,4,Tier-2,34569
+Business Analyst,SQL;Power BI;Process Mapping;Documentation,11,Metro,74941
+Software Developer,Algorithms;Git;SQL,4,Metro,66719
+Business Analyst,Excel;Python;Documentation,10,Tier-2,51787
+Business Analyst,Excel;Communication;Requirements Gathering;Python;SQL,12,Tier-2,57920
+Web Developer,MongoDB;HTML;JavaScript;PHP;CSS,12,Metro,63666
+Business Analyst,Requirements Gathering;Power BI;Process Mapping,8,Rural,37483
+Web Developer,Node.js;CSS;JavaScript,11,Metro,57047
+HR Specialist,Onboarding;Training;Employee Relations;HR Policies;MS Office,3,Rural,18471
+Data Analyst,DAX;Power BI,1,Tier-2,29419
+HR Specialist,Payroll;Recruitment;Onboarding;Communication,6,Rural,20709
+Software Developer,Algorithms;Python;Data Structures,8,Metro,70045
+Web Developer,MySQL;HTML;JavaScript;Git;CSS,4,Metro,47702
+Web Developer,PHP;MongoDB,5,Tier-2,37071
+HR Specialist,Training;Communication;HR Policies;Onboarding,4,Metro,33177
+Software Developer,Spring;Git;SQL;Data Structures;Testing,4,Tier-2,50142
+Web Developer,HTML;Node.js;React;Git;MySQL,6,Rural,27056
+Data Scientist,Statistics;Pandas;NumPy,7,Rural,45590
+Software Developer,Spring;C++;Python;Java;Testing,7,Rural,45826
+Data Analyst,Statistics;DAX,5,Metro,42295
+Software Developer,SQL;Data Structures;Testing;Algorithms,6,Rural,36312
+Software Developer,Algorithms;Testing;SQL,6,Tier-2,47432
+Sales Executive,Excel;Customer Service;Lead Generation;Negotiation,0,Metro,24743
+Sales Executive,Lead Generation;Communication;Excel;Customer Service;CRM,3,Rural,18237
+Web Developer,HTML;PHP,1,Metro,36300
+Data Analyst,DAX;R;Excel,3,Metro,39017
+Data Scientist,NLP;Pandas;TensorFlow;NumPy;Statistics,3,Rural,40663
+Web Developer,HTML;CSS;JavaScript;Node.js;MySQL,12,Rural,33582
+Sales Executive,CRM;Communication;Customer Service;Lead Generation;Presentation,1,Rural,14896
+Software Developer,Spring;Git;SQL;Data Structures,6,Rural,38249
+Sales Executive,Excel;Sales;Communication;Lead Generation,1,Tier-2,20120
+Software Developer,Java;C++,5,Metro,62697
+Sales Executive,Presentation;Communication;CRM,3,Metro,28584
+Digital Marketing Specialist,Canva;PPC;Social Media;Content Writing;SEM,11,Tier-2,37303
+Software Developer,Algorithms;Spring,8,Tier-2,53913
+Digital Marketing Specialist,SEM;Content Writing;Social Media,2,Metro,34239
+Digital Marketing Specialist,Content Writing;Social Media,6,Metro,39297
+Digital Marketing Specialist,Content Writing;SEO;Email Marketing;Canva;SEM,2,Tier-2,26997
+Software Developer,Testing;Data Structures;Git;Spring,11,Tier-2,62969
+Web Developer,React;CSS;MongoDB,0,Rural,17078
+Data Scientist,TensorFlow;SQL;NLP,9,Metro,90618
+Business Analyst,Communication;Power BI;Python;Excel;Documentation,12,Rural,45905
+Digital Marketing Specialist,Email Marketing;Canva;Google Analytics;Social Media;Content Writing,6,Tier-2,32732
+Data Scientist,Pandas;Deep Learning,6,Metro,81272
+Web Developer,Node.js;Git,11,Metro,56181
+Business Analyst,Communication;SQL;Power BI;Process Mapping;Python,11,Rural,40333
+HR Specialist,Onboarding;Training;MS Office,3,Metro,31710
+Sales Executive,CRM;Negotiation,1,Rural,13113
+Business Analyst,Requirements Gathering;Communication;Documentation;SQL;Excel,8,Metro,71817
+Data Analyst,Excel;Python;Tableau;DAX;R,4,Tier-2,37463
+Business Analyst,SQL;Python;Documentation,0,Metro,43503
+Sales Executive,Communication;Negotiation;Excel;Lead Generation;CRM,0,Rural,14078
+HR Specialist,HR Policies;Recruitment;Employee Relations,8,Tier-2,26922
+Digital Marketing Specialist,SEO;Canva;Content Writing;SEM;Google Analytics,3,Tier-2,26679
+Web Developer,Node.js;MongoDB,6,Tier-2,33045
+Digital Marketing Specialist,Email Marketing;Social Media;Google Analytics;PPC;SEO,4,Rural,21015
+Digital Marketing Specialist,PPC;Content Writing;SEM,6,Tier-2,28512
+Sales Executive,Presentation;Lead Generation;CRM,1,Rural,11511
+Sales Executive,Sales;CRM;Excel;Negotiation,9,Metro,39422
+Web Developer,Node.js;JavaScript;PHP,6,Rural,23007
+HR Specialist,HR Policies;Recruitment,0,Metro,24877
+Digital Marketing Specialist,PPC;Google Analytics;SEM;Content Writing;Social Media,5,Rural,23147
+Data Scientist,Statistics;Deep Learning;TensorFlow;Pandas,1,Metro,60472
+Digital Marketing Specialist,Content Writing;Social Media;PPC;Google Analytics,2,Metro,35708
+Software Developer,Data Structures;Git;Spring;Algorithms;Python,11,Metro,90610
+Digital Marketing Specialist,Content Writing;Email Marketing,12,Tier-2,35628
+Sales Executive,Presentation;Excel,12,Rural,20276
+Business Analyst,Process Mapping;Documentation;Power BI,1,Rural,26798
+Business Analyst,Documentation;SQL;Requirements Gathering;Python;Excel,6,Tier-2,49288
+Software Developer,Data Structures;Git;Spring;SQL,0,Metro,54437
+Data Analyst,Data Visualization;DAX;Tableau;SQL,8,Tier-2,41605
+Data Analyst,SQL;Statistics;R,6,Metro,50428
+Business Analyst,SQL;Requirements Gathering,5,Tier-2,39217
+Sales Executive,Lead Generation;Customer Service;Sales,7,Rural,19662
+Software Developer,C++;SQL;Git;Data Structures,0,Metro,58052
+Data Analyst,Tableau;R;Data Visualization;DAX,5,Metro,47262
+HR Specialist,HR Policies;MS Office;Employee Relations,11,Metro,43697
+Software Developer,Data Structures;Python;SQL,0,Metro,53144
+Web Developer,JavaScript;PHP;MySQL;HTML,12,Metro,61043
+Data Scientist,Machine Learning;SQL;Pandas,11,Metro,98840
+HR Specialist,Training;Employee Relations,4,Metro,33245
+Business Analyst,Python;Excel,9,Metro,67241
+Data Scientist,Deep Learning;Statistics;TensorFlow;NLP;Python,6,Tier-2,69638
+Data Scientist,NLP;Machine Learning;Statistics,12,Tier-2,73655
+Data Scientist,SQL;Python;Statistics;Deep Learning;Pandas,5,Rural,50109
+Business Analyst,Process Mapping;Communication,8,Rural,37231
+Digital Marketing Specialist,SEM;Canva;PPC;Social Media;SEO,5,Rural,21079
+Data Analyst,Data Visualization;SQL;Excel;DAX;Python,5,Tier-2,36846
+HR Specialist,MS Office;Training;Onboarding;HR Policies,5,Tier-2,25444
+Data Scientist,Deep Learning;Python,5,Metro,76648
+Data Scientist,Pandas;TensorFlow;Machine Learning;Statistics,1,Tier-2,47283
+Data Analyst,DAX;Excel;Python,11,Tier-2,43217
+Sales Executive,Presentation;Lead Generation,7,Tier-2,23796
+Sales Executive,Communication;CRM,1,Metro,26859
+Web Developer,React;Git;MongoDB,12,Rural,29246
+Web Developer,HTML;PHP;React,3,Metro,48901
+HR Specialist,MS Office;Communication;Employee Relations,4,Metro,32551
+Digital Marketing Specialist,Social Media;Content Writing;Canva;Email Marketing;Google Analytics,6,Rural,23474
+HR Specialist,Employee Relations;Payroll;Training,1,Metro,30512
+Software Developer,Java;Testing;Algorithms,11,Metro,77964
+Digital Marketing Specialist,Email Marketing;PPC;SEM,5,Rural,21028
+Web Developer,PHP;CSS;MongoDB,3,Metro,41005
+Data Scientist,SQL;Python,2,Rural,39125
+Software Developer,Spring;Testing,3,Metro,59267
+HR Specialist,Recruitment;Employee Relations,4,Tier-2,24072
+Data Analyst,R;Statistics;Excel,11,Metro,61361
+Sales Executive,CRM;Excel,7,Metro,33763
+Data Analyst,Statistics;Data Visualization;Python;Tableau,0,Rural,19030
+HR Specialist,Payroll;Communication;Training,1,Metro,31433
+HR Specialist,HR Policies;Employee Relations;Communication,12,Tier-2,33471
+Digital Marketing Specialist,Social Media;SEM,8,Tier-2,35274
+Data Analyst,R;Power BI,9,Rural,27801
+Digital Marketing Specialist,Canva;Email Marketing;SEO;Social Media,3,Rural,19032
+Data Scientist,Deep Learning;NLP;TensorFlow;Machine Learning,2,Metro,74526
+Data Scientist,SQL;Machine Learning;Statistics;TensorFlow;Deep Learning,0,Tier-2,52255
+Data Analyst,Excel;SQL;Python;Data Visualization;R,9,Metro,59880
+Software Developer,SQL;C++;Java;Testing,5,Rural,32539
+Data Analyst,DAX;Power BI;Python,5,Metro,48523
+Sales Executive,Communication;Excel;Presentation,11,Metro,37683
+Software Developer,Git;Spring;Python;Algorithms;Java,10,Tier-2,68109
+Data Analyst,Power BI;R;Tableau,4,Rural,23022
+Software Developer,Spring;SQL;Data Structures,1,Rural,26238
+Business Analyst,Requirements Gathering;Process Mapping;Excel;Documentation;Power BI,2,Rural,32355
+HR Specialist,Training;Employee Relations;Communication;HR Policies;MS Office,0,Tier-2,21037
+Data Scientist,TensorFlow;Deep Learning,0,Rural,35011
+Digital Marketing Specialist,SEO;Content Writing;Canva,2,Metro,31907
+Software Developer,C++;Data Structures;SQL,4,Tier-2,45041
+Software Developer,Algorithms;Git;Java;Spring;Python,5,Tier-2,54766
+Data Analyst,Power BI;SQL;Data Visualization,7,Tier-2,36471
+Data Analyst,Data Visualization;Statistics;Tableau;SQL,2,Metro,44584
+Data Scientist,Machine Learning;TensorFlow;Deep Learning,2,Metro,64716
+Sales Executive,Communication;Sales,8,Tier-2,26960
+Data Scientist,TensorFlow;Machine Learning;Pandas;Python,5,Tier-2,61557
+Data Scientist,Statistics;Pandas,2,Rural,35321
+Data Scientist,Python;NLP;SQL;Deep Learning;Machine Learning,7,Metro,95411
+HR Specialist,Training;Employee Relations,12,Metro,43839
+HR Specialist,Payroll;Training;HR Policies,6,Tier-2,27081
+Sales Executive,CRM;Presentation;Negotiation,3,Rural,13776
+Digital Marketing Specialist,Content Writing;Email Marketing;Canva,8,Rural,22664
+Web Developer,MongoDB;React;PHP,10,Rural,32609
+Software Developer,Testing;Algorithms;Spring,6,Rural,38110
+Data Analyst,Statistics;Excel;Power BI;SQL,2,Rural,22799
+Data Scientist,SQL;NumPy,3,Tier-2,49704
+Sales Executive,Lead Generation;Excel;Sales;Communication,1,Rural,16528
+Business Analyst,SQL;Excel;Process Mapping,6,Metro,59213
+Data Analyst,Python;Power BI;DAX;Tableau,12,Rural,33494
+Web Developer,Git;JavaScript,2,Metro,40148
+Digital Marketing Specialist,Content Writing;PPC;SEM;SEO,7,Tier-2,31235
+Web Developer,JavaScript;Node.js,9,Tier-2,40156
+Data Scientist,TensorFlow;Machine Learning;Pandas,9,Tier-2,70456
+Sales Executive,Negotiation;Lead Generation;Excel;Customer Service,2,Metro,29164
+Sales Executive,Presentation;CRM;Negotiation,3,Rural,14130
+Web Developer,Git;HTML;PHP;MongoDB,12,Tier-2,46402
+HR Specialist,HR Policies;Communication;Recruitment;Onboarding;MS Office,8,Tier-2,31711
+Digital Marketing Specialist,Content Writing;Social Media,0,Tier-2,21760
+HR Specialist,Training;Communication;MS Office,7,Metro,36817
+Web Developer,CSS;React;PHP,10,Tier-2,44074
+Digital Marketing Specialist,Google Analytics;Content Writing;PPC,7,Rural,20806
+Data Analyst,Python;Tableau;DAX;SQL;Statistics,8,Tier-2,38348
+Business Analyst,Communication;Requirements Gathering;Python,2,Rural,24401
+Web Developer,React;HTML;Git;MySQL,2,Tier-2,32871
+Data Analyst,Tableau;DAX,3,Rural,21410
+Software Developer,C++;Git;SQL;Java;Testing,11,Metro,86860
+Data Analyst,Python;R;DAX,12,Tier-2,49833
+Web Developer,MySQL;PHP,11,Tier-2,42828
+Data Analyst,DAX;Python;SQL;Excel;Power BI,0,Tier-2,28402
+Digital Marketing Specialist,Content Writing;Canva;Email Marketing,12,Rural,25952
+HR Specialist,MS Office;Communication;Onboarding;Payroll,6,Metro,37987
+Sales Executive,Presentation;Negotiation,4,Tier-2,22669
+Digital Marketing Specialist,PPC;Social Media;Email Marketing,12,Rural,25783
+Sales Executive,Lead Generation;Negotiation,6,Metro,31252
+Digital Marketing Specialist,Google Analytics;PPC,4,Tier-2,26318
+Data Analyst,Statistics;Power BI;Python;DAX;Data Visualization,10,Rural,30687
+Sales Executive,Negotiation;Excel;Customer Service,11,Rural,16846
+Digital Marketing Specialist,Content Writing;Email Marketing;SEM;SEO;PPC,10,Rural,28114
+Data Analyst,Python;DAX;Tableau,0,Tier-2,26035
+Business Analyst,Communication;Excel;Power BI,4,Metro,56345
+Software Developer,C++;Data Structures;SQL;Git;Python,5,Rural,36673
+Business Analyst,SQL;Excel;Communication,6,Tier-2,44740
+Web Developer,HTML;Node.js;JavaScript;MongoDB,6,Metro,50009
+HR Specialist,Communication;HR Policies;Onboarding,7,Metro,36972
+Business Analyst,Excel;Documentation,4,Rural,27444
+Web Developer,Node.js;React;Git;JavaScript,6,Metro,50391
+HR Specialist,Training;Recruitment;HR Policies;MS Office;Onboarding,6,Metro,38190
+Data Analyst,Statistics;R;DAX,6,Metro,44510
+Data Scientist,Pandas;NumPy,3,Tier-2,55007
+Data Scientist,Machine Learning;NLP;Pandas;NumPy,0,Tier-2,42923
+Digital Marketing Specialist,SEO;Google Analytics,0,Rural,16784
+Data Scientist,SQL;Python;NumPy,7,Metro,84702
+Software Developer,Algorithms;Java,6,Tier-2,50528
+Digital Marketing Specialist,Email Marketing;SEO,11,Tier-2,35352
+Data Analyst,DAX;Python;Data Visualization;SQL,12,Tier-2,48144
+Data Analyst,Excel;Data Visualization;R;Power BI;Python,9,Tier-2,44567
+Sales Executive,CRM;Excel;Negotiation;Presentation;Lead Generation,10,Metro,39996
+Software Developer,C++;Data Structures;Testing;Java;SQL,0,Tier-2,40792
+Digital Marketing Specialist,Canva;Email Marketing;Google Analytics,3,Rural,20266
+Software Developer,C++;Python,10,Metro,72232
+Web Developer,Git;React;MySQL;PHP,5,Tier-2,37145
+HR Specialist,Onboarding;Communication;Recruitment;MS Office,9,Tier-2,30051
+Sales Executive,Lead Generation;Excel;CRM;Sales,11,Metro,38685
+Web Developer,MySQL;PHP,0,Rural,17311
+Sales Executive,Sales;Lead Generation;Excel;Negotiation;Presentation,1,Tier-2,20262
+HR Specialist,Recruitment;Training;Employee Relations;Communication,1,Metro,29330
+Data Scientist,NLP;Pandas,8,Metro,88249
+Sales Executive,Excel;Sales,2,Rural,14329
+Software Developer,Python;Git;Java;Data Structures;C++,3,Tier-2,46016
+Software Developer,Python;Spring;SQL,6,Tier-2,49816
+Data Analyst,Data Visualization;R;Power BI;SQL;Excel,10,Metro,57468
+Software Developer,Data Structures;Java,2,Tier-2,39891
+Digital Marketing Specialist,Google Analytics;Canva;PPC,8,Metro,45014
+HR Specialist,MS Office;Onboarding;Employee Relations;Training,6,Metro,35869
+Data Analyst,Excel;Statistics;Data Visualization;Power BI;R,0,Tier-2,26906
+Web Developer,MySQL;HTML;Node.js;React;PHP,12,Metro,63715
+Digital Marketing Specialist,PPC;Social Media;SEM,0,Rural,16378
+Sales Executive,Sales;Customer Service;CRM,4,Rural,16107
+Sales Executive,Presentation;Sales;Customer Service;CRM,11,Tier-2,28003
+Data Scientist,Statistics;Machine Learning;SQL;Deep Learning;TensorFlow,1,Rural,44098
+Digital Marketing Specialist,PPC;Google Analytics;SEO;SEM;Content Writing,11,Metro,52698
+Sales Executive,Presentation;CRM;Lead Generation,12,Metro,41039
+Data Analyst,R;SQL;Statistics,9,Metro,52473
+Web Developer,React;Node.js;CSS,0,Metro,38100
+Software Developer,Data Structures;Testing,0,Rural,29652
+Data Analyst,Power BI;Python;R;Statistics;Excel,3,Rural,26215
+Business Analyst,Process Mapping;Power BI;Documentation,12,Tier-2,57505
+Data Analyst,Tableau;Data Visualization,5,Tier-2,33352
+Data Analyst,Power BI;Excel;Tableau,5,Metro,43211
+HR Specialist,HR Policies;Payroll;Recruitment;Communication;Employee Relations,5,Metro,38525
+Sales Executive,Excel;CRM;Presentation;Sales,0,Rural,14904
+Sales Executive,CRM;Excel;Communication;Negotiation;Sales,6,Metro,34574
+HR Specialist,HR Policies;Training,1,Rural,15230
+Software Developer,Java;Spring;Data Structures,11,Metro,86544
+Web Developer,JavaScript;PHP;Git,12,Metro,60313
+Sales Executive,Presentation;Customer Service;Communication;Lead Generation,0,Tier-2,19465
+Software Developer,Testing;C++;Spring;Data Structures,10,Rural,45931
+Data Scientist,TensorFlow;NumPy;Deep Learning;Python,12,Rural,62610
+Data Analyst,R;Power BI;Data Visualization;SQL,12,Tier-2,44685
+Software Developer,Python;C++,10,Rural,42114
+Digital Marketing Specialist,SEM;PPC;Canva;Google Analytics;Content Writing,12,Tier-2,40002
+Data Scientist,NumPy;Statistics;Deep Learning,1,Metro,70982
+Business Analyst,Documentation;Power BI;Process Mapping;Python;SQL,6,Tier-2,52960
+Data Analyst,Statistics;Power BI;Python;Data Visualization,4,Rural,23460
+Digital Marketing Specialist,Social Media;Google Analytics;SEO,1,Metro,32494
+HR Specialist,Recruitment;Training,3,Metro,29520
+Sales Executive,Sales;CRM;Excel,8,Rural,16450
+Data Analyst,Data Visualization;SQL,2,Rural,19284
+Data Analyst,Statistics;Tableau;Power BI,8,Tier-2,42110
+Software Developer,Spring;SQL;Algorithms;Testing;Data Structures,4,Rural,34335
+Sales Executive,Customer Service;Negotiation;Sales;Lead Generation,3,Rural,13991
+Software Developer,C++;Git;Testing,7,Tier-2,50012
+Business Analyst,Requirements Gathering;Excel,10,Rural,36818
+Data Analyst,Power BI;Statistics;Python;Data Visualization;R,1,Tier-2,31961
+Web Developer,MongoDB;Node.js;MySQL;React,12,Tier-2,43423
+Sales Executive,Lead Generation;Communication,6,Rural,17163
+Web Developer,PHP;React;JavaScript;MySQL,2,Metro,39544
+Web Developer,JavaScript;Git;React,12,Rural,35228
+Data Scientist,SQL;TensorFlow,7,Rural,44860
+HR Specialist,Training;Communication;MS Office;Payroll;Employee Relations,6,Rural,23109
+Web Developer,React;MySQL;JavaScript;MongoDB,6,Rural,25278
+Software Developer,Python;Algorithms;Testing;SQL;Data Structures,7,Metro,78966
+Web Developer,MongoDB;MySQL;React,4,Tier-2,32962
+Data Scientist,Python;NLP;Pandas;Statistics,2,Tier-2,55351
+Digital Marketing Specialist,Social Media;PPC;Canva;SEO;Email Marketing,6,Metro,42000
+Digital Marketing Specialist,PPC;Google Analytics;Content Writing,4,Rural,17071
+Business Analyst,Documentation;Communication,11,Metro,76045
+Data Scientist,TensorFlow;SQL;NumPy;NLP;Pandas,12,Rural,61306
+Data Scientist,NLP;SQL;Machine Learning;TensorFlow;Pandas,6,Metro,89031
+HR Specialist,Training;HR Policies;Payroll,2,Metro,28376
+Sales Executive,Negotiation;Lead Generation;Excel;Communication,6,Rural,15470
+Data Analyst,DAX;Excel;Python;Data Visualization;Tableau,5,Rural,25009
+Business Analyst,Excel;Process Mapping,2,Rural,28065
+Data Analyst,Statistics;Excel;Data Visualization;Tableau;SQL,10,Metro,61048
+HR Specialist,HR Policies;Communication;Employee Relations,4,Tier-2,23402
+Business Analyst,Excel;Documentation;Communication,12,Metro,76643
+Digital Marketing Specialist,PPC;Canva;Google Analytics;SEM,1,Tier-2,24024
+Digital Marketing Specialist,SEM;PPC;Canva,8,Tier-2,29931
+Data Scientist,Pandas;Statistics;Machine Learning,9,Tier-2,68478
+Web Developer,JavaScript;MySQL;PHP,2,Tier-2,30666
+Business Analyst,Documentation;SQL;Process Mapping;Communication,3,Metro,54929
+Sales Executive,Sales;Excel;Presentation,8,Rural,17725
+Digital Marketing Specialist,Social Media;Content Writing;Canva;SEO,0,Rural,18546
+HR Specialist,Employee Relations;HR Policies;Communication;Onboarding;Training,6,Metro,39392
+Business Analyst,SQL;Python;Power BI;Documentation;Process Mapping,2,Rural,29207
+Data Analyst,Data Visualization;Power BI,1,Tier-2,28017
+Digital Marketing Specialist,Google Analytics;SEO;Email Marketing;SEM;Social Media,12,Metro,51158
+HR Specialist,Onboarding;Training;Employee Relations;Recruitment;MS Office,1,Tier-2,23619
+Data Scientist,NLP;SQL;Pandas,9,Tier-2,70256
+Business Analyst,Process Mapping;Power BI;SQL;Communication,12,Metro,83757
+Business Analyst,Process Mapping;Python;SQL;Requirements Gathering;Excel,9,Rural,39348
+Digital Marketing Specialist,Social Media;Content Writing;Google Analytics;Canva;SEO,1,Tier-2,24885
+Data Analyst,Python;SQL;Statistics,11,Tier-2,43552
+Web Developer,PHP;React;MySQL,6,Metro,49070
+Data Analyst,Excel;SQL;Tableau;Power BI;Statistics,6,Tier-2,38068
+Data Scientist,NLP;NumPy;SQL,9,Tier-2,69449
+Business Analyst,Communication;Process Mapping;Python,7,Metro,63973
+Web Developer,MongoDB;JavaScript;React;HTML,12,Metro,62761
+Digital Marketing Specialist,Content Writing;SEM;Email Marketing,1,Rural,18561
+Digital Marketing Specialist,Canva;Social Media;SEO;PPC;Email Marketing,7,Tier-2,32885
+Software Developer,Algorithms;Python;Java;Spring,11,Metro,85399
+Sales Executive,Communication;Customer Service;Excel,9,Metro,36774
+Software Developer,Algorithms;SQL;Spring,3,Tier-2,41069
+Business Analyst,Power BI;SQL;Communication,5,Rural,30410
+Web Developer,PHP;JavaScript,5,Rural,22913
+Software Developer,Data Structures;Java;Spring,6,Tier-2,54370
+Software Developer,Python;Testing;Algorithms;Git,12,Rural,43134
+HR Specialist,Payroll;Communication;Recruitment;Training,8,Metro,39313
+Data Analyst,Python;DAX;Tableau,5,Rural,23756
+HR Specialist,Training;Communication;Payroll;Onboarding,9,Tier-2,30335
+HR Specialist,Communication;Onboarding;Employee Relations;HR Policies,1,Tier-2,23062
+Data Scientist,NLP;NumPy;SQL;Machine Learning,10,Tier-2,73984
+HR Specialist,Communication;Onboarding;Recruitment,7,Metro,35545
+Data Scientist,Deep Learning;NumPy;Python,5,Rural,44438
+Sales Executive,Customer Service;Lead Generation;Presentation;Excel,10,Rural,21471
+Business Analyst,Documentation;Communication,11,Rural,36430
+Data Analyst,Tableau;Power BI;DAX;Statistics;Python,11,Tier-2,43765
+HR Specialist,Onboarding;HR Policies,12,Metro,42027
+Data Analyst,Excel;Statistics;DAX,11,Tier-2,42599
+Business Analyst,Excel;Documentation,2,Metro,48128
+Business Analyst,Excel;Process Mapping;Power BI;Communication;Documentation,7,Metro,68034
+HR Specialist,Communication;Payroll;MS Office,0,Rural,16544
+HR Specialist,Communication;HR Policies;Onboarding;Training;MS Office,7,Metro,41152
+Data Scientist,NumPy;Pandas;TensorFlow;Python;Deep Learning,2,Rural,44848
+Business Analyst,Excel;SQL,3,Metro,50321
+Software Developer,Python;Spring,9,Rural,43138
+Software Developer,Testing;SQL;Git,9,Tier-2,56447
+Data Scientist,Pandas;NumPy;TensorFlow;Deep Learning;Statistics,2,Metro,77742
+Software Developer,Spring;C++;Testing;SQL,9,Metro,83395
+Software Developer,Testing;C++,1,Rural,25440
+Software Developer,Java;Spring;Python;SQL;C++,6,Tier-2,57942
+Business Analyst,Requirements Gathering;Power BI;Excel;SQL,8,Rural,32310
+Web Developer,Node.js;PHP;Git;React,0,Rural,20709
+Sales Executive,Lead Generation;Customer Service;CRM,4,Rural,16780
+Data Analyst,Data Visualization;SQL;Excel,6,Rural,19937
+Web Developer,CSS;PHP;React;Git;MySQL,10,Rural,32483
+Data Scientist,Machine Learning;SQL;Pandas,10,Tier-2,69843
+Business Analyst,SQL;Documentation;Python;Process Mapping,10,Tier-2,54522
+Digital Marketing Specialist,Email Marketing;SEM;Canva,11,Rural,25320
+Data Scientist,Machine Learning;TensorFlow,0,Rural,36883
+Web Developer,PHP;JavaScript;HTML;Git;CSS,8,Metro,55528
+Business Analyst,Process Mapping;Power BI;Communication,0,Rural,22186
+Digital Marketing Specialist,Canva;Content Writing;Email Marketing,7,Tier-2,33133
+Business Analyst,Python;Power BI,12,Metro,73212
+Digital Marketing Specialist,PPC;SEM,8,Metro,40655
+Sales Executive,Communication;CRM;Customer Service;Lead Generation,10,Tier-2,29086
+Data Scientist,NLP;Pandas;NumPy,11,Tier-2,73084
+Web Developer,MongoDB;PHP;HTML,10,Tier-2,43618
+Sales Executive,Excel;CRM;Customer Service;Lead Generation,12,Metro,41005
+Data Scientist,NLP;Statistics;Deep Learning;TensorFlow;Python,6,Tier-2,61296
+HR Specialist,Onboarding;Training;Payroll,0,Metro,27418
+Business Analyst,Excel;Python,0,Rural,21157
+Business Analyst,Python;Power BI;Requirements Gathering,0,Rural,22900
+Business Analyst,Python;SQL;Documentation,5,Metro,57883
+Web Developer,Node.js;JavaScript;Git;CSS;MongoDB,3,Rural,23339
+Digital Marketing Specialist,PPC;Content Writing;Email Marketing;Google Analytics;SEM,5,Tier-2,31726
+Business Analyst,Communication;Requirements Gathering;Power BI,6,Rural,32602
+HR Specialist,Onboarding;Employee Relations;Payroll;Training;HR Policies,8,Tier-2,31532
+Business Analyst,Documentation;SQL;Python;Requirements Gathering;Process Mapping,7,Metro,69179
+Business Analyst,Communication;Documentation,3,Metro,51464
+HR Specialist,Employee Relations;Communication;MS Office;HR Policies;Onboarding,5,Tier-2,25395
+Software Developer,Algorithms;Data Structures;SQL;Git,9,Tier-2,58643
+Business Analyst,Python;Power BI,11,Metro,70378
+Web Developer,JavaScript;CSS,8,Metro,46397
+HR Specialist,Recruitment;Training;Payroll,11,Rural,22272

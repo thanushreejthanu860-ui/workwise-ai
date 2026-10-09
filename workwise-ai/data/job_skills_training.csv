@@ -1,0 +1,801 @@
+skills,role
+CRM;Excel;Lead Generation,Sales Executive
+Java;Algorithms;Data Structures,Software Developer
+Spring;Algorithms;C++;SQL,Software Developer
+Customer Service;Negotiation;CRM,Sales Executive
+Sales;HR Policies;Onboarding;Communication;NumPy;MS Office,HR Specialist
+Sales;Customer Service;Presentation;Lead Generation;Excel,Sales Executive
+React;JavaScript;PHP;MongoDB;Git,Web Developer
+NLP;Deep Learning;Statistics;Machine Learning,Data Scientist
+Canva;Google Analytics;Testing;SEO,Digital Marketing Specialist
+Spring;C++;Data Structures;Customer Service;Java;Python,Software Developer
+Requirements Gathering;Process Mapping;Python;Power BI,Business Analyst
+Spring;Data Structures;Git;SQL,Software Developer
+C++;DAX;Spring;SQL,Software Developer
+Git;MongoDB;PHP;MySQL;HTML,Web Developer
+Content Writing;Email Marketing;Canva;SEO;Social Media,Digital Marketing Specialist
+Communication;Presentation;Lead Generation;CRM,Sales Executive
+R;Python;SQL;DAX;Data Visualization,Data Analyst
+Requirements Gathering;Python;Documentation;Process Mapping;SQL;Excel;Power BI,Business Analyst
+Machine Learning;Deep Learning;Pandas;Statistics,Data Scientist
+React;Power BI;HTML;Git;MySQL,Web Developer
+Content Writing;SEM;Google Analytics;Email Marketing;PPC,Digital Marketing Specialist
+CRM;Customer Service;Sales;Communication;Employee Relations;Lead Generation;Negotiation,Sales Executive
+SEM;Social Media;Content Writing;Canva,Digital Marketing Specialist
+JavaScript;SQL;Deep Learning;Data Visualization;TensorFlow;Pandas,Data Scientist
+Pandas;Statistics;TensorFlow;SQL;NLP;Machine Learning,Data Scientist
+Spring;Testing;Communication;Python,Software Developer
+Customer Service;Content Writing;Negotiation;CRM,Sales Executive
+Onboarding;Recruitment;MS Office;Communication;HR Policies;Training,HR Specialist
+Python;Testing;Git;C++;Data Structures;Algorithms,Software Developer
+Email Marketing;Social Media;SEO;Google Analytics;SQL;TensorFlow;Canva,Digital Marketing Specialist
+Python;SQL;Java;Power BI;Algorithms;Spring;Testing,Software Developer
+Statistics;Pandas;SQL,Data Scientist
+NLP;Python;Statistics;Pandas;Git;Data Structures,Data Scientist
+MySQL;Node.js;React;JavaScript;MongoDB;Java,Web Developer
+React;JavaScript;MySQL;PHP;HTML;Git,Web Developer
+Statistics;Python;Power BI;SQL,Data Analyst
+Negotiation;Sales;Lead Generation;Customer Service,Sales Executive
+Documentation;Power BI;Excel;Customer Service;Google Analytics,Business Analyst
+TensorFlow;Testing;Algorithms;Git;Data Structures,Software Developer
+SQL;DAX;Data Visualization;Communication;Excel,Data Analyst
+Content Writing;Email Marketing;SEO;Google Analytics;SEM;NLP;Communication;Canva,Digital Marketing Specialist
+Power BI;Process Mapping;Requirements Gathering;Documentation,Business Analyst
+CRM;Lead Generation;Customer Service;Presentation,Sales Executive
+SQL;Process Mapping;Communication;Documentation;Excel;Python,Business Analyst
+Documentation;Power BI;Excel;Communication;SQL,Business Analyst
+Node.js;CSS;MongoDB;PHP;MySQL,Web Developer
+Presentation;Negotiation;Communication;CRM,Sales Executive
+Canva;Excel;Documentation;Python;SQL;Communication;Power BI,Business Analyst
+C++;Git;Python,Software Developer
+Negotiation;Customer Service;Excel;Sales,Sales Executive
+Excel;CRM;Communication;Negotiation,Sales Executive
+Requirements Gathering;R;Tableau;SQL;Excel;Power BI,Data Analyst
+NumPy;TensorFlow;Pandas,Data Scientist
+Canva;Email Marketing;Social Media;PPC;SEM;Excel;SEO,Digital Marketing Specialist
+HTML;Deep Learning;MongoDB;Git;JavaScript,Web Developer
+Data Structures;Testing;C++;Git,Software Developer
+Recruitment;Employee Relations;Onboarding;HR Policies,HR Specialist
+Power BI;DAX;Statistics;SEM;Python;Excel;SQL;Data Visualization,Data Analyst
+Communication;Training;HR Policies,HR Specialist
+Requirements Gathering;Documentation;Process Mapping;Python;Excel,Business Analyst
+Power BI;HR Policies;MS Office;Training,HR Specialist
+CRM;Sales;Excel;Presentation;Lead Generation,Sales Executive
+Onboarding;Communication;HR Policies;Training;Employee Relations;Recruitment,HR Specialist
+Machine Learning;NLP;Statistics;Excel;SQL,Data Scientist
+NLP;TensorFlow;Machine Learning;Python;Pandas;SEO;NumPy;Statistics,Data Scientist
+CSS;React;Node.js;NumPy,Web Developer
+Pandas;Machine Learning;SQL;TensorFlow,Data Scientist
+Excel;CSS;JavaScript;Data Visualization;MySQL,Web Developer
+Communication;MS Office;Recruitment;Employee Relations,HR Specialist
+Excel;Python;Documentation;SQL,Business Analyst
+Communication;Presentation;Customer Service,Sales Executive
+Onboarding;MS Office;HR Policies;Payroll;Employee Relations;Recruitment,HR Specialist
+SQL;Deep Learning;NumPy;Statistics;Machine Learning,Data Scientist
+MongoDB;MySQL;Git,Web Developer
+Statistics;SQL;Deep Learning;Python;NLP,Data Scientist
+Communication;HR Policies;Onboarding,HR Specialist
+NumPy;NLP;MySQL;Python;R,Data Scientist
+SQL;Excel;Power BI,Data Analyst
+Google Analytics;Canva;Social Media;Content Writing;PPC,Digital Marketing Specialist
+SEO;Social Media;Content Writing,Digital Marketing Specialist
+CSS;MySQL;HTML,Web Developer
+Data Structures;Algorithms;Spring;CSS;C++;Java;Python,Software Developer
+Employee Relations;Onboarding;SQL;HR Policies;Payroll;Training;MS Office,HR Specialist
+TensorFlow;Pandas;Python;SQL;PHP;Machine Learning;Deep Learning;SQL,Data Scientist
+Sales;Documentation;Process Mapping;SQL,Business Analyst
+Documentation;Excel;Requirements Gathering;Process Mapping,Business Analyst
+Content Writing;SQL;Statistics;Communication;R;DAX,Data Analyst
+Statistics;Machine Learning;Python;NLP;SQL;Deep Learning,Data Scientist
+Training;Communication;Onboarding;Payroll;MS Office,HR Specialist
+DAX;Tableau;Data Visualization;Python;Power BI;SQL,Data Analyst
+Node.js;HTML;Pandas;MongoDB;MySQL;Excel;React,Web Developer
+Excel;SQL;Python;Process Mapping;Communication,Business Analyst
+Power BI;SQL;Tableau;Python;Data Visualization,Data Analyst
+Negotiation;Presentation;Excel;Lead Generation;Customer Service,Sales Executive
+Employee Relations;Payroll;Java;MS Office;Training;Recruitment;Onboarding,HR Specialist
+Payroll;HR Policies;MS Office;Training;Recruitment;Onboarding,HR Specialist
+CSS;PHP;HTML;Git;MySQL;MongoDB,Web Developer
+PPC;MS Office;SEM;Social Media;Google Analytics;Content Writing;Email Marketing,Digital Marketing Specialist
+Python;Data Visualization;Tableau;Power BI;R,Data Analyst
+Negotiation;Statistics;Presentation;Sales,Sales Executive
+Content Writing;Communication;Email Marketing;Canva;PPC;Python;SEO;Google Analytics,Digital Marketing Specialist
+Requirements Gathering;JavaScript;Communication;Process Mapping;SEM;Documentation;Excel;Power BI,Business Analyst
+Python;Communication;Documentation,Business Analyst
+Machine Learning;Deep Learning;NumPy;Python;SQL;Statistics,Data Scientist
+Testing;Algorithms;Spring;SQL,Software Developer
+Power BI;Excel;Sales;Data Visualization;MS Office;SQL;DAX,Data Analyst
+Tableau;Data Visualization;SQL;Excel,Data Analyst
+Training;Payroll;MS Office,HR Specialist
+Canva;Testing;Java;Spring;NLP;Data Structures,Software Developer
+CSS;React;HTML;Git;PHP;JavaScript,Web Developer
+Employee Relations;Payroll;Onboarding;Training,HR Specialist
+SEM;Canva;PPC;Google Analytics,Digital Marketing Specialist
+Employee Relations;Payroll;Communication;Testing;SQL;HR Policies;Onboarding;Recruitment,HR Specialist
+Sales;Canva;Recruitment;Content Writing;Email Marketing,Digital Marketing Specialist
+Communication;Sales;Negotiation;Presentation;Customer Service;Lead Generation,Sales Executive
+Python;MySQL;CSS;PHP;Power BI,Web Developer
+Java;Testing;Python;CRM;Git;SQL;Algorithms;HR Policies,Software Developer
+Node.js;JavaScript;MySQL;Excel;Training;HTML;MongoDB,Web Developer
+Google Analytics;PPC;Requirements Gathering;Content Writing,Digital Marketing Specialist
+Onboarding;Recruitment;Employee Relations,HR Specialist
+Google Analytics;Data Structures;Content Writing;Canva,Digital Marketing Specialist
+Machine Learning;Python;TensorFlow;Statistics;Pandas,Data Scientist
+Communication;Process Mapping;TensorFlow;Requirements Gathering;CSS;Python;Documentation;Power BI,Business Analyst
+Data Visualization;DAX;Python;Statistics;Power BI;Excel,Data Analyst
+Sales;Deep Learning;Java;SQL;Pandas;Machine Learning;Python,Data Scientist
+HR Policies;MS Office;Documentation;Payroll;Power BI;Training;Onboarding,HR Specialist
+Communication;Presentation;SQL;Spring;Customer Service;Negotiation,Sales Executive
+SEM;Google Analytics;SEO;Social Media;Content Writing,Digital Marketing Specialist
+Communication;Sales;CRM;Customer Service,Sales Executive
+DAX;Excel;Data Visualization;R;Python;Tableau,Data Analyst
+Python;SQL;Excel,Business Analyst
+MS Office;Payroll;HR Policies;Communication;Recruitment;Employee Relations,HR Specialist
+Canva;Statistics;Content Writing;Google Analytics;Email Marketing;Excel;PPC,Digital Marketing Specialist
+Python;Statistics;Deep Learning;TensorFlow;Power BI,Data Analyst
+Process Mapping;Canva;Training;Recruitment;Employee Relations,HR Specialist
+Node.js;Spring;Lead Generation;CRM;Customer Service;Excel;Negotiation,Sales Executive
+CSS;React;MySQL;SQL;Content Writing;PHP;Node.js,Web Developer
+Employee Relations;HR Policies;Deep Learning;Power BI;MS Office;Communication;Payroll,HR Specialist
+NLP;SQL;Statistics;TensorFlow;NumPy;Sales;Onboarding,Data Scientist
+Node.js;Python;Java;Data Structures;SQL;Git,Software Developer
+Employee Relations;HR Policies;Training;MS Office,HR Specialist
+Excel;Tableau;Data Visualization;SQL,Data Analyst
+Pandas;NumPy;Statistics;TensorFlow;Python;Machine Learning,Data Scientist
+MongoDB;JavaScript;Git;HTML;PHP;MySQL,Web Developer
+SQL;Pandas;Python;Statistics,Data Scientist
+Data Structures;Lead Generation;Presentation;Sales,Sales Executive
+Spring;Sales;C++;Data Structures;Algorithms,Software Developer
+CSS;Deep Learning;NumPy;Machine Learning;TensorFlow,Data Scientist
+Documentation;Power BI;SQL,Business Analyst
+TensorFlow;Pandas;Statistics,Data Scientist
+Node.js;Python;MySQL;HTML,Web Developer
+Lead Generation;Excel;CRM;PPC,Sales Executive
+Git;PHP;Node.js,Web Developer
+MS Office;Onboarding;Recruitment;Training;Employee Relations,HR Specialist
+SQL;Process Mapping;Power BI;Excel;Python;Documentation,Business Analyst
+Statistics;Tableau;Python;SQL;R;Data Visualization,Data Analyst
+Customer Service;Sales;Communication;Lead Generation,Sales Executive
+Power BI;Python;Excel,Business Analyst
+Testing;SQL;Python;C++;Deep Learning,Software Developer
+Pandas;SQL;Machine Learning;Deep Learning;Python,Data Scientist
+Negotiation;Customer Service;Lead Generation;Excel;Presentation,Sales Executive
+Git;Algorithms;Testing;SQL;Spring;C++,Software Developer
+Google Analytics;Email Marketing;PHP;DAX;Content Writing,Digital Marketing Specialist
+Git;HTML;Node.js;CSS,Web Developer
+Content Writing;SEM;PPC;Social Media;Canva,Digital Marketing Specialist
+HR Policies;JavaScript;Employee Relations;MS Office;Recruitment;Training,HR Specialist
+Excel;SQL;Python,Business Analyst
+SQL;Algorithms;Git;Data Structures,Software Developer
+Algorithms;Testing;Data Structures;SQL;Java;Git,Software Developer
+NumPy;Statistics;Pandas,Data Scientist
+Employee Relations;MS Office;Excel;Onboarding,HR Specialist
+Power BI;R;SQL;Statistics;Tableau;Data Visualization,Data Analyst
+Customer Service;Sales;Presentation;Lead Generation;Data Structures;Communication;CRM,Sales Executive
+Documentation;Python;Requirements Gathering,Business Analyst
+Communication;Process Mapping;Payroll;MS Office;Recruitment,HR Specialist
+Negotiation;Communication;Tableau;Customer Service,Sales Executive
+CRM;Customer Service;NLP;Negotiation;R;Presentation,Sales Executive
+Communication;Payroll;HR Policies;Onboarding,HR Specialist
+Requirements Gathering;Python;Documentation;Communication;Excel;Lead Generation;SQL,Business Analyst
+React;MySQL;Node.js;NLP;Tableau,Web Developer
+SQL;MySQL;C++;Java;Data Structures,Software Developer
+MySQL;React;Node.js;JavaScript;PHP;C++;CSS,Web Developer
+Negotiation;Customer Service;CRM;Git;Sales;Java,Sales Executive
+Requirements Gathering;Python;Power BI;SQL,Business Analyst
+SQL;C++;Git;Python;Algorithms,Software Developer
+Requirements Gathering;Python;SQL;Communication;Communication,Business Analyst
+Algorithms;Java;Excel;Testing;Power BI;SQL,Software Developer
+MySQL;HTML;Node.js;MongoDB,Web Developer
+Process Mapping;CSS;Requirements Gathering;SQL,Business Analyst
+Machine Learning;Communication;SQL;Lead Generation;Excel;Presentation;Customer Service;Negotiation,Sales Executive
+Onboarding;MS Office;HR Policies;Communication;Recruitment;Payroll;Process Mapping;SQL,HR Specialist
+SQL;Git;C++;Data Visualization;Git,Software Developer
+NumPy;Onboarding;TensorFlow;Statistics;React;NLP;SQL,Data Scientist
+Node.js;CSS;MySQL;JavaScript;MongoDB;HTML,Web Developer
+Requirements Gathering;Documentation;Communication;Process Mapping,Business Analyst
+Testing;Java;SQL;Algorithms;C++;Data Structures;Spring,Software Developer
+Data Structures;MongoDB;Excel;Python;Java;Algorithms,Software Developer
+Data Structures;Python;SQL;Algorithms;Git;C++,Software Developer
+Payroll;HR Policies;MS Office,HR Specialist
+Python;Power BI;Tableau;DAX;R;SQL,Data Analyst
+Customer Service;Communication;Negotiation;Excel,Sales Executive
+HR Policies;Process Mapping;Recruitment;Employee Relations;Training;Onboarding;Payroll;Python,HR Specialist
+Excel;Process Mapping;Power BI;Communication;SQL;Requirements Gathering,Business Analyst
+Lead Generation;Sales;Negotiation,Sales Executive
+Power BI;Excel;R;SQL;Statistics;Python,Data Analyst
+Data Visualization;Statistics;Excel,Data Analyst
+Google Analytics;Email Marketing;Content Writing,Digital Marketing Specialist
+C++;Python;Communication;Algorithms,Software Developer
+SQL;Recruitment;Payroll;Onboarding;Employee Relations;Communication;Training;Excel,HR Specialist
+Customer Service;Sales;Presentation;JavaScript,Sales Executive
+Canva;SEO;SEM;NumPy;Social Media,Digital Marketing Specialist
+Spring;C++;NumPy;Algorithms;MongoDB,Software Developer
+Statistics;DAX;TensorFlow;Deep Learning;Excel,Data Analyst
+MS Office;Employee Relations;Statistics;HR Policies;Communication;Payroll;Onboarding,HR Specialist
+Communication;Communication;HR Policies;Python;Training;Onboarding;MS Office;Payroll,HR Specialist
+Power BI;Power BI;Python;Process Mapping;Excel,Business Analyst
+Git;Requirements Gathering;Excel;Communication;Process Mapping;Documentation;Python,Business Analyst
+SQL;Presentation;Documentation;Communication;SQL,Business Analyst
+CSS;MongoDB;JavaScript;PHP;HTML,Web Developer
+MS Office;Onboarding;Communication;Payroll;Employee Relations,HR Specialist
+NumPy;TensorFlow;Statistics;Deep Learning,Data Scientist
+CRM;Customer Service;Negotiation;Presentation;Excel,Sales Executive
+Social Media;Onboarding;Training;Recruitment;HR Policies;Pandas,HR Specialist
+Excel;Python;Requirements Gathering;SQL;Communication,Business Analyst
+Excel;Statistics;Power BI,Data Analyst
+MongoDB;Git;Node.js;CSS;Excel;PHP;Excel,Web Developer
+Python;Statistics;NLP;Machine Learning;Pandas;Excel,Data Scientist
+PPC;SEM;SEO;Google Analytics;Machine Learning;Social Media;SQL;Email Marketing,Digital Marketing Specialist
+Customer Service;CRM;SQL;Lead Generation,Sales Executive
+Git;Algorithms;Training;Data Structures;Java,Software Developer
+HTML;CSS;PHP;Node.js,Web Developer
+SQL;Power BI;R,Data Analyst
+R;Python;Power BI;Statistics;DAX,Data Analyst
+Excel;Lead Generation;Presentation;HR Policies;CRM,Sales Executive
+DAX;Python;Power BI;Excel;Tableau,Data Analyst
+Presentation;Communication;Sales;Lead Generation,Sales Executive
+MongoDB;Git;MySQL;SEO;JavaScript;Git;HTML;CSS,Web Developer
+Power BI;Python;SQL;Process Mapping,Business Analyst
+HTML;MongoDB;CSS;React;Power BI;JavaScript;Git,Web Developer
+SQL;C++;Data Structures;Git;Python,Software Developer
+Excel;HTML;Lead Generation;Customer Service;Presentation,Sales Executive
+SEM;SEO;PPC;Canva;Social Media,Digital Marketing Specialist
+Data Structures;C++;SQL;Power BI;Communication,Business Analyst
+Java;Algorithms;SQL;Git;Spring;Python,Software Developer
+Statistics;TensorFlow;Python;SQL;Deep Learning;NLP,Data Scientist
+Machine Learning;NumPy;TensorFlow;Pandas;Statistics,Data Scientist
+Power BI;Data Visualization;Excel;DAX;R,Data Analyst
+Excel;SEM;SQL;Requirements Gathering;Python,Business Analyst
+Communication;SQL;Excel;Python;Documentation,Business Analyst
+Canva;Email Marketing;Social Media;SEO,Digital Marketing Specialist
+Process Mapping;SQL;Power BI,Business Analyst
+CSS;MongoDB;PHP;Git;HTML;Power BI,Web Developer
+Communication;Power BI;CRM;Customer Service;Excel;Presentation;Sales,Sales Executive
+Training;Onboarding;Payroll;Communication,HR Specialist
+Excel;Lead Generation;CRM;Power BI;Negotiation,Sales Executive
+Python;DAX;Statistics,Data Analyst
+SEO;Email Marketing;SEM;Social Media,Digital Marketing Specialist
+Excel;Python;Requirements Gathering;Communication;Lead Generation,Business Analyst
+Git;SQL;Testing;C++;Social Media;Java,Software Developer
+Email Marketing;Google Analytics;C++;SEM;Canva;Content Writing;Data Structures;PPC,Digital Marketing Specialist
+C++;SQL;Algorithms;Java;Data Structures,Software Developer
+Lead Generation;CRM;Negotiation;Communication;Excel;SQL,Sales Executive
+HR Policies;Recruitment;Training,HR Specialist
+Python;Communication;Excel,Business Analyst
+Statistics;Python;DAX,Data Analyst
+Content Writing;C++;Social Media;Canva;Google Analytics;NumPy;PPC;Email Marketing,Digital Marketing Specialist
+SQL;Python;NLP;Pandas;Deep Learning;NumPy,Data Scientist
+Documentation;Employee Relations;Payroll;Onboarding;HR Policies;Data Structures;MS Office;Training,HR Specialist
+HR Policies;Recruitment;Training;Employee Relations,HR Specialist
+SQL;Python;Process Mapping;Documentation;Power BI,Business Analyst
+Node.js;React;HTML;MongoDB,Web Developer
+Python;Excel;Negotiation;Sales;Presentation;Communication;CRM,Sales Executive
+TensorFlow;Pandas;NumPy;Statistics,Data Scientist
+Algorithms;Python;Power BI;Data Structures;Java,Software Developer
+Python;Process Mapping;Excel;SQL;Data Visualization;Communication;Node.js,Business Analyst
+Lead Generation;Google Analytics;Email Marketing;Content Writing;PPC,Digital Marketing Specialist
+PHP;Java;Algorithms;Spring;Google Analytics;SQL,Software Developer
+Communication;Content Writing;Employee Relations;HR Policies;Onboarding;MS Office,HR Specialist
+Presentation;CRM;Sales;Negotiation;Excel,Sales Executive
+Data Visualization;R;Python,Data Analyst
+Deep Learning;SQL;NumPy;Excel;Machine Learning;TensorFlow,Data Scientist
+Employee Relations;MS Office;Communication;SQL,HR Specialist
+Statistics;NLP;NumPy;SQL,Data Scientist
+Communication;Payroll;Statistics;Deep Learning;Recruitment,HR Specialist
+Node.js;Git;MySQL;Canva,Web Developer
+Customer Service;SEM;CRM;Node.js;Negotiation;Communication,Sales Executive
+SEM;SQL;Communication;Process Mapping;Requirements Gathering;Power BI,Business Analyst
+Python;Algorithms;Git,Software Developer
+C++;SEO;Python;SQL;Algorithms;MySQL;Data Structures,Software Developer
+R;Excel;DAX;Statistics;Data Visualization,Data Analyst
+Statistics;Requirements Gathering;Data Visualization;PPC;R,Data Analyst
+Communication;SQL;Requirements Gathering;Process Mapping;Documentation;Python,Business Analyst
+Process Mapping;Excel;Requirements Gathering;R,Business Analyst
+JavaScript;Spring;SQL;Tableau;Data Visualization,Data Analyst
+Documentation;Requirements Gathering;SQL,Business Analyst
+SQL;Content Writing;DAX;Data Visualization;Excel,Data Analyst
+Power BI;SQL;Pandas;Python;Data Visualization,Data Analyst
+Git;Spring;Recruitment;Data Structures;Power BI,Software Developer
+CRM;PHP;React;SEM;CSS,Web Developer
+Social Media;Canva;SEM;PPC;Google Analytics;Content Writing,Digital Marketing Specialist
+CSS;HTML;MongoDB;PHP,Web Developer
+SQL;Power BI;Process Mapping;PPC;Python;Java,Business Analyst
+Process Mapping;Spring;SQL;Excel;Algorithms,Software Developer
+Power BI;SQL;R;Excel;Statistics;Tableau,Data Analyst
+MongoDB;Git;CSS;PHP,Web Developer
+Excel;Data Visualization;Lead Generation;Negotiation;Content Writing;Customer Service,Sales Executive
+SEM;Content Writing;Social Media;SEO;PPC,Digital Marketing Specialist
+Python;Java;C++,Software Developer
+MongoDB;JavaScript;PHP;HTML,Web Developer
+Excel;HR Policies;Onboarding;Communication;Employee Relations,HR Specialist
+Statistics;MS Office;Communication;Employee Relations,HR Specialist
+Sales;Negotiation;Communication;Presentation;Canva,Sales Executive
+Data Visualization;R;Statistics,Data Analyst
+Recruitment;Payroll;Onboarding;Communication,HR Specialist
+TensorFlow;SQL;SQL;Pandas;HTML;NumPy;NLP,Data Scientist
+Presentation;Sales;CRM;Customer Service;Communication,Sales Executive
+Negotiation;Process Mapping;Power BI;Documentation;Python;Excel;Git,Business Analyst
+Excel;CRM;Sales;Communication;Lead Generation;Presentation,Sales Executive
+HR Policies;Employee Relations;Training;PPC;Onboarding;Recruitment,HR Specialist
+NLP;Pandas;NumPy;Deep Learning;SEO;Payroll;TensorFlow,Data Scientist
+Statistics;PHP;TensorFlow;NLP;Machine Learning;SEM,Data Scientist
+Python;Excel;Power BI;Data Visualization;DAX,Data Analyst
+SEM;Machine Learning;Communication;PPC;Content Writing;SEO;Canva;Social Media,Digital Marketing Specialist
+Employee Relations;Python;HR Policies;Payroll;Data Visualization,HR Specialist
+Python;NLP;NumPy,Data Scientist
+Pandas;Training;Deep Learning;NumPy;Tableau,Data Scientist
+Excel;Negotiation;DAX;Communication,Sales Executive
+Statistics;Machine Learning;NumPy,Data Scientist
+JavaScript;Git;HTML;PHP;React,Web Developer
+C++;Python;Algorithms;Testing,Software Developer
+Social Media;Content Writing;Presentation;Google Analytics;PPC;Email Marketing;Canva,Digital Marketing Specialist
+Process Mapping;Documentation;Python;Excel,Business Analyst
+HTML;Canva;Tableau;SEM;Social Media,Digital Marketing Specialist
+Algorithms;SQL;Git;Spring,Software Developer
+CRM;Sales;Communication,Sales Executive
+PHP;MongoDB;MySQL;CSS;Python;HTML,Web Developer
+MySQL;CSS;Node.js;Git;HTML;JavaScript,Web Developer
+Tableau;Statistics;R;Power BI;Data Visualization,Data Analyst
+PHP;HTML;React;JavaScript,Web Developer
+Python;Statistics;Pandas;NLP;TensorFlow,Data Scientist
+Canva;Email Marketing;Content Writing;PPC;Google Analytics;Social Media,Digital Marketing Specialist
+Tableau;Excel;Power BI;SQL;Python;Statistics,Data Analyst
+Java;SQL;Git;C++;Spring;Python,Software Developer
+SQL;Python;Git;SEM;Machine Learning;Data Structures,Software Developer
+Presentation;Lead Generation;Excel;Testing;CRM;Customer Service;Sales,Sales Executive
+Lead Generation;Sales;Communication,Sales Executive
+Statistics;R;Communication;Power BI;Excel,Data Analyst
+Statistics;Machine Learning;Python;Social Media;SQL;Tableau,Data Scientist
+SQL;HR Policies;Git;Algorithms;C++;Pandas,Software Developer
+Recruitment;MS Office;Training;Payroll;Communication,HR Specialist
+Customer Service;Communication;Excel;Negotiation;Sales,Sales Executive
+Process Mapping;Recruitment;Deep Learning;Onboarding;Payroll;Employee Relations;Communication;MS Office,HR Specialist
+PPC;HTML;SEM;Google Analytics;Content Writing,Digital Marketing Specialist
+NumPy;Pandas;TensorFlow,Data Scientist
+SEM;React;Social Media;PPC;Canva;SEO,Digital Marketing Specialist
+JavaScript;HTML;Node.js,Web Developer
+CSS;Social Media;Canva;Google Analytics,Digital Marketing Specialist
+Payroll;Testing;Training;MS Office,HR Specialist
+Power BI;DAX;Data Visualization;Python;Tableau;R,Data Analyst
+SEM;Email Marketing;Google Analytics;PPC,Digital Marketing Specialist
+MS Office;HR Policies;Recruitment;Onboarding;Employee Relations,HR Specialist
+Statistics;Pandas;Python;NLP;Google Analytics,Data Scientist
+MS Office;Communication;Employee Relations;HR Policies;Payroll;Training,HR Specialist
+Communication;Process Mapping;Requirements Gathering,Business Analyst
+Data Visualization;Power BI;Tableau;Statistics,Data Analyst
+Payroll;Power BI;Spring;Python;SQL;Testing,Software Developer
+Node.js;Git;PHP;MySQL,Web Developer
+SQL;Statistics;Power BI;Python;Tableau,Data Analyst
+Lead Generation;Sales;CRM;Onboarding;Excel;Communication;Presentation,Sales Executive
+SQL;Statistics;SQL;Excel;Sales,Data Analyst
+Payroll;Communication;HR Policies,HR Specialist
+Lead Generation;Excel;Communication;Negotiation;Customer Service;Presentation,Sales Executive
+TensorFlow;NLP;Python;NumPy;Statistics;SQL,Data Scientist
+Pandas;PPC;SEO;Java;Email Marketing;Google Analytics;Canva,Digital Marketing Specialist
+SQL;Statistics;Machine Learning,Data Scientist
+Spring;Algorithms;Git;Data Structures;Python,Software Developer
+Employee Relations;HR Policies;Tableau;Recruitment;MS Office,HR Specialist
+Payroll;MS Office;Training;Onboarding;Recruitment,HR Specialist
+Excel;Documentation;Process Mapping;Power BI,Business Analyst
+HR Policies;MS Office;Recruitment;Employee Relations;Communication;Payroll,HR Specialist
+Social Media;PPC;Content Writing;Canva;Google Analytics,Digital Marketing Specialist
+SQL;Power BI;Tableau,Data Analyst
+SEM;Google Analytics;Email Marketing;Canva;PPC;Content Writing,Digital Marketing Specialist
+Machine Learning;NumPy;Email Marketing;Communication;NLP,Data Scientist
+PPC;Social Media;SEM;Content Writing;Employee Relations;Google Analytics;Canva;CRM,Digital Marketing Specialist
+SQL;TensorFlow;Python;Statistics;NLP,Data Scientist
+SQL;Requirements Gathering;Power BI;Process Mapping;Excel,Business Analyst
+SEM;Email Marketing;Social Media;Content Writing;MySQL,Digital Marketing Specialist
+Spring;SQL;Python;Git,Software Developer
+Algorithms;Google Analytics;Testing;C++,Software Developer
+HTML;MySQL;Git;CSS;PHP;Social Media;MongoDB;Statistics,Web Developer
+Node.js;Sales;HTML;JavaScript;React,Web Developer
+SQL;Machine Learning;TensorFlow;Deep Learning;Python;Pandas,Data Scientist
+Google Analytics;Canva;Content Writing;SEO;Email Marketing;PPC,Digital Marketing Specialist
+HR Policies;Employee Relations;MS Office;Onboarding;Training,HR Specialist
+SEM;Node.js;Spring;CSS;MySQL;Git,Web Developer
+PHP;MongoDB;React;JavaScript;Power BI;HTML;Node.js,Web Developer
+Communication;Lead Generation;Customer Service;Excel,Sales Executive
+Python;Deep Learning;Machine Learning;Pandas;Statistics;NumPy;NLP,Data Scientist
+Documentation;Requirements Gathering;Communication;Excel;Power BI,Business Analyst
+Data Visualization;Python;Excel;Statistics;DAX;Python,Data Analyst
+Excel;Customer Service;CRM;Sales;Lead Generation,Sales Executive
+Google Analytics;Social Media;SEM;Canva;Content Writing;SEO,Digital Marketing Specialist
+Data Structures;Java;SQL,Software Developer
+Python;NumPy;SQL;TensorFlow;Pandas;Deep Learning,Data Scientist
+Communication;SQL;Requirements Gathering,Business Analyst
+Statistics;Node.js;MongoDB;HTML;JavaScript;PHP,Web Developer
+Employee Relations;Training;Onboarding;MS Office;Communication,HR Specialist
+Excel;R;Power BI;Data Visualization;DAX;SQL,Data Analyst
+Data Structures;Python;Algorithms;Spring;Java;Testing,Software Developer
+Negotiation;PHP;MongoDB;Node.js;Testing,Web Developer
+SEO;Email Marketing;SEM;PPC;Canva;Requirements Gathering;Content Writing,Digital Marketing Specialist
+Data Structures;SQL;Algorithms;Testing,Software Developer
+R;Statistics;Data Visualization;Algorithms;Customer Service,Data Analyst
+Payroll;Employee Relations;Git;Communication,HR Specialist
+DAX;Python;Excel;Power BI;SQL;R,Data Analyst
+React;PHP;HTML,Web Developer
+Social Media;Content Writing;Google Analytics;SEO,Digital Marketing Specialist
+MongoDB;CSS;PHP;JavaScript,Web Developer
+Statistics;TensorFlow;Deep Learning;NLP;Social Media;SQL;Machine Learning,Data Scientist
+Process Mapping;SQL;SQL;Requirements Gathering;Machine Learning;Power BI;Communication,Business Analyst
+Communication;Training;Communication;Recruitment;HR Policies,HR Specialist
+TensorFlow;NLP;Machine Learning;NumPy,Data Scientist
+CSS;HR Policies;Node.js;PPC;JavaScript,Web Developer
+Recruitment;Communication;HR Policies;MS Office;Training;Onboarding,HR Specialist
+Machine Learning;NumPy;Deep Learning;TensorFlow;Python;Java,Data Scientist
+Excel;Sales;Customer Service,Sales Executive
+Python;R;Excel;Statistics,Data Analyst
+SEM;Social Media;Email Marketing,Digital Marketing Specialist
+Spring;Algorithms;Java;Testing;C++;Python;Onboarding,Software Developer
+Tableau;Data Visualization;Power BI;Excel;SQL,Data Analyst
+Data Visualization;R;SQL;DAX;Statistics;Power BI,Data Analyst
+SEM;Canva;PPC;SEO;PHP;Google Analytics;Content Writing,Digital Marketing Specialist
+Lead Generation;CRM;Excel;Presentation;Communication;Negotiation,Sales Executive
+CSS;MySQL;Git;HTML;MongoDB,Web Developer
+Recruitment;HR Policies;Payroll;MS Office;Onboarding;Communication,HR Specialist
+Deep Learning;Payroll;SQL;NLP;Python;Machine Learning,Data Scientist
+Pandas;Sales;NumPy;SQL;TensorFlow;Python;Statistics,Data Scientist
+Python;Machine Learning;Statistics;Pandas,Data Scientist
+Statistics;C++;Algorithms;Python;NLP,Software Developer
+Process Mapping;Excel;SQL;Documentation,Business Analyst
+Java;Spring;Git;HR Policies;SQL;MongoDB;Algorithms;Data Structures,Software Developer
+React;HTML;Excel;Sales;Negotiation,Sales Executive
+Spring;Git;Data Structures,Software Developer
+Statistics;Excel;DAX;SQL,Data Analyst
+C++;Algorithms;Git;Testing;Canva;Python;Recruitment;Spring,Software Developer
+SQL;Spring;Python;Testing,Software Developer
+Employee Relations;Recruitment;HR Policies;MS Office;Training,HR Specialist
+Excel;Presentation;Negotiation;Lead Generation,Sales Executive
+Statistics;NLP;SQL;TensorFlow;Machine Learning;Pandas,Data Scientist
+DAX;Power BI;Excel,Data Analyst
+HR Policies;Onboarding;Communication;Payroll;MS Office,HR Specialist
+Training;Process Mapping;Payroll;Recruitment,HR Specialist
+Communication;Onboarding;HR Policies,HR Specialist
+Python;R;DAX;Statistics,Data Analyst
+Negotiation;Testing;Sales;Communication;Lead Generation,Sales Executive
+HTML;MySQL;PHP,Web Developer
+SEO;SEM;Content Writing;Social Media;Email Marketing;Google Analytics,Digital Marketing Specialist
+Email Marketing;PPC;Canva;Statistics;Recruitment,Digital Marketing Specialist
+Documentation;Process Mapping;Lead Generation;Communication;SQL;Excel,Business Analyst
+Google Analytics;PPC;SEO,Digital Marketing Specialist
+Java;Data Structures;Algorithms;CRM;Python,Software Developer
+Communication;Employee Relations;MS Office;Recruitment;Training,HR Specialist
+Excel;Presentation;CRM;Negotiation;Sales;Communication,Sales Executive
+Onboarding;Recruitment;HR Policies;Training;Communication;Payroll,HR Specialist
+Onboarding;Training;Payroll;Deep Learning;HR Policies;C++,HR Specialist
+MS Office;Training;Power BI;MySQL;Recruitment,HR Specialist
+CRM;Sales;Communication;Excel;Presentation,Sales Executive
+Documentation;Communication;Requirements Gathering;Process Mapping,Business Analyst
+MySQL;Git;React,Web Developer
+Data Visualization;DAX;R;SQL;Tableau;Power BI,Data Analyst
+Email Marketing;Excel;SEO;Statistics;SEM;Canva;Google Analytics,Digital Marketing Specialist
+C++;MongoDB;Onboarding;MySQL;React,Web Developer
+Content Writing;SEO;Email Marketing;SEM;Social Media,Digital Marketing Specialist
+Content Writing;Training;HR Policies;Recruitment;SEO;Onboarding;MS Office,HR Specialist
+Recruitment;Employee Relations;Customer Service;MS Office;Communication;DAX,HR Specialist
+TensorFlow;C++;SEM;Python;Testing,Software Developer
+TensorFlow;Statistics;NumPy;Employee Relations;NLP,Data Scientist
+SQL;Data Visualization;Tableau;DAX;Statistics;Sales,Data Analyst
+SEO;PPC;Canva;Google Analytics;Content Writing,Digital Marketing Specialist
+Presentation;Customer Service;Communication;Power BI;Git;Lead Generation,Sales Executive
+Excel;MongoDB;CSS;HTML;MySQL;Node.js;JavaScript,Web Developer
+SQL;Data Structures;Git;C++;Java,Software Developer
+Lead Generation;Sales;Negotiation;Python;Git,Sales Executive
+Excel;Power BI;Requirements Gathering,Business Analyst
+Process Mapping;Communication;Requirements Gathering;Documentation;Python,Business Analyst
+Documentation;Requirements Gathering;SQL;Power BI;Python;Excel;Process Mapping;SQL,Business Analyst
+Git;HTML;Node.js;PHP;MySQL;MongoDB,Web Developer
+Python;Communication;Requirements Gathering;Documentation;Power BI;Process Mapping,Business Analyst
+CSS;HTML;Node.js,Web Developer
+React;Content Writing;SEO;SEM;Email Marketing;PPC;NLP;Canva,Digital Marketing Specialist
+R;Power BI;Python,Data Analyst
+SEM;Canva;Content Writing;Payroll;PPC;SEO;Social Media,Digital Marketing Specialist
+TensorFlow;Deep Learning;NumPy;Machine Learning;Statistics,Data Scientist
+CSS;MongoDB;PHP;Git;Social Media;MySQL;Customer Service,Web Developer
+Power BI;NumPy;Data Visualization;Excel,Data Analyst
+NumPy;SQL;Deep Learning,Data Scientist
+SEO;Content Writing;Email Marketing,Digital Marketing Specialist
+Requirements Gathering;Communication;Power BI;Python;SQL;Excel,Business Analyst
+Content Writing;React;Social Media;Email Marketing;Excel;SEO;PPC,Digital Marketing Specialist
+MySQL;Node.js;CSS,Web Developer
+Recruitment;Onboarding;Communication,HR Specialist
+Excel;Tableau;Power BI;R;Statistics,Data Analyst
+Employee Relations;Communication;HR Policies;Payroll,HR Specialist
+Java;Git;Testing;Data Structures;Python;SQL,Software Developer
+Communication;Presentation;Customer Service;Sales;Negotiation,Sales Executive
+Documentation;HR Policies;Python;Requirements Gathering;Communication;HTML;Excel,Business Analyst
+SEO;HTML;Content Writing;Google Analytics;PPC;Spring;Canva,Digital Marketing Specialist
+JavaScript;PHP;React;Algorithms;Git,Web Developer
+CRM;Customer Service;Negotiation,Sales Executive
+PHP;MySQL;MongoDB;Power BI;Power BI,Web Developer
+Social Media;SEM;Google Analytics;SEO;PPC,Digital Marketing Specialist
+Content Writing;Lead Generation;Customer Service;Excel;Negotiation;Communication,Sales Executive
+Documentation;Communication;Power BI;Process Mapping;Excel,Business Analyst
+Python;Java;Data Visualization;C++;Python;Data Structures;Spring,Software Developer
+SQL;TensorFlow;Statistics;Python;NumPy;Machine Learning,Data Scientist
+Sales;Data Visualization;R;NumPy;SQL,Data Analyst
+Requirements Gathering;NumPy;Pandas;TensorFlow;Statistics;Machine Learning;SQL,Data Scientist
+SEM;NLP;Content Writing;SEO;Testing;PPC;Google Analytics;Social Media,Digital Marketing Specialist
+Content Writing;SEO;Canva;SEM;PPC,Digital Marketing Specialist
+Tableau;R;Statistics,Data Analyst
+Machine Learning;SQL;NumPy;Statistics;Python;Sales,Data Scientist
+Git;HTML;CSS;React;Node.js;MongoDB,Web Developer
+JavaScript;MongoDB;CSS,Web Developer
+R;React;Data Visualization;Onboarding;Tableau,Data Analyst
+JavaScript;CSS;HTML,Web Developer
+Content Writing;SEO;Email Marketing;Social Media;Canva;SEM;Python;Communication,Digital Marketing Specialist
+React;MySQL;PHP;Git;JavaScript;Node.js,Web Developer
+Git;Python;Data Structures;Java;SQL;Testing,Software Developer
+PHP;Spring;Node.js;React;MongoDB;Git;MySQL,Web Developer
+Git;Python;MySQL;CSS,Web Developer
+MongoDB;Node.js;Statistics;MySQL,Web Developer
+Java;HTML;Node.js;CSS;Machine Learning;PHP,Web Developer
+Canva;Content Writing;SEO;PPC;Social Media;Email Marketing,Digital Marketing Specialist
+Git;MongoDB;MySQL;React;JavaScript,Web Developer
+SEO;PPC;Content Writing,Digital Marketing Specialist
+SEO;Social Media;Email Marketing;Tableau,Digital Marketing Specialist
+Recruitment;Training;Employee Relations;MS Office,HR Specialist
+Employee Relations;HR Policies;Onboarding;Communication;Python;Training;SQL,HR Specialist
+CRM;Lead Generation;HTML;Presentation;Customer Service;Excel;Tableau,Sales Executive
+Presentation;Communication;Sales;Negotiation;Customer Service;Requirements Gathering,Sales Executive
+Onboarding;MS Office;Employee Relations;HR Policies;Training;Payroll,HR Specialist
+Git;Spring;Algorithms;SQL,Software Developer
+Excel;Python;Power BI;DAX;Requirements Gathering,Business Analyst
+DAX;Statistics;Power BI;Tableau;R,Data Analyst
+DAX;Tableau;Python;Data Visualization,Data Analyst
+Employee Relations;Algorithms;Spring;SEM;Testing;SQL;C++,Software Developer
+R;PPC;Excel;Power BI,Data Analyst
+DAX;Power BI;Tableau;Data Visualization,Data Analyst
+Pandas;NLP;Python,Data Scientist
+Content Writing;Email Marketing;SEO;Social Media;SEM,Digital Marketing Specialist
+Customer Service;Communication;Excel;Negotiation;Presentation;CRM,Sales Executive
+Spring;Git;Testing;SQL;Python,Software Developer
+Statistics;Python;Excel,Data Analyst
+Python;Process Mapping;SQL;Onboarding;Requirements Gathering;Python,Business Analyst
+Tableau;Payroll;HTML;Python;DAX;Power BI,Data Analyst
+SQL;C++;Testing;Data Structures;Spring;Java,Software Developer
+Customer Service;Communication;Negotiation;Excel;CRM,Sales Executive
+Process Mapping;Power BI;Requirements Gathering;Communication;Python;Documentation,Business Analyst
+Excel;R;DAX,Data Analyst
+Git;JavaScript;HTML;MongoDB,Web Developer
+SQL;Requirements Gathering;Process Mapping;Power BI;Communication;Excel,Business Analyst
+Machine Learning;Pandas;NLP;NumPy;SQL;Statistics,Data Scientist
+Python;SQL;Process Mapping;Testing,Business Analyst
+Documentation;SQL;Power BI;SQL;Process Mapping;Communication;Python,Business Analyst
+Communication;Presentation;Customer Service;Excel;Sales,Sales Executive
+Process Mapping;C++;Python;Java;Algorithms,Software Developer
+Statistics;SQL;Excel;Deep Learning;Pandas;NLP;Spring;NumPy,Data Scientist
+SQL;Requirements Gathering;Documentation,Business Analyst
+Tableau;Python;Data Visualization;Excel;Power BI,Data Analyst
+C++;Algorithms;Spring;Java;Pandas;Testing;SQL,Software Developer
+Communication;Onboarding;Training,HR Specialist
+Algorithms;Testing;Data Structures;Power BI;Onboarding;Git;SQL,Software Developer
+SEO;Social Media;SEM;Content Writing,Digital Marketing Specialist
+Deep Learning;Python;Machine Learning;SQL;Email Marketing,Data Scientist
+Communication;HR Policies;Recruitment;Employee Relations;MS Office;Onboarding,HR Specialist
+Deep Learning;Data Structures;TensorFlow;NLP,Data Scientist
+Email Marketing;Social Media;SEM;Google Analytics;Canva;SEO,Digital Marketing Specialist
+Documentation;C++;Power BI;Communication;Process Mapping;Git;SQL;Python,Business Analyst
+Process Mapping;Documentation;PPC;SQL;Requirements Gathering;Excel;Communication,Business Analyst
+NLP;NumPy;Statistics;Deep Learning,Data Scientist
+Communication;Excel;CRM,Sales Executive
+Process Mapping;Excel;Python;Requirements Gathering;SQL;Power BI,Business Analyst
+NLP;Statistics;Python;TensorFlow;NumPy,Data Scientist
+SEO;Google Analytics;Email Marketing,Digital Marketing Specialist
+Process Mapping;SQL;Python;Excel;Power BI,Business Analyst
+Social Media;Canva;PPC;Content Writing,Digital Marketing Specialist
+Recruitment;Payroll;HR Policies;Training;Employee Relations;SEO,HR Specialist
+Node.js;SEO;Canva;Content Writing,Digital Marketing Specialist
+TensorFlow;Communication;SQL;Python;Power BI;Documentation,Business Analyst
+Power BI;Python;Statistics;Data Visualization,Data Analyst
+DAX;Recruitment;Excel;Machine Learning;SQL,Data Analyst
+Customer Service;CRM;Excel;Payroll;Negotiation;Presentation;Communication,Sales Executive
+Statistics;NLP;SQL;TensorFlow;Machine Learning,Data Scientist
+Excel;Communication;Python,Business Analyst
+Excel;JavaScript;Negotiation;CRM;Presentation;Payroll;Lead Generation;Sales,Sales Executive
+Lead Generation;CRM;Negotiation;Presentation;Excel,Sales Executive
+Testing;C++;Python;Spring;SQL,Software Developer
+Git;NLP;Machine Learning;Spring;Testing,Software Developer
+Python;NumPy;Machine Learning,Data Scientist
+Node.js;MongoDB;React,Web Developer
+MS Office;Onboarding;HR Policies;TensorFlow;Payroll,HR Specialist
+SQL;Python;Machine Learning;Deep Learning,Data Scientist
+Python;Excel;Python;DAX;Data Visualization;R,Data Analyst
+Statistics;Social Media;PPC;PHP;Content Writing,Digital Marketing Specialist
+Process Mapping;SQL;Excel;Requirements Gathering;Python;Communication,Business Analyst
+Customer Service;Sales;Negotiation;Presentation;Lead Generation,Sales Executive
+Git;React;Node.js;JavaScript,Web Developer
+Employee Relations;Onboarding;Recruitment;HR Policies;Payroll;SQL;CRM,HR Specialist
+Presentation;Canva;Lead Generation;Customer Service,Sales Executive
+MySQL;JavaScript;HTML;PHP,Web Developer
+Testing;C++;Algorithms;Communication;TensorFlow;Python;SQL,Software Developer
+Communication;Presentation;Excel;CRM;Sales,Sales Executive
+Statistics;Deep Learning;NumPy;NLP;MongoDB;SQL;Python;CSS,Data Scientist
+SEO;Machine Learning;Power BI;SEM;PPC;Canva;Google Analytics,Digital Marketing Specialist
+TensorFlow;Pandas;Statistics;NumPy;NLP;Machine Learning,Data Scientist
+Communication;HR Policies;MS Office;Employee Relations;Training;Recruitment,HR Specialist
+Data Visualization;Statistics;R;Power BI;Lead Generation;DAX;Email Marketing;SQL,Data Analyst
+Presentation;Excel;Customer Service,Sales Executive
+MS Office;Communication;Process Mapping;Spring;Power BI;Documentation;Excel;Requirements Gathering,Business Analyst
+Excel;Communication;Customer Service;Negotiation,Sales Executive
+DAX;Communication;Tableau;Statistics,Data Analyst
+Communication;Machine Learning;SQL;NumPy;Deep Learning,Data Scientist
+Data Visualization;Statistics;SQL,Data Analyst
+Pandas;R;Python;Machine Learning;Deep Learning;Statistics;Node.js;NLP,Data Scientist
+MS Office;Onboarding;Training;HR Policies;Employee Relations;Payroll,HR Specialist
+Customer Service;CRM;Sales,Sales Executive
+Excel;SQL;SQL;Spring;Testing,Software Developer
+Presentation;Algorithms;C++;Java;Data Structures;Testing,Software Developer
+Python;Pandas;Statistics;NumPy;NLP;Deep Learning,Data Scientist
+Email Marketing;SEM;Canva;Content Writing;Google Analytics,Digital Marketing Specialist
+Excel;Sales;Communication;Customer Service,Sales Executive
+Testing;Node.js;Java;Spring;Python,Software Developer
+Statistics;SQL;TensorFlow;NumPy;Python,Data Scientist
+SQL;NumPy;Python;DAX;Statistics;Power BI;Excel;R,Data Analyst
+React;PHP;Node.js;Documentation;Git,Web Developer
+Data Visualization;Python;SQL;Power BI,Data Analyst
+Google Analytics;Canva;Social Media;Email Marketing;SEM,Digital Marketing Specialist
+Power BI;Recruitment;Excel;Python,Business Analyst
+Algorithms;Data Structures;Spring;Git;SQL,Software Developer
+Requirements Gathering;Python;Excel;SQL,Business Analyst
+Communication;Presentation;Communication;Sales;Customer Service;CRM;Lead Generation,Sales Executive
+Tableau;Power BI;DAX;SQL;R;Data Visualization,Data Analyst
+PHP;MySQL;CSS;React;Git,Web Developer
+MS Office;Employee Relations;Training;Payroll;Tableau,HR Specialist
+Recruitment;Payroll;Training;Excel;Communication,HR Specialist
+MongoDB;JavaScript;Node.js;Git;MySQL;HTML,Web Developer
+Java;Pandas;SQL;Git,Software Developer
+Canva;Email Marketing;Presentation;Sales;Social Media,Digital Marketing Specialist
+Statistics;Pandas;NLP;Machine Learning,Data Scientist
+Python;Deep Learning;Machine Learning;TensorFlow;NLP;Statistics;HTML,Data Scientist
+Employee Relations;Payroll;Onboarding;Data Visualization;SQL,HR Specialist
+JavaScript;PHP;MySQL;CSS;HTML,Web Developer
+NLP;Machine Learning;NumPy;Pandas;Python;Statistics,Data Scientist
+Data Visualization;Excel;Statistics;Spring;DAX;SQL;Tableau,Data Analyst
+Email Marketing;SEO;PPC;Canva,Digital Marketing Specialist
+Power BI;Data Visualization;Python;Excel;Tableau,Data Analyst
+Communication;Communication;Negotiation;Sales;CRM;Excel;Presentation,Sales Executive
+Communication;Excel;Presentation;Negotiation;Customer Service,Sales Executive
+JavaScript;MySQL;HTML;PHP;MongoDB;React,Web Developer
+Communication;Onboarding;Training;Recruitment,HR Specialist
+CSS;Node.js;SQL;MongoDB,Web Developer
+Python;PHP;Git;React;CRM;HTML,Web Developer
+Content Writing;Google Analytics;SEM,Digital Marketing Specialist
+Canva;Google Analytics;Social Media;Content Writing;Email Marketing,Digital Marketing Specialist
+Customer Service;Canva;Social Media;SEM;Spring;Email Marketing,Digital Marketing Specialist
+Communication;SQL;Power BI,Business Analyst
+SQL;Documentation;Communication;Python,Business Analyst
+NumPy;Communication;Onboarding;Recruitment;Payroll;HR Policies,HR Specialist
+R;Tableau;Python;DAX;Excel;SQL,Data Analyst
+Employee Relations;Data Visualization;Process Mapping;SQL;Statistics,Data Analyst
+Python;Statistics;SQL;Deep Learning,Data Scientist
+Pandas;Statistics;Payroll;Python;Deep Learning,Data Scientist
+Negotiation;Algorithms;C++;Git;Data Structures;NumPy,Software Developer
+Email Marketing;SEO;SEM;Canva;Google Analytics;Content Writing,Digital Marketing Specialist
+Payroll;Deep Learning;TensorFlow;Python;R,Data Scientist
+Node.js;CSS;MongoDB,Web Developer
+Statistics;SQL;Power BI;Data Visualization;Excel,Data Analyst
+Sales;Onboarding;Process Mapping;Excel;Python;Requirements Gathering;Communication;Documentation,Business Analyst
+Requirements Gathering;Process Mapping;SQL;Documentation,Business Analyst
+HR Policies;Training;Employee Relations;Payroll;Algorithms;Communication;Recruitment,HR Specialist
+Communication;Power BI;Requirements Gathering;Process Mapping;SQL;Documentation,Business Analyst
+Python;Testing;PHP;Spring;Java,Software Developer
+Email Marketing;Social Media;Google Analytics;PPC;Content Writing;Canva,Digital Marketing Specialist
+PHP;MongoDB;CSS;MySQL;React;Node.js,Web Developer
+Social Media;PPC;SEM;Content Writing;Canva,Digital Marketing Specialist
+MySQL;PHP;Git;Node.js;JavaScript,Web Developer
+C++;Python;Algorithms;Statistics;Java,Software Developer
+Python;NLP;SQL;Statistics;TensorFlow,Data Scientist
+Recruitment;MS Office;HR Policies,HR Specialist
+Pandas;NLP;Node.js;TensorFlow;NumPy;Deep Learning,Data Scientist
+HR Policies;Training;Onboarding,HR Specialist
+Negotiation;Presentation;Documentation;PPC;CRM;Sales;Excel,Sales Executive
+React;JavaScript;MongoDB;PHP;MySQL;Git;Presentation,Web Developer
+Tableau;R;DAX,Data Analyst
+Email Marketing;SEM;Google Analytics;Canva,Digital Marketing Specialist
+Process Mapping;SQL;Excel;Communication;Requirements Gathering;Python,Business Analyst
+Pandas;Power BI;Tableau;Sales;Data Visualization,Data Analyst
+SEM;SEO;Google Analytics;CRM;PPC;Recruitment;Content Writing;Canva,Digital Marketing Specialist
+Deep Learning;NLP;NumPy;Pandas;Machine Learning;Statistics,Data Scientist
+Content Writing;Email Marketing;Social Media;Google Analytics,Digital Marketing Specialist
+Communication;Negotiation;Excel;Lead Generation;CRM;Customer Service,Sales Executive
+Payroll;Onboarding;Recruitment;DAX;HR Policies;MS Office,HR Specialist
+Content Writing;React;Python;Social Media;SEM;Canva,Digital Marketing Specialist
+Canva;Content Writing;SEM;PPC;Email Marketing;Social Media,Digital Marketing Specialist
+Social Media;Content Writing;SEO;Canva;PPC,Digital Marketing Specialist
+C++;NLP;Deep Learning;Pandas,Data Scientist
+Git;MongoDB;React;MySQL;PHP,Web Developer
+Content Writing;Google Analytics;SEM;Canva;Email Marketing;Social Media,Digital Marketing Specialist
+CSS;MySQL;Node.js;PHP,Web Developer
+Git;Python;Excel;Excel;Power BI;Documentation,Business Analyst
+Communication;Canva;Social Media;Email Marketing;SEM;PPC,Digital Marketing Specialist
+Documentation;Testing;Python;SQL,Software Developer
+Excel;Spring;Documentation;Payroll;SQL;Requirements Gathering,Business Analyst
+Customer Service;Communication;Lead Generation;Excel,Sales Executive
+Social Media;PHP;SEM;Canva;C++;Email Marketing;PPC;Google Analytics,Digital Marketing Specialist
+Payroll;MS Office;HR Policies;Training,HR Specialist
+Statistics;Python;C++;Testing;SQL,Software Developer
+JavaScript;Node.js;MySQL,Web Developer
+Power BI;Communication;Process Mapping;Documentation,Business Analyst
+Customer Service;Excel;Lead Generation;Communication;Negotiation,Sales Executive
+TensorFlow;Python;Deep Learning;NumPy;Employee Relations;NLP;Pandas;CRM,Data Scientist
+SEM;Email Marketing;DAX;Google Analytics;Canva;PPC,Digital Marketing Specialist
+SQL;C++;Data Structures;Spring,Software Developer
+Algorithms;Java;Python;Spring;Communication;Testing;Data Structures,Software Developer
+Deep Learning;Machine Learning;Python,Data Scientist
+JavaScript;CSS;MongoDB,Web Developer
+SEO;Documentation;Canva;Python;Social Media;Email Marketing,Digital Marketing Specialist
+Social Media;Canva;PPC;Content Writing;Google Analytics;SEM,Digital Marketing Specialist
+Statistics;DAX;Data Visualization;Excel;R,Data Analyst
+Recruitment;MS Office;Training,HR Specialist
+Testing;Algorithms;Data Structures;SQL;Data Visualization;Java,Software Developer
+Power BI;Excel;Communication,Business Analyst
+Communication;Onboarding;Recruitment;HR Policies,HR Specialist
+Email Marketing;Communication;CRM;SQL;Lead Generation,Sales Executive
+Python;Machine Learning;TensorFlow,Data Scientist
+Power BI;DAX;Statistics;Python,Data Analyst
+Pandas;NumPy;SQL,Data Scientist
+SQL;Documentation;Communication;Process Mapping,Business Analyst
+Tableau;Pandas;NumPy;Python;SQL;TensorFlow,Data Scientist
+Lead Generation;Excel;Presentation;Sales;Customer Service;Negotiation,Sales Executive
+DAX;R;Python;Spring;Data Visualization;Power BI,Data Analyst
+Python;SQL;NumPy;Deep Learning,Data Scientist
+SQL;Python;R;Statistics;Data Visualization,Data Analyst
+Employee Relations;Onboarding;Recruitment;Communication;HR Policies;MS Office,HR Specialist
+R;Excel;Tableau;Statistics,Data Analyst
+Python;R;SQL;Tableau;DAX;Communication,Data Analyst
+MS Office;Customer Service;Presentation;Excel;CRM;Lead Generation;Negotiation;Power BI,Sales Executive
+SEO;Content Writing;Social Media;SEM,Digital Marketing Specialist
+Deep Learning;Statistics;NumPy;Machine Learning;SQL,Data Scientist
+Customer Service;Node.js;React;NumPy;HTML,Web Developer
+Documentation;Requirements Gathering;Python;SQL;Communication,Business Analyst
+CRM;MySQL;Python;CSS;JavaScript,Web Developer
+CRM;Excel;Negotiation;Communication;Sales,Sales Executive
+Testing;Lead Generation;Java;Python;Git;Spring,Software Developer
+Requirements Gathering;Communication;Process Mapping;Python,Business Analyst
+Communication;SQL;Process Mapping;Excel,Business Analyst
+Requirements Gathering;Excel;Communication;SQL;Power BI,Business Analyst
+Spring;Communication;Java;Python;Testing;HR Policies;C++,Software Developer
+Lead Generation;Customer Service;Communication;Negotiation;Sales;Excel;Payroll,Sales Executive
+Python;DAX;Tableau;Excel,Data Analyst
+Onboarding;HR Policies;Recruitment;Communication;Payroll,HR Specialist
+Testing;SQL;Git;Spring;Algorithms;Java,Software Developer
+SEO;Testing;SQL;Data Structures;C++,Software Developer
+HTML;CSS;JavaScript;Node.js;React,Web Developer
+Git;React;JavaScript;MongoDB,Web Developer
+SQL;Documentation;Python;Communication;PPC;HTML;Excel,Business Analyst
+Data Structures;Statistics;Algorithms;Testing;Spring,Software Developer
+Data Visualization;Power BI;Excel;Python,Data Analyst
+Requirements Gathering;Documentation;Python;Communication;Power BI;Excel,Business Analyst
+C++;Node.js;Algorithms;SQL,Software Developer
+Communication;Sales;Customer Service;Lead Generation;Negotiation;Presentation;MySQL;HTML,Sales Executive
+Canva;Content Writing;Google Analytics;SEO;SEM,Digital Marketing Specialist
+HR Policies;Training;HTML;Payroll;Onboarding;MS Office;Employee Relations;Git,HR Specialist
+Data Visualization;SQL;Python;Statistics;Tableau,Data Analyst
+CRM;Communication;Negotiation;Sales,Sales Executive
+React;Git;MongoDB;MySQL,Web Developer
+MongoDB;C++;Testing;Python;Algorithms;Excel;Data Structures;Spring,Software Developer
+Statistics;SQL;Deep Learning;TensorFlow;Machine Learning,Data Scientist
+CRM;JavaScript;HTML;MongoDB;Git;React,Web Developer
+Process Mapping;Excel;JavaScript;Google Analytics;Documentation,Business Analyst
+PPC;Social Media;Google Analytics;SEM;SEO,Digital Marketing Specialist
+Lead Generation;Communication;Customer Service;CRM,Sales Executive
+Process Mapping;Negotiation;Power BI;SQL;Deep Learning,Business Analyst
+Google Analytics;Testing;Data Structures;Java;Git,Software Developer
+Statistics;SQL;DAX;Excel;Python,Data Analyst
+Lead Generation;Customer Service;Communication;Presentation;Negotiation;Sales;CRM,Sales Executive
+Git;Python;SQL;Spring;Algorithms;C++,Software Developer
+MongoDB;Lead Generation;Process Mapping;MySQL;React;HTML,Web Developer
+NumPy;Statistics;SQL,Data Scientist
+Data Structures;Python;Sales;Negotiation;Java;SQL,Software Developer
+Node.js;MySQL;PHP;JavaScript;Statistics;MongoDB;Git;Excel,Web Developer
+MS Office;Payroll;Statistics;Employee Relations,HR Specialist
+Git;CSS;PHP;HTML;JavaScript;Node.js,Web Developer
+NLP;Pandas;Statistics;Python,Data Scientist
+Excel;DAX;Python;SQL;SQL;Data Visualization,Data Analyst
+SQL;Tableau;DAX;Data Visualization;Excel;Power BI,Data Analyst
+Negotiation;Customer Service;Communication;CRM;Canva;Sales;Lead Generation,Sales Executive
+C++;Data Structures;Employee Relations;Java;Spring,Software Developer
+Power BI;Communication;Negotiation;Documentation;Excel;Requirements Gathering,Business Analyst

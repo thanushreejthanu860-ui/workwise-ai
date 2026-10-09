@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="pill pill-sdg">UN SDG 8 · Decent Work &amp; Economic Growth</span>
+    <h1>Find your <span class="grad-text">dream job</span> now</h1>
+    <p class="hero-sub">AI-matched jobs and internships for Indian freshers,
+      with fair wage insights, career roadmaps and interview prep — all in one place.</p>
+
+    <!-- Search interface -->
+    <form class="search-bar" id="hero-search" role="search" action="{{ url_for('jobs') }}" method="get">
+      <div class="search-field">
+        <label class="sr-only" for="q">Skills, designation or company</label>
+        <input type="text" id="q" name="q" placeholder="Skills, designation or company (e.g. Python, Data Analyst)">
+      </div>
+      <div class="search-field">
+        <label class="sr-only" for="experience">Experience</label>
+        <select id="experience" name="experience">
+          <option value="">Experience</option>
+          <option value="fresher">Fresher / 0 yrs</option>
+          <option value="1-2">1-2 years</option>
+          <option value="3-5">3-5 years</option>
+          <option value="5plus">5+ years</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label class="sr-only" for="location">Location</label>
+        <input type="text" id="location" name="location" placeholder="Location (city)">
+      </div>
+      <button type="submit" class="btn btn-light">Search Jobs</button>
+    </form>
+
+    <!-- Category chips (each maps to a real filter parameter) -->
+    <div class="chips" role="list" aria-label="Job categories">
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?work_mode=Remote">Remote</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?q=MNC">MNC</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?category=Analytics">Analytics</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?category=Marketing">Marketing</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?category=Software">Software</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?experience=fresher">Fresher</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?q=Startup">Startup</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?q=Engineering">Engineering</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?category=HR">HR</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?category=Sales">Sales</a>
+      <a class="chip" role="listitem" href="{{ url_for('jobs') }}?type=internship">Internship</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="{{ url_for('static', filename='images/hero-career.jpg') }}"
+         class="hero-img" alt="Illustration of career opportunities, AI job matching and salary insights">
+  </div>
+</section>
+
+<!-- ============ FEATURED JOBS ============ -->
+<section class="section">
+  <div class="section-head">
+    <h2>Featured <span class="grad-text">Jobs</span></h2>
+    <a href="{{ url_for('jobs') }}" class="btn btn-outline">View all jobs →</a>
+  </div>
+  <div class="job-grid" id="featured-grid">
+    {% for job in featured %}
+      <article class="job-card">
+        <div class="job-card-top">
+          <img src="{{ url_for('static', filename='images/' + company_image(job.company)) }}"
+               class="company-logo-img" alt="{{ job.company }} logo" width="44" height="44">
+          <div>
+            <h3><a href="{{ url_for('job_details', job_id=job.id) }}">{{ job.title }}</a></h3>
+            <p class="company">{{ job.company }}</p>
+          </div>
+          {% if fit_map[job.id] is not none %}
+            <span class="fit-badge" title="AI match based on your skills">AI {{ fit_map[job.id] }}%</span>
+          {% endif %}
+        </div>
+        <p class="job-meta">
+          <span>📍 {{ job.location }}</span>
+          <span>💼 {{ job.job_type }}</span>
+          <span>🕒 {{ job.experience_text() }}</span>
+        </p>
+        <p class="job-salary">{{ job.salary_text() }}</p>
+        <div class="skill-tags">
+          {% for s in job.skill_list()[:4] %}<span class="skill-tag">{{ s }}</span>{% endfor %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+  <p class="sample-note">All listings are <strong>SAMPLE DATA</strong> (fictional) for demonstration.</p>
+</section>
+
+<!-- ============ TOP COMPANIES ============ -->
+<section class="section">
+  <div class="section-head"><h2>Top <span class="grad-text">Fictional Companies</span></h2></div>
+  <div class="company-strip">
+    {% for c in companies %}
+      <div class="company-chip">
+        <img src="{{ url_for('static', filename='images/' + company_image(c)) }}"
+             class="company-logo-img" alt="{{ c }} logo" width="30" height="30">
+        {{ c }}
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="section-head"><h2>How WorkWise AI <span class="grad-text">works</span></h2></div>
+  <div class="steps-grid">
+    <article class="step-card">
+      <img src="{{ url_for('static', filename='images/step-1.png') }}"
+           class="step-img" alt="Build your profile illustration" width="90" height="90">
+      <div class="step-num">1</div>
+      <h3>Build your profile</h3>
+      <p>Add your skills with proficiency levels, education, projects and certificates.</p>
+    </article>
+    <article class="step-card">
+      <img src="{{ url_for('static', filename='images/step-2.png') }}"
+           class="step-img" alt="AI matching illustration" width="90" height="90">
+      <div class="step-num">2</div>
+      <h3>Get AI-matched jobs</h3>
+      <p>We compare your skill vector with job requirements using <strong>cosine similarity</strong> — real math, not hard-coded scores.</p>
+    </article>
+    <article class="step-card">
+      <img src="{{ url_for('static', filename='images/step-3.png') }}"
+           class="step-img" alt="Close your skill gap illustration" width="90" height="90">
+      <div class="step-num">3</div>
+      <h3>Close the skill gap</h3>
+      <p>See exactly which skills you're missing (e.g. SQL, Power BI) and follow a 5-stage roadmap.</p>
+    </article>
+    <article class="step-card">
+      <img src="{{ url_for('static', filename='images/step-4.png') }}"
+           class="step-img" alt="Apply and track illustration" width="90" height="90">
+      <div class="step-num">4</div>
+      <h3>Apply &amp; track</h3>
+      <p>Apply in one click, track your application timeline and practise interview answers with the AI chatbot.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ AI MATCHING EXPLANATION ============ -->
+<section class="section section-alt">
+  <div class="ai-explain">
+    <div>
+      <h2>AI matching you can <span class="grad-text">understand</span></h2>
+      <p>WorkWise AI converts your skills and each job's required skills into
+      multi-hot vectors, then computes <strong>cosine similarity</strong>:</p>
+      <div class="formula">AI Fit % = cos(user_skills, job_skills) × 100</div>
+      <p>The <strong>Skill Gap</strong> lists job skills you don't yet have, so you
+      know exactly what to learn. A machine-learning role classifier
+      (RandomForest vs DecisionTree vs LogisticRegression, compared with
+      cross-validation) predicts your best-fit roles from your skills.</p>
+      <a href="{{ url_for('register') }}" class="btn btn-primary">Try AI matching — it's free</a>
+    </div>
+    <div class="ai-visual" aria-hidden="true">
+      <svg viewBox="0 0 360 220" class="ai-svg">
+        <circle cx="110" cy="110" r="70" fill="rgba(124,58,237,.18)" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 6"/>
+        <circle cx="190" cy="110" r="70" fill="rgba(6,182,212,.18)" stroke="#06b6d4" stroke-width="2" stroke-dasharray="6 6"/>
+        <path d="M110 110 L190 110" stroke="#f59e0b" stroke-width="3"/>
+        <text x="110" y="205" font-size="13" fill="currentColor" text-anchor="middle" font-family="sans-serif">Your skills</text>
+        <text x="190" y="205" font-size="13" fill="currentColor" text-anchor="middle" font-family="sans-serif">Job skills</text>
+        <text x="150" y="95" font-size="15" fill="currentColor" text-anchor="middle" font-family="sans-serif" font-weight="bold">cos θ = 0.86</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAIR WAGE / ROADMAP / INTERVIEW CARDS ============ -->
+<section class="section">
+  <div class="section-head"><h2>Tools for every <span class="grad-text">career stage</span></h2></div>
+  <div class="tool-grid">
+    <article class="tool-card">
+      <img src="{{ url_for('static', filename='images/tool-wage.png') }}"
+           class="tool-img" alt="Fair Wage Check illustration" width="120" height="82">
+      <h3>Fair Wage Check</h3>
+      <p>Indicative daily wages for masons, painters, electricians, domestic workers, drivers and delivery partners — estimated by a trained regression model.</p>
+      <a class="btn btn-outline" href="{{ url_for('fair_wage') }}">Check a wage</a>
+    </article>
+    <article class="tool-card">
+      <img src="{{ url_for('static', filename='images/tool-roadmap.png') }}"
+           class="tool-img" alt="Career Roadmaps illustration" width="120" height="82">
+      <h3>Career Roadmaps</h3>
+      <p>Visual 5-stage learning paths with durations and skills, rendered as SVG and downloadable as PNG.</p>
+      <a class="btn btn-outline" href="{{ url_for('roadmaps') }}">Generate a roadmap</a>
+    </article>
+    <article class="tool-card">
+      <img src="{{ url_for('static', filename='images/tool-interview.png') }}"
+           class="tool-img" alt="Interview Preparation illustration" width="120" height="82">
+      <h3>Interview Prep</h3>
+      <p>Rounds, sample questions with "why they ask" and sample answers for 8 roles, plus an AI practice box.</p>
+      <a class="btn btn-outline" href="{{ url_for('interview_prep') }}">Start practising</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SDG 8 SECTION ============ -->
+<section class="section section-sdg">
+  <div class="sdg-card">
+    <img src="{{ url_for('static', filename='images/sdg8.png') }}"
+         class="sdg-img" alt="UN Sustainable Development Goal 8 illustration" width="150" height="100">
+    <div>
+      <h2>Supporting <span class="grad-text">Decent Work and Economic Growth</span></h2>
+      <p>WorkWise AI helps freshers discover opportunities transparently, helps informal
+      workers understand typical daily wages, and gives everyone free access to career
+      roadmaps, resume building and interview preparation — promoting inclusive,
+      sustainable economic growth and productive employment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <h2>Ready to find your next opportunity?</h2>
+  <p>Join free in under a minute. Save jobs, see your AI Fit score and track applications.</p>
+  <div class="cta-actions">
+    <a href="{{ url_for('register') }}" class="btn btn-light btn-lg">Create free account</a>
+    <a href="{{ url_for('jobs') }}" class="btn btn-outline-light btn-lg">Browse sample jobs</a>
+  </div>
+</section>
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}

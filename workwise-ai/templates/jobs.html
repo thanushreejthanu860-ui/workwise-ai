@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Jobs & Internships{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1 id="jobs-title">Jobs &amp; Internships</h1>
+  <p class="muted">Explore <strong>SAMPLE DATA</strong> listings with real AI Fit scoring. Log in to personalise your matches.</p>
+</div>
+
+<!-- Filters -->
+<section class="filters" aria-label="Job filters">
+  <form id="job-filters" class="filter-grid">
+    <div class="form-group">
+      <label for="f-q">Search</label>
+      <input type="text" id="f-q" name="q" placeholder="Skills / role / company">
+    </div>
+    <div class="form-group">
+      <label for="f-location">Location</label>
+      <input type="text" id="f-location" name="location" placeholder="e.g. Bengaluru">
+    </div>
+    <div class="form-group">
+      <label for="f-experience">Experience</label>
+      <select id="f-experience" name="experience">
+        <option value="">Any</option>
+        <option value="fresher">Fresher (0 yrs)</option>
+        <option value="1-2">1-2 years</option>
+        <option value="3-5">3-5 years</option>
+        <option value="5plus">5+ years</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="f-job-type">Job type</label>
+      <select id="f-job-type" name="job_type">
+        <option value="">Any</option>
+        <option>Full-time</option>
+        <option>Part-time</option>
+        <option>Contract</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="f-work-mode">Work mode</label>
+      <select id="f-work-mode" name="work_mode">
+        <option value="">Any</option>
+        <option>On-site</option>
+        <option>Remote</option>
+        <option>Hybrid</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="f-category">Category</label>
+      <select id="f-category" name="category">
+        <option value="">Any</option>
+        <option>Analytics</option>
+        <option>Software</option>
+        <option>Marketing</option>
+        <option>HR</option>
+        <option>Sales</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="f-min-salary">Min salary (₹/month)</label>
+      <input type="number" id="f-min-salary" name="min_salary" min="0" placeholder="0">
+    </div>
+    <div class="form-group">
+      <label for="f-max-salary">Max salary (₹/month)</label>
+      <input type="number" id="f-max-salary" name="max_salary" min="0" placeholder="No limit">
+    </div>
+    <div class="form-group filter-actions">
+      <button type="submit" class="btn btn-primary">Apply filters</button>
+      <button type="button" class="btn btn-ghost" id="clear-filters">Clear</button>
+    </div>
+  </form>
+
+  <div class="jobs-toolbar">
+    <div class="seg" role="tablist" aria-label="Listing type">
+      <button class="seg-btn active" id="tab-jobs" role="tab" aria-selected="true">All Jobs</button>
+      <button class="seg-btn" id="tab-internships" role="tab" aria-selected="false">Internships</button>
+    </div>
+    <div class="sort-wrap">
+      <label for="sort" class="sr-only">Sort</label>
+      <select id="sort" name="sort">
+        <option value="">Sort: Newest</option>
+        <option value="fit">Sort: AI Fit %</option>
+        <option value="salary">Sort: Salary (high)</option>
+      </select>
+    </div>
+  </div>
+</section>
+
+<div id="jobs-status" class="muted" role="status" aria-live="polite">Loading jobs…</div>
+<div class="job-grid" id="job-grid"></div>
+
+<!-- Job details modal (quick view) -->
+<div class="modal" id="job-modal" hidden>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header class="modal-head">
+      <h3 id="modal-title">Job details</h3>
+      <button class="icon-btn" id="modal-close" aria-label="Close">✕</button>
+    </header>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/jobs.js') }}"></script>
+{% endblock %}

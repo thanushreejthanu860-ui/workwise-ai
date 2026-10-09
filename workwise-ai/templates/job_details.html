@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block title %}{{ job.title }}{% endblock %}
+{% block content %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ url_for('jobs') }}">Jobs</a> <span aria-hidden="true">›</span>
+  <span>{{ job.title }}</span>
+</nav>
+
+<article class="job-detail">
+  <header class="job-detail-head">
+    <div class="job-detail-id">
+      <img src="{{ url_for('static', filename='images/' + company_image(job.company)) }}"
+           class="company-logo-img lg" alt="{{ job.company }} logo" width="60" height="60">
+      <div>
+        <h1>{{ job.title }}</h1>
+        <p class="company">{{ job.company }}
+          {% if job.is_sample %}<span class="pill pill-sample">SAMPLE DATA</span>{% endif %}
+        </p>
+        <p class="job-meta">
+          <span>📍 {{ job.location }}</span>
+          <span>💼 {{ job.job_type }}</span>
+          <span>🕒 {{ job.experience_text() }}</span>
+          <span>🏢 Team of {{ job.team_size }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="job-detail-actions">
+      {% if user %}
+        {% if fit is not none %}
+          <div class="fit-hero">
+            <span class="fit-hero-num">{{ fit }}%</span>
+            <span class="fit-hero-label">AI Fit</span>
+          </div>
+        {% endif %}
+        <a href="{{ url_for('apply_page', job_id=job.id) }}" class="btn btn-primary">Apply now</a>
+        <button class="btn btn-outline" id="save-job"
+                data-job-id="{{ job.id }}" data-saved="{{ 'true' if saved else 'false' }}">
+          {% if saved %}★ Saved{% else %}☆ Save job{% endif %}
+        </button>
+        <a href="{{ url_for('interview_prep') }}" class="btn btn-ghost">Sample interview</a>
+      {% else %}
+        <a href="{{ url_for('login') }}" class="btn btn-primary">Login to apply</a>
+        <a href="{{ url_for('login') }}" class="btn btn-outline">Save job</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="job-detail-grid">
+    <div class="job-detail-main">
+      <section class="panel">
+        <h2>About the role</h2>
+        <p>{{ job.description }}</p>
+      </section>
+
+      <section class="panel">
+        <h2>What you will do</h2>
+        <p>{{ job.responsibilities }}</p>
+        <ul class="checklist">
+          <li>Collaborate with a team of {{ job.team_size }} members</li>
+          <li>Deliver work in a {{ job.work_mode | lower }} environment</li>
+          <li>Receive mentorship and a sample completion certificate</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Required skills</h2>
+        <div class="skill-tags">
+          {% for s in job.skill_list() %}<span class="skill-tag">{{ s }}</span>{% endfor %}
+        </div>
+        {% if gap %}
+          {% if gap|length > 0 %}
+            <div class="gap-box">
+              <h3>Your skill gap</h3>
+              <p>Missing skills to improve your AI Fit:</p>
+              <div class="skill-tags">
+                {% for s in gap %}<span class="skill-tag skill-gap">{{ s }}</span>{% endfor %}
+              </div>
+              <a href="{{ url_for('profile_page') }}" class="btn btn-outline btn-sm">Add these skills to my profile</a>
+            </div>
+          {% else %}
+            <div class="gap-box gap-ok">
+              <h3>You have all the required skills — excellent match!</h3>
+            </div>
+          {% endif %}
+        {% endif %}
+      </section>
+
+      <section class="panel">
+        <h2>Perks</h2>
+        <p>{{ job.perks }}</p>
+      </section>
+
+      <section class="panel">
+        <h2>Reviews <span class="pill">sample</span></h2>
+        <div class="reviews">
+          <div class="review">
+            <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
+            <p>"Good learning environment and supportive mentors. Work felt meaningful."</p>
+            <p class="muted">— Sample reviewer (fictional)</p>
+          </div>
+          <div class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Great exposure to real projects. Flexible timings helped me balance studies."</p>
+            <p class="muted">— Sample reviewer (fictional)</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="job-detail-side">
+      <div class="panel side-panel">
+        <h2>Job facts</h2>
+        <dl class="facts">
+          <div><dt>Pay / stipend</dt><dd>{{ job.salary_text() }}</dd></div>
+          <div><dt>Experience</dt><dd>{{ job.experience_text() }}</dd></div>
+          <div><dt>Work mode</dt><dd>{{ job.work_mode }}</dd></div>
+          <div><dt>Category</dt><dd>{{ job.category }}</dd></div>
+          <div><dt>Duration</dt><dd>{{ job.duration }}</dd></div>
+          <div><dt>Team size</dt><dd>{{ job.team_size }} people</dd></div>
+          <div><dt>Applicants</dt><dd>{{ job.applications.count() }} (sample)</dd></div>
+        </dl>
+      </div>
+
+      <!-- Illustrative visual -->
+      <div class="panel side-panel">
+        <h2>Role illustration</h2>
+        <img src="{{ url_for('static', filename='images/' + role_image(job)) }}"
+             class="detail-art-img" alt="Illustration for {{ job.title }}" width="300" height="163">
+        <p class="muted">Illustrative visual (sample).</p>
+      </div>
+    </aside>
+  </div>
+</article>
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/jobs.js') }}"></script>
+<script>
+  // Save/unsave via API
+  document.getElementById('save-job').addEventListener('click', async function () {
+    const btn = this;
+    const id = btn.dataset.jobId;
+    const saved = btn.dataset.saved === 'true';
+    try {
+      const res = await fetch(`/api/jobs/${id}/save`, { method: saved ? 'DELETE' : 'POST' });
+      const data = await res.json();
+      btn.dataset.saved = String(data.saved);
+      btn.textContent = data.saved ? '★ Saved' : '☆ Save job';
+    } catch (err) {
+      alert('Could not save job. Are you logged in?');
+    }
+  });
+</script>
+{% endblock %}

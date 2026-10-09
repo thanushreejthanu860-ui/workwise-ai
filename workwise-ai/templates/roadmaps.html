@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Career Roadmaps{% endblock %}
+{% block content %}
+<div class="page-head">
+  <img src="{{ url_for('static', filename='images/tool-roadmap.png') }}"
+       class="page-head-img" alt="Career Roadmaps illustration" width="160" height="109">
+  <h1>Career Roadmaps</h1>
+  <p class="muted">Pick a role (or type your own) to generate a visual 5-stage learning roadmap.</p>
+</div>
+
+<section class="panel roadmap-panel">
+  <form id="roadmap-form" class="roadmap-form">
+    <div class="form-group">
+      <label for="role-select">Select a role</label>
+      <select id="role-select">
+        <option>Data Analyst</option>
+        <option>Data Scientist</option>
+        <option>Software Developer</option>
+        <option>Web Developer</option>
+        <option>Digital Marketing Specialist</option>
+        <option>HR Specialist</option>
+        <option>Sales Executive</option>
+        <option>Business Analyst</option>
+      </select>
+    </div>
+    <span class="roadmap-or">or</span>
+    <div class="form-group">
+      <label for="role-custom">Type a custom role</label>
+      <input type="text" id="role-custom" placeholder="e.g. UX Designer" maxlength="60">
+    </div>
+    <button type="submit" class="btn btn-primary">Generate roadmap</button>
+  </form>
+
+  <div class="roadmap-toolbar" id="roadmap-toolbar" hidden>
+    <span class="muted" id="roadmap-meta"></span>
+    <div class="roadmap-downloads">
+      <button class="btn btn-outline btn-sm" id="download-roadmap-png">Download PNG</button>
+      <button class="btn btn-outline btn-sm" id="download-roadmap-svg">Download SVG</button>
+    </div>
+  </div>
+
+  <!-- Roadmap SVG is rendered here by roadmap.js -->
+  <div class="roadmap-stage" id="roadmap-stage" role="img" aria-label="Career roadmap diagram"></div>
+
+  <div class="roadmap-legend" id="roadmap-legend" hidden>
+    <span class="legend-item"><span class="legend-dot done"></span> You have this skill</span>
+    <span class="legend-item"><span class="legend-dot todo"></span> Skill to learn</span>
+    <p class="muted">Sign in so your profile skills are ticked automatically.</p>
+  </div>
+</section>
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/roadmap.js') }}"></script>
+{% endblock %}

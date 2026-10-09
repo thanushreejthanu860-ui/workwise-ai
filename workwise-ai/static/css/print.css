@@ -1,0 +1,23 @@
+/* Print stylesheet — only the A4 resume prints (PDF via window.print()) */
+@media print {
+  body * { visibility: hidden; }
+  .resume-preview, .resume-preview * { visibility: visible; }
+  .resume-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    background: none;
+  }
+  .resume-page {
+    box-shadow: none;
+    border-radius: 0;
+    min-height: auto;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+  }
+  .navbar, .footer, .chat-bubble, .chat-window, .resume-form, .page-head { display: none !important; }
+  @page { size: A4; margin: 0; }
+}

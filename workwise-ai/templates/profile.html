@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}My Profile{% endblock %}
+{% block content %}
+<div class="page-head profile-head">
+  <img src="{{ url_for('static', filename='images/avatar-default.png') }}"
+       class="profile-avatar" alt="Your profile avatar" width="72" height="72">
+  <div>
+    <h1>{{ user.name }}</h1>
+    <p class="muted">{{ user.email }}{% if user.profile and user.profile.headline %} · {{ user.profile.headline }}{% endif %}</p>
+  </div>
+</div>
+
+<div class="profile-grid">
+  <section class="panel">
+    <h2>Profile strength</h2>
+    <div class="strength-ring">
+      <div class="strength-num"><span id="profile-strength">–</span>%</div>
+    </div>
+    <ul class="section-checklist" id="profile-sections"></ul>
+  </section>
+
+  <section class="panel">
+    <h2>Personal details</h2>
+    <div class="form-group"><label for="p-name">Name</label><input id="p-name" value="{{ user.name }}" disabled></div>
+    <div class="form-group"><label for="p-headline">Headline</label><input id="p-headline" placeholder="e.g. Aspiring Data Analyst | Python + SQL"></div>
+    <div class="form-group"><label for="p-about">About</label><textarea id="p-about" rows="3" placeholder="Tell employers about yourself"></textarea></div>
+    <div class="form-row">
+      <div class="form-group"><label for="p-phone">Phone</label><input id="p-phone" placeholder="10-digit mobile"></div>
+      <div class="form-group"><label for="p-location">Location</label><input id="p-location" placeholder="City, State"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Job preferences</h2>
+    <div class="form-row">
+      <div class="form-group"><label for="p-role">Preferred role</label><input id="p-role" placeholder="e.g. Data Analyst"></div>
+      <div class="form-group"><label for="p-jobtype">Job type</label>
+        <select id="p-jobtype"><option value="">Select</option><option>Full-time</option><option>Part-time</option><option>Contract</option><option>Internship</option></select></div>
+      <div class="form-group"><label for="p-workmode">Work mode</label>
+        <select id="p-workmode"><option value="">Select</option><option>On-site</option><option>Remote</option><option>Hybrid</option></select></div>
+    </div>
+    <div class="form-row">
+      <div class="form-group"><label for="p-prefloc">Preferred location</label><input id="p-prefloc" placeholder="e.g. Bengaluru"></div>
+      <div class="form-group"><label for="p-salary">Expected salary (₹/month)</label><input id="p-salary" placeholder="e.g. 25000-35000"></div>
+    </div>
+    <button class="btn btn-primary" id="save-profile">Save profile</button>
+    <span class="save-status" id="profile-status" role="status"></span>
+  </section>
+
+  <section class="panel">
+    <h2>Skills <span class="muted">(with proficiency)</span></h2>
+    <div class="skill-add">
+      <input id="skill-name" list="skill-datalist" placeholder="Type a skill (e.g. Python)" aria-label="Skill name">
+      <datalist id="skill-datalist"></datalist>
+      <select id="skill-prof" aria-label="Proficiency">
+        <option>Beginner</option><option selected>Intermediate</option><option>Advanced</option>
+      </select>
+      <input type="number" id="skill-years" min="0" max="40" placeholder="Yrs" aria-label="Years of experience" style="max-width:80px">
+      <button class="btn btn-outline" id="add-skill">Add</button>
+    </div>
+    <ul class="skill-list" id="my-skills"></ul>
+  </section>
+
+  <section class="panel">
+    <h2>Links, languages & hobbies</h2>
+    <div class="form-row">
+      <div class="form-group"><label for="p-linkedin">LinkedIn URL</label><input id="p-linkedin" placeholder="https://..."></div>
+      <div class="form-group"><label for="p-github">GitHub URL</label><input id="p-github" placeholder="https://..."></div>
+    </div>
+    <div class="form-group"><label for="p-languages">Languages <span class="muted">(comma separated)</span></label><input id="p-languages" placeholder="English, Hindi"></div>
+    <div class="form-group"><label for="p-hobbies">Hobbies <span class="muted">(comma separated)</span></label><input id="p-hobbies" placeholder="Cricket, Reading"></div>
+    <button class="btn btn-ghost" id="save-extra">Save extras</button>
+  </section>
+
+  <section class="panel">
+    <h2>Education, projects & certificates</h2>
+    <p class="muted">Add these from the Resume Builder — they appear here and in your resume.</p>
+    <div id="profile-extra-lists"></div>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/profile.js') }}"></script>
+{% endblock %}

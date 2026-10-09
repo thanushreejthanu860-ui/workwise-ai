@@ -1,0 +1,25 @@
+{
+  "model": "GradientBoostingRegressor",
+  "cross_validation_rmse": {
+    "RandomForestRegressor": 50.12,
+    "GradientBoostingRegressor": 45.63
+  },
+  "mae": 34.61,
+  "rmse": 48.25,
+  "r2": 0.9774,
+  "residual_std": 48.16,
+  "synthetic_data": true,
+  "trades": [
+    "Delivery Partner",
+    "Domestic Worker",
+    "Driver",
+    "Electrician",
+    "Mason",
+    "Painter"
+  ],
+  "city_types": [
+    "Metro",
+    "Rural",
+    "Tier-2"
+  ]
+}

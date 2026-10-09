@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block content %}
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h1>Create your account</h1>
+    <p class="muted">Free forever. Your password is stored as a one-way hash — never plaintext.</p>
+
+    {% if errors %}
+      <div class="alert alert-error" role="alert">
+        <ul class="error-list">
+          {% for e in errors %}<li>{{ e }}</li>{% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+
+    <form method="post" id="register-form" novalidate>
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input type="text" id="name" name="name" required value="{{ name or '' }}"
+               placeholder="e.g. Priya Sharma" maxlength="120">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required value="{{ email or '' }}"
+               placeholder="you@example.com" autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password <span class="muted">(min 8 characters)</span></label>
+        <input type="password" id="password" name="password" required minlength="8"
+               placeholder="Choose a strong password" autocomplete="new-password">
+        <small class="field-hint" id="password-hint">Use 8+ characters with a number and a symbol.</small>
+      </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm password</label>
+        <input type="password" id="confirm_password" name="confirm_password" required
+               placeholder="Re-enter your password" autocomplete="new-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Create account</button>
+    </form>
+
+    <p class="auth-alt">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+  // Client-side validation for a friendlier experience
+  document.getElementById('register-form').addEventListener('submit', function (e) {
+    var pwd = document.getElementById('password').value;
+    var confirm = document.getElementById('confirm_password').value;
+    var email = document.getElementById('email').value;
+    var errors = [];
+    if (pwd.length < 8) errors.push('Password must be at least 8 characters.');
+    if (pwd !== confirm) errors.push('Passwords do not match.');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) errors.push('Enter a valid email.');
+    if (errors.length) {
+      e.preventDefault();
+      alert('Please fix:\n- ' + errors.join('\n- '));
+    }
+  });
+
+  // Live password strength hint
+  document.getElementById('password').addEventListener('input', function () {
+    var v = this.value;
+    var score = 0;
+    if (v.length >= 8) score++;
+    if (/[0-9]/.test(v)) score++;
+    if (/[^A-Za-z0-9]/.test(v)) score++;
+    var hints = ['Weak — add length, a number and a symbol.',
+                 'Fair — getting better.',
+                 'Good — strong enough.',
+                 'Strong password.'];
+    document.getElementById('password-hint').textContent = hints[score];
+  });
+</script>
+{% endblock %}

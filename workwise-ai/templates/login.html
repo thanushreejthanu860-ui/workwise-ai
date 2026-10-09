@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h1>Welcome back</h1>
+    <p class="muted">Login to access your dashboard, saved jobs and AI matching.</p>
+
+    {% if error %}
+      <div class="alert alert-error" role="alert">{{ error }}</div>
+    {% endif %}
+
+    <form method="post" novalidate>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email"
+               placeholder="you@example.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required
+               autocomplete="current-password" placeholder="Your password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+
+    <p class="auth-alt">New to WorkWise AI? <a href="{{ url_for('register') }}">Create an account</a></p>
+
+    <div class="demo-box">
+      <strong>Demo account (sample data):</strong><br>
+      Email: <code>demo@workwise.ai</code> · Password: <code>demo1234</code>
+      <a href="{{ url_for('login') }}" id="fill-demo" class="btn btn-link">Autofill</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+  // Autofill demo credentials button
+  document.getElementById('fill-demo').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('email').value = 'demo@workwise.ai';
+    document.getElementById('password').value = 'demo1234';
+  });
+</script>
+{% endblock %}

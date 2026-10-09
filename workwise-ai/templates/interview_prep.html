@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Interview Preparation{% endblock %}
+{% block content %}
+<div class="page-head">
+  <img src="{{ url_for('static', filename='images/tool-interview.png') }}"
+       class="page-head-img" alt="Interview Preparation illustration" width="160" height="109">
+  <h1>Interview Preparation</h1>
+  <p class="muted">Rounds, real sample questions, why they ask, and sample answers — plus an AI practice box.</p>
+</div>
+
+<div class="interview-grid">
+  <section class="panel">
+    <h2>Choose a role</h2>
+    <div class="role-chips" id="role-chips">
+      {% for role in ["Data Analyst","Data Scientist","Software Developer","Web Developer","Digital Marketing","HR","Sales","Business Analyst"] %}
+        <button class="chip chip-btn" data-role="{{ role }}">{{ role }}</button>
+      {% endfor %}
+    </div>
+    <div id="prep-content"><p class="muted">Select a role above to see interview rounds and questions.</p></div>
+  </section>
+
+  <section class="panel">
+    <h2>Practice box</h2>
+    <p class="muted">Type your answer to any question. The offline AI evaluates clarity, relevance, structure and missing points.</p>
+    <div class="form-group">
+      <label for="practice-question">Question</label>
+      <textarea id="practice-question" rows="2"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="practice-answer">Your answer</label>
+      <textarea id="practice-answer" rows="5" placeholder="Answer out loud in your head, then type it here..."></textarea>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="practice-role">Role</label>
+        <select id="practice-role"></select>
+      </div>
+      <button class="btn btn-primary" id="practice-submit" style="align-self:end">Get feedback</button>
+    </div>
+    <div id="practice-result" hidden>
+      <h3>Feedback <span class="pill" id="practice-score"></span></h3>
+      <div class="score-bars" id="practice-bars"></div>
+      <h4>Missing points</h4>
+      <ul class="checklist" id="practice-missing"></ul>
+    </div>
+    <div id="practice-error" class="alert alert-error" hidden></div>
+  </section>
+</div>
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/interview.js') }}"></script>
+{% endblock %}

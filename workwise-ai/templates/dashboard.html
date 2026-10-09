@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Welcome, {{ user.name.split()[0] }} 👋</h1>
+  <p class="muted">Your career dashboard — applications, saved jobs and AI insights.</p>
+</div>
+
+<!-- Notification banner -->
+<div class="notif-banner" id="notif-banner" hidden>
+  <span id="notif-banner-text"></span>
+  <button class="icon-btn" id="notif-banner-close" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- Stat cards -->
+<section class="stat-grid" aria-label="Dashboard statistics">
+  <div class="stat-card"><div class="stat-num" id="stat-applied">–</div><div class="stat-label">Total Applications</div></div>
+  <div class="stat-card"><div class="stat-num" id="stat-jobs">–</div><div class="stat-label">Jobs Applied</div></div>
+  <div class="stat-card"><div class="stat-num" id="stat-interns">–</div><div class="stat-label">Internships Applied</div></div>
+  <div class="stat-card"><div class="stat-num" id="stat-saved">–</div><div class="stat-label">Saved Jobs</div></div>
+  <div class="stat-card"><div class="stat-num" id="stat-skills">–</div><div class="stat-label">My Skills</div></div>
+  <div class="stat-card stat-strength"><div class="stat-num"><span id="stat-strength">–</span><small>%</small></div><div class="stat-label">Profile Strength</div><div class="progress"><div class="progress-bar" id="strength-bar" style="width:0%"></div></div></div>
+</section>
+
+<!-- Charts -->
+<section class="chart-grid">
+  <div class="panel chart-panel">
+    <h3>AI Fit % across your jobs</h3>
+    <div class="chart-box"><canvas id="chart-fit" aria-label="Area chart of AI fit percentage across jobs"></canvas></div>
+  </div>
+  <div class="panel chart-panel">
+    <h3>Skill growth over time</h3>
+    <div class="chart-box"><canvas id="chart-growth" aria-label="Line chart of skill growth over time"></canvas></div>
+  </div>
+  <div class="panel chart-panel">
+    <h3>Skills in demand vs my skills</h3>
+    <div class="chart-box"><canvas id="chart-demand" aria-label="Bar chart comparing skills in demand with your skills"></canvas></div>
+  </div>
+  <div class="panel chart-panel">
+    <h3>My skills by category</h3>
+    <div class="chart-box"><canvas id="chart-category" aria-label="Donut chart of skills by category"></canvas></div>
+  </div>
+</section>
+
+<!-- Lists -->
+<section class="list-grid">
+  <div class="panel">
+    <h3>Applied jobs</h3>
+    <ul class="app-list" id="applied-jobs"></ul>
+  </div>
+  <div class="panel">
+    <h3>Applied internships</h3>
+    <ul class="app-list" id="applied-internships"></ul>
+  </div>
+  <div class="panel">
+    <h3>Saved jobs</h3>
+    <ul class="app-list" id="saved-jobs-list"></ul>
+  </div>
+</section>
+
+<!-- Application status timeline detail -->
+<section class="panel" id="app-detail-panel" hidden>
+  <h3 id="app-detail-title">Application status</h3>
+  <div class="timeline" id="app-timeline"></div>
+  <div id="app-detail-body"></div>
+</section>
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

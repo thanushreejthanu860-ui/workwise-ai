@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% block title %}Resume Builder – WorkWise AI{% endblock %}
+{% block head %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% raw %}
+<style>
+:root{--ui-bg:#f2f4f8;--ui-card:#fff;--ui-tx:#1c2433;--ui-mu:#64708a;--ui-bd:#dde3ee;--ui-ac:#2563eb;--accent:#c94c5d}
+@media(prefers-color-scheme:dark){:root{--ui-bg:#0f1623;--ui-card:#18212f;--ui-tx:#e8edf7;--ui-mu:#93a0ba;--ui-bd:#293548}}
+*{box-sizing:border-box}body{margin:0;background:var(--ui-bg);color:var(--ui-tx);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{max-width:1380px;margin:0 auto;padding:16px;display:grid;grid-template-columns:minmax(320px,470px) 1fr;gap:18px;align-items:start}
+@media(max-width:980px){.wrap{grid-template-columns:1fr}}
+h1{font-size:22px;margin:0}.sub{color:var(--ui-mu);margin:2px 0 12px;font-size:14px}
+details{background:var(--ui-card);border:1px solid var(--ui-bd);border-radius:12px;margin-bottom:10px;padding:0 14px}
+summary{cursor:pointer;font-weight:700;padding:12px 0}details[open] summary{border-bottom:1px solid var(--ui-bd);margin-bottom:10px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:8px}.g1{grid-template-columns:1fr}
+label{display:block;font-size:12.5px;color:var(--ui-mu)}
+input,textarea,select{width:100%;padding:8px 10px;border:1px solid var(--ui-bd);border-radius:8px;background:var(--ui-bg);color:var(--ui-tx);font:inherit}textarea{min-height:64px;resize:vertical}
+input[type=checkbox]{width:auto}input[type=range]{padding:0}
+.btn{border:1px solid var(--ui-bd);background:var(--ui-card);color:var(--ui-tx);padding:8px 14px;border-radius:999px;cursor:pointer;font:inherit}.btn.pri{background:var(--ui-ac);border-color:var(--ui-ac);color:#fff}.btn.sm{padding:4px 10px;font-size:13px}
+.item{border:1px dashed var(--ui-bd);border-radius:10px;padding:10px;margin:8px 0}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}.tag{background:var(--ui-bg);border:1px solid var(--ui-bd);border-radius:999px;padding:2px 10px;font-size:13px;cursor:pointer}
+.stage{position:sticky;top:8px}.bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.dots{display:flex;gap:8px;background:var(--ui-card);border:1px solid var(--ui-bd);border-radius:12px;padding:8px 12px}
+.dot{width:26px;height:26px;border-radius:50%;border:0;cursor:pointer;color:#fff;font-size:14px;line-height:26px;padding:0}
+.ai{background:#ffc15e;color:#3b2a00;border:0;border-radius:999px;padding:9px 16px;font-weight:700;cursor:pointer}
+.sug{display:grid;gap:8px;margin:10px 0}.sug button{display:flex;gap:10px;align-items:flex-start;text-align:left;background:var(--ui-card);border:1px solid var(--ui-bd);border-radius:10px;padding:8px 10px;cursor:pointer;color:var(--ui-tx);font:inherit;font-size:13px}.sug b{background:#ffc15e;color:#3b2a00;border-radius:50%;width:22px;height:22px;flex:none;display:grid;place-items:center}
+.view{overflow:hidden;border-radius:6px;box-shadow:0 8px 30px rgba(0,0,0,.25)}#fit{transform-origin:top left;width:794px}
+/* ===== resume page (always white) ===== */
+.page{width:794px;min-height:1123px;background:#fff;color:#222;font:12px/1.45 Calibri,Carlito,Arial,sans-serif;position:relative;padding-bottom:30px}
+.top{height:28px;background:var(--accent);position:relative}.top:after{content:"";position:absolute;left:150px;top:28px;border:11px solid transparent;border-top-color:var(--accent);border-left-width:0}
+.head{display:flex;gap:22px;padding:30px 48px 18px;align-items:flex-start}
+.photo{width:98px;height:118px;border-radius:6px;object-fit:cover;flex:none}
+.head h1{font-size:30px;letter-spacing:1px;text-transform:uppercase;color:var(--accent);margin:2px 0 2px;line-height:1.15;font-weight:700}
+.hl{color:#555;font-size:13px;margin-bottom:8px}.ct{display:flex;align-items:center;gap:8px;font-size:11.5px;margin:3px 0}.ct svg{width:12px;height:12px;fill:var(--accent);flex:none}
+.sec{display:grid;grid-template-columns:130px 1fr;gap:10px;border-top:2px solid var(--accent);margin:0 48px;padding:12px 0}
+.sec>h2{font-size:9.5px;letter-spacing:.4px;text-transform:uppercase;margin:2px 0 0;font-weight:700;color:#222}
+.sec p{margin:0 0 4px}.sec ul{margin:2px 0 6px;padding-left:16px}.sec li{margin:1px 0}.cols{columns:2;column-gap:20px}
+.ent{margin-bottom:9px;break-inside:avoid}.ent .t{font-weight:700;text-transform:uppercase;font-size:11.5px}.ent .c{font-style:italic;font-weight:700}.ent .s{color:#555}
+.lang{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}.lang b{display:block}.lb{display:flex;gap:2px;margin:2px 0}.lb i{flex:1;height:4px;background:#ddd}.lb i.on{background:var(--accent)}
+.empty{padding:40px 48px;color:#888}
+@page{size:A4;margin:0}
+@media print{@page{size:A4;margin:0}html,body{width:210mm;min-height:297mm;margin:0!important;padding:0!important;background:#fff!important}body>*:not(#main),#main>*:not(.wrap),.wrap>*:not(.stage),.stage>*:not(.view),.view>*:not(#fit),#fit>*:not(#page){display:none!important}#main,.wrap,.stage,.view,#fit,#page{display:block!important;width:210mm!important;max-width:none!important;margin:0!important;padding:0!important;box-shadow:none!important;border-radius:0!important;overflow:visible!important;position:static!important;transform:none!important;height:auto!important}#page{min-height:297mm!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.ent,.sec{break-inside:avoid}}
+</style>{% endraw %}
+{% endblock %}
+
+{% block content %}
+<div class="wrap">
+<div class="ui" id="form">
+ <h1>Resume Builder</h1><p class="sub">Fill the form — the resume updates live. Download as PDF or Word.</p>
+ <div id="fm"></div>
+ <div class="row" style="margin:8px 0 30px"><button class="btn" onclick="clearAll()">Clear resume</button><span id="saved" class="sub" style="margin:0"></span></div>
+</div>
+<div class="stage"><div class="ui bar"><button class="ai" id="aib" onclick="enhance()">✨ Enhance with AI</button><div class="dots" id="dots"></div><button class="btn pri" onclick="printResume()">⬇ Download PDF</button><button class="btn" onclick="dlDoc()">⬇ Word (.doc)</button></div>
+ <div class="ui sug" id="sug"></div>
+ <div class="view" id="view"><div id="fit"><div class="page" id="page"></div></div></div>
+ <p class="ui sub" id="msg"></p></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const COL=['#a89a8c','#c94c5d','#1f8a70','#3b7ddd','#2b2b2b'];
+const EMPTY=()=>({accent:'#c94c5d',name:'',head:'',email:'',phone:'',loc:'',li:'',gh:'',photo:'',sum:'',skills:[],exp:[],edu:[],m12:{inst:'',board:'',yr:'',score:''},m10:{inst:'',board:'',yr:'',score:''},proj:[],cert:[],lang:[],ach:'',hob:''});
+let R=EMPTY();
+let resumeReady=false;
+const CAPS={sql:'SQL',html:'HTML',css:'CSS',ai:'AI',ml:'ML',js:'JavaScript',seo:'SEO',ui:'UI',ux:'UX',api:'API',ibm:'IBM',php:'PHP','c++':'C++','c#':'C#'};
+const tc=s=>String(s).trim().split(/\s+/).map(w=>CAPS[w.toLowerCase()]||(w[0]?w[0].toUpperCase()+w.slice(1):w)).join(' ');
+const get=p=>p.split('.').reduce((o,k)=>o==null?o:o[k],R),set=(p,v)=>{const a=p.split('.'),l=a.pop();a.reduce((o,k)=>o[k],R)[l]=v};
+const I=(p,l,t)=>`<label>${l}<input type="${t||'text'}" data-p="${p}" value="${esc(get(p))}"></label>`;
+const T=(p,l,r)=>`<label>${l}<textarea data-p="${p}" style="min-height:${r||64}px">${esc(get(p))}</textarea></label>`;
+const rm=(a,i)=>`<button class="btn sm" onclick="del('${a}',${i})">Remove</button>`;
+function form(){const e=R.exp.map((x,i)=>`<div class="item"><div class="g">${I(`exp.${i}.t`,'Job title')}${I(`exp.${i}.co`,'Company')}${I(`exp.${i}.loc`,'Location')}${I(`exp.${i}.from`,'From (MM/YYYY)')}${I(`exp.${i}.to`,'To (MM/YYYY)')}<label><br><input type="checkbox" data-p="exp.${i}.cur" ${x.cur?'checked':''}> Currently working</label></div>${T(`exp.${i}.b`,'Bullet points (one per line)',80)}${rm('exp',i)}</div>`).join('');
+ const d=R.edu.map((x,i)=>`<div class="item"><div class="g">${I(`edu.${i}.deg`,'Degree / course')}${I(`edu.${i}.inst`,'College / university')}${I(`edu.${i}.yr`,'Year')}${I(`edu.${i}.score`,'CGPA or %')}</div>${rm('edu',i)}</div>`).join('');
+ const p=R.proj.map((x,i)=>`<div class="item"><div class="g">${I(`proj.${i}.t`,'Project title')}${I(`proj.${i}.d`,'One-line description')}</div>${T(`proj.${i}.b`,'Bullet points (one per line)')}${rm('proj',i)}</div>`).join('');
+ const c=R.cert.map((x,i)=>`<div class="item"><div class="g">${I(`cert.${i}.t`,'Certificate')}${I(`cert.${i}.iss`,'Issued by')}${I(`cert.${i}.yr`,'Year')}</div>${rm('cert',i)}</div>`).join('');
+ const l=R.lang.map((x,i)=>`<div class="item"><div class="g">${I(`lang.${i}.n`,'Language')}<label>Level: <b>${LV[x.l-1]}</b><input type="range" min="1" max="5" data-p="lang.${i}.l" data-num="1" value="${x.l}"></label></div>${rm('lang',i)}</div>`).join('');
+ $('fm').innerHTML=`<details open><summary>Personal details</summary><div class="g">${I('name','Full name *')}${I('head','Headline')}${I('email','Email *','email')}${I('phone','Phone')}${I('loc','Location')}${I('li','LinkedIn URL')}${I('gh','GitHub / portfolio')}<label>Photo (png/jpg, max 2 MB)<input type="file" accept="image/png,image/jpeg" onchange="photo(this)"></label></div></details>
+ <details><summary>Summary</summary>${T('sum','Career summary',90)}</details>
+ <details><summary>Skills</summary><label>Type a skill and press Enter<input id="sk" placeholder="e.g. Python" onkeydown="if(event.key==='Enter'){addSk(this);event.preventDefault()}"></label><div class="tags">${R.skills.map((s,i)=>`<span class="tag" title="Remove" onclick="rmSk(${i})">${esc(tc(s))} ✕</span>`).join('')}</div></details>
+ <details><summary>Experience / internships</summary>${e}<button class="btn sm" onclick="add('exp')">+ Add experience</button></details>
+ <details><summary>Education</summary>${d}<button class="btn sm" onclick="add('edu')">+ Add degree</button><div class="item"><b>12th standard</b><div class="g">${I('m12.inst','School / college')}${I('m12.board','Board / stream')}${I('m12.yr','Year')}${I('m12.score','Marks (%)')}</div></div><div class="item"><b>10th standard</b><div class="g">${I('m10.inst','School')}${I('m10.board','Board')}${I('m10.yr','Year')}${I('m10.score','Marks (%)')}</div></div></details>
+ <details><summary>Projects</summary>${p}<button class="btn sm" onclick="add('proj')">+ Add project</button></details>
+ <details><summary>Certificates</summary>${c}<button class="btn sm" onclick="add('cert')">+ Add certificate</button></details>
+ <details><summary>Languages</summary>${l}<button class="btn sm" onclick="add('lang')">+ Add language</button></details>
+ <details><summary>Achievements &amp; hobbies</summary>${T('ach','Achievements (one per line)')}${T('hob','Hobbies / interests',50)}</details>`}
+const LV=['Basic','Elementary','Conversational','Professional','Native'],BLANK={exp:{t:'',co:'',loc:'',from:'',to:'',cur:false,b:''},edu:{deg:'',inst:'',yr:'',score:''},proj:{t:'',d:'',b:''},cert:{t:'',iss:'',yr:''},lang:{n:'',l:3}};
+function add(a){R[a].push({...BLANK[a]});form();draw()}function del(a,i){R[a].splice(i,1);form();draw()}
+function addSk(el){const v=el.value.trim();if(v&&!R.skills.some(s=>s.toLowerCase()===v.toLowerCase()))R.skills.push(v);form();draw();$('sk').focus()}
+function rmSk(i){R.skills.splice(i,1);form();draw()}
+function photo(el){const f=el.files[0];if(!f)return;if(!/^image\/(png|jpeg)$/.test(f.type)||f.size>2097152){$('msg').textContent='Photo must be a png or jpg under 2 MB.';return}const r=new FileReader();r.onload=()=>{R.photo=r.result;draw()};r.readAsDataURL(f)}
+document.addEventListener('input',e=>{const p=e.target.dataset&&e.target.dataset.p;if(!p)return;set(p,e.target.type==='checkbox'?e.target.checked:e.target.dataset.num?+e.target.value:e.target.value);if(e.target.dataset.num){const b=e.target.closest('label').querySelector('b');if(b)b.textContent=LV[e.target.value-1]}draw()});
+function clearAll(){if(!confirm('Clear all resume details?'))return;R={accent:R.accent,name:'',head:'',email:'',phone:'',loc:'',li:'',gh:'',photo:'',sum:'',skills:[],exp:[],edu:[],m12:{inst:'',board:'',yr:'',score:''},m10:{inst:'',board:'',yr:'',score:''},proj:[],cert:[],lang:[],ach:'',hob:''};form();draw()}
+ 
+/* ---------- preview ---------- */
+const L=t=>String(t||'').split('\n').map(x=>x.trim()).filter(Boolean),ul=t=>L(t).length?`<ul>${L(t).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
+const pct=s=>{s=String(s||'').trim();if(!s)return'';const n=parseFloat(s);return/^\d+(\.\d+)?$/.test(s)?(n<=10?'CGPA '+s:s+'%'):s};
+const IC={pin:'M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z',ph:'M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.5.55 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.55 3.5a1 1 0 0 1-.25 1z',ml:'M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7L4 7v1.5l8 5 8-5V7z',ln:'M10 6H6a4 4 0 0 0 0 8h4v-2H6a2 2 0 0 1 0-4h4zm4 0v2h4a2 2 0 0 1 0 4h-4v2h4a4 4 0 0 0 0-8zm-6 5h8v2H8z'};
+const ct=(k,t)=>t?`<div class="ct"><svg viewBox="0 0 24 24"><path d="${IC[k]}"/></svg><span>${esc(t)}</span></div>`:'';
+const sec=(t,h)=>h?`<div class="sec"><h2>${t}</h2><div>${h}</div></div>`:'';
+function pageHTML(){const r=R,ed=[];
+ const exp=r.exp.filter(x=>x.t||x.co).map(x=>`<div class="ent"><div class="t">${esc(x.t)}${x.from||x.to||x.cur?', '+esc(x.from)+(x.from&&(x.to||x.cur)?' - ':'')+(x.cur?'Current':esc(x.to)):''}</div><div class="c">${esc(x.co)}${x.loc?', '+esc(x.loc):''}</div>${ul(x.b)}</div>`).join('');
+ r.edu.filter(x=>x.deg||x.inst).forEach(x=>ed.push(`<div class="ent"><i>${esc(x.inst)}</i><br><b>${esc(x.deg)}</b>${x.yr||x.score?`<div class="s">${esc(x.yr)}${x.yr&&x.score?' · ':''}${esc(pct(x.score))}</div>`:''}</div>`));
+ [['m12','12th standard'],['m10','10th standard']].forEach(([k,n])=>{const m=r[k];if(m.inst||m.score)ed.push(`<div class="ent"><i>${esc(m.inst)}</i><br><b>${n}</b>${m.board?', '+esc(m.board):''}<div class="s">${esc(m.yr)}${m.yr&&m.score?' · ':''}${esc(pct(m.score))}</div></div>`)});
+ const pr=r.proj.filter(x=>x.t).map(x=>`<div class="ent"><b>${esc(x.t)}</b>${x.d?' — '+esc(x.d):''}${ul(x.b)}</div>`).join('');
+ const ce=r.cert.filter(x=>x.t).map(x=>`<li><b>${esc(x.t)}</b>${x.iss?', '+esc(x.iss):''}${x.yr?' ('+esc(x.yr)+')':''}</li>`).join('');
+ const la=r.lang.filter(x=>x.n).map(x=>`<div><b>${esc(tc(x.n))}:</b><div class="lb">${[1,2,3,4,5].map(i=>`<i class="${i<=x.l?'on':''}"></i>`).join('')}</div>${LV[x.l-1]}</div>`).join('');
+ const hasAny=r.name||r.sum||r.skills.length;
+ return`<div class="top"></div><div class="head">${r.photo?`<img class="photo" src="${esc(r.photo)}" alt="">`:''}<div><h1>${esc(r.name||'Your Name')}</h1>${r.head?`<div class="hl">${esc(r.head)}</div>`:''}${ct('pin',r.loc)}${ct('ph',r.phone)}${ct('ml',r.email)}${ct('ln',r.li)}${ct('ln',r.gh)}</div></div>`+
+ sec('Summary',r.sum?`<p>${esc(r.sum)}</p>`:'')+sec('Skills',r.skills.length?`<ul class="cols">${r.skills.map(s=>`<li>${esc(tc(s))}</li>`).join('')}</ul>`:'')+sec('Experience',exp)+sec('Education and training',ed.join(''))+sec('Projects',pr)+sec('Certificates',ce?`<ul>${ce}</ul>`:'')+sec('Languages',la?`<div class="lang">${la}</div>`:'')+sec('Achievements',ul(r.ach))+sec('Hobbies',r.hob?`<p>${esc(r.hob)}</p>`:'')+(hasAny?'':'<div class="empty">Start filling the form to see your resume here.</div>')}
+function draw(){document.documentElement.style.setProperty('--accent',R.accent);$('page').innerHTML=pageHTML();dots();fit();suggest();if(!resumeReady)return;
+ $('saved').textContent='Saved to your account';clearTimeout(draw.t);draw.t=setTimeout(()=>{fetch('/api/resume',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(R)}).catch(()=>{$('saved').textContent='Could not save to your account'})},700)}
+function dots(){$('dots').innerHTML=COL.map(c=>`<button class="dot" style="background:${c}" aria-label="Colour ${c}" onclick="R.accent='${c}';draw()">${R.accent===c?'✓':''}</button>`).join('')}
+function fit(){const v=$('view'),s=Math.min(1,v.clientWidth/794);$('fit').style.transform=`scale(${s})`;v.style.height=$('page').offsetHeight*s+'px'}
+addEventListener('resize',fit);addEventListener('beforeprint',()=>{$('view').style.height='auto'});addEventListener('afterprint',fit);
+ 
+/* ---------- AI helpers ---------- */
+const SUG={data:['Analysed datasets using Python and SQL to find trends and prepared weekly reports.','Built dashboards in Excel or Power BI that helped the team track key numbers.','Cleaned and validated data to improve the accuracy of reports.','Presented findings to non-technical team members in simple language.'],web:['Built responsive web pages using HTML, CSS and JavaScript.','Fixed bugs and improved page load speed on existing pages.','Worked with a team using Git and code reviews.','Connected the front end to REST APIs.'],mkt:['Planned and posted content on social media and tracked reach and engagement.','Improved page ranking by researching keywords and optimising content (SEO).','Wrote blog posts, captions and ad copy for campaigns.','Prepared a weekly report on campaign results.'],sup:['Answered customer queries by phone, chat and email within the target time.','Logged and tracked tickets in a CRM and escalated complex issues.','Kept customers informed and handled complaints politely.','Suggested fixes for common problems to the team.'],acc:['Entered vouchers and maintained ledgers in Tally.','Prepared invoices and reconciled bank statements.','Checked GST and expense data for accuracy.','Supported month-end closing with the finance team.'],any:['Completed assigned tasks on time and learned new tools quickly.','Worked with team members to solve problems and share updates.','Prepared clear reports and documentation.','Took feedback from mentors and improved the quality of work.']};
+function role(){const s=(R.head+' '+R.skills.join(' ')).toLowerCase();return/data|python|sql|analy|machine/.test(s)?'data':/web|front|java|react|html|develop/.test(s)?'web':/market|seo|content|social|writ/.test(s)?'mkt':/support|customer|service/.test(s)?'sup':/account|tally|finance/.test(s)?'acc':'any'}
+function suggest(){$('sug').innerHTML='<div class="sub" style="margin:0">AI suggestions — examples only. Edit them so they match what you really did.</div>'+SUG[role()].slice(0,3).map((s,i)=>`<button onclick="useSug(${i})"><b>+</b><span>${esc(s)}</span></button>`).join('')}
+function useSug(i){const s=SUG[role()][i],t=R.exp[0]||R.proj[0];if(!t){R.exp.push({...BLANK.exp,t:'Intern',b:s})}else t.b=(t.b?t.b+'\n':'')+s;form();draw();$('msg').textContent='Added to your '+(R.exp[0]?'experience':'project')+'. Edit it to match your real work.'}
+async function enhance(){const b=$('aib');b.textContent='Writing…';b.disabled=true;const base=`Write a professional 2-3 sentence resume summary for a fresher. Headline: ${R.head}. Skills: ${R.skills.join(', ')}. Draft: ${R.sum}. Do not invent facts. Output only the summary.`;let out='';
+ try{const c=new AbortController();setTimeout(()=>c.abort(),9000);const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:base}),signal:c.signal});if(r.ok){const d=await r.json();out=(d.answer||d.reply||'').trim()}}catch(e){}
+ if(!out){const sk=R.skills.slice(0,4).map(tc).join(', ');out=`${R.head||'Motivated fresher'} with skills in ${sk||'a range of tools'}. ${R.proj[0]&&R.proj[0].t?`Built projects such as ${R.proj.filter(p=>p.t).slice(0,2).map(p=>p.t).join(' and ')}. `:''}Eager to learn quickly, work in a team and add value in an entry-level role.`;$('msg').textContent='AI service not connected, so a template summary was used. Edit it to match you.'}
+ R.sum=out;form();draw();b.textContent='✨ Enhance with AI';b.disabled=false}
+ 
+/* Print only the resume preview in an isolated document. */
+function printResume(){
+ const frame=document.createElement('iframe');
+ frame.setAttribute('aria-hidden','true');
+ frame.style.cssText='position:fixed;right:0;bottom:0;width:0;height:0;border:0';
+ document.body.appendChild(frame);
+ const sourceStyle=document.querySelector('style').textContent.split('@page')[0];
+ const doc=frame.contentDocument;
+ doc.open();
+ doc.write('<!doctype html><html><head><meta charset="utf-8"><title>Resume</title><style>'+sourceStyle+'@page{size:A4;margin:0}html,body{margin:0!important;padding:0!important;background:#fff!important}.page{width:210mm!important;min-height:297mm!important;margin:0!important;box-shadow:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.sec,.ent{break-inside:avoid}</style></head><body><div class="page" style="--accent:'+esc(R.accent)+'">'+$('page').innerHTML+'</div></body></html>');
+ doc.close();
+ frame.contentWindow.focus();
+ frame.contentWindow.print();
+ setTimeout(()=>frame.remove(),1000);
+}
+
+/* ---------- Word download (table layout so Word renders it) ---------- */
+function dlDoc(){const a=R.accent,h=(t,c)=>c?`<tr><td style="width:120px;border-top:2px solid ${a};vertical-align:top;font-size:9pt;font-weight:bold;text-transform:uppercase;padding:8px 6px">${t}</td><td style="border-top:2px solid ${a};padding:8px 0">${c}</td></tr>`:'';
+ const u=t=>L(t).length?'<ul>'+L(t).map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>':'';
+ const ex=R.exp.filter(x=>x.t||x.co).map(x=>`<p><b>${esc(x.t.toUpperCase())}${x.from?', '+esc(x.from)+' - '+(x.cur?'Current':esc(x.to)):''}</b><br><i><b>${esc(x.co)}${x.loc?', '+esc(x.loc):''}</b></i></p>${u(x.b)}`).join('');
+ const ed=R.edu.filter(x=>x.deg||x.inst).map(x=>`<p><i>${esc(x.inst)}</i><br><b>${esc(x.deg)}</b><br>${esc(x.yr)} ${esc(pct(x.score))}</p>`).join('')+[['m12','12th standard'],['m10','10th standard']].map(([k,n])=>R[k].inst||R[k].score?`<p><i>${esc(R[k].inst)}</i><br><b>${n}</b> ${esc(R[k].board)}<br>${esc(R[k].yr)} ${esc(pct(R[k].score))}</p>`:'').join('');
+ const pr=R.proj.filter(x=>x.t).map(x=>`<p><b>${esc(x.t)}</b>${x.d?' — '+esc(x.d):''}</p>${u(x.b)}`).join('');
+ const ce=R.cert.filter(x=>x.t).map(x=>`<li>${esc(x.t)}${x.iss?', '+esc(x.iss):''}${x.yr?' ('+esc(x.yr)+')':''}</li>`).join('');
+ const la=R.lang.filter(x=>x.n).map(x=>`${esc(tc(x.n))}: ${LV[x.l-1]}`).join(' &nbsp;|&nbsp; ');
+ const html=`<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><style>body{font-family:Calibri,Arial;font-size:10.5pt}</style></head><body><table width="100%" cellspacing="0"><tr><td colspan="2" style="background:${a};height:14px"></td></tr><tr><td colspan="2" style="padding:12px 0"><span style="font-size:24pt;font-weight:bold;color:${a}">${esc((R.name||'').toUpperCase())}</span><br>${esc(R.head)}<br>${[R.loc,R.phone,R.email,R.li,R.gh].filter(Boolean).map(esc).join(' | ')}</td></tr>${h('Summary',R.sum?'<p>'+esc(R.sum)+'</p>':'')}${h('Skills',R.skills.map(s=>esc(tc(s))).join(', '))}${h('Experience',ex)}${h('Education and training',ed)}${h('Projects',pr)}${h('Certificates',ce?'<ul>'+ce+'</ul>':'')}${h('Languages',la)}${h('Achievements',u(R.ach))}${h('Hobbies',esc(R.hob))}</table></body></html>`;
+ const a2=document.createElement('a');a2.href=URL.createObjectURL(new Blob(['\ufeff',html],{type:'application/msword'}));a2.download=((R.name||'resume').replace(/\s+/g,'_'))+'_Resume.doc';document.body.append(a2);a2.click();a2.remove()}
+async function loadUserResume(){
+ try{
+  const [profileResponse,resumeResponse]=await Promise.all([fetch('/api/profile'),fetch('/api/resume')]);
+  if(!profileResponse.ok||!resumeResponse.ok)throw new Error('Could not load your account details.');
+  const p=await profileResponse.json(),saved=await resumeResponse.json();
+  const oldSample=saved&&saved.name==='Ananya Rao';
+  R=Object.assign(EMPTY(),saved&&typeof saved==='object'&&!oldSample?saved:{});
+  const links=p.links||{};
+  R.name=p.name||'';R.email=p.email||'';R.head=p.headline||p.preferred_role||'';R.phone=p.phone||'';R.loc=p.location||'';R.sum=p.about||R.sum||'';
+  R.li=links.LinkedIn||links.linkedin||R.li||'';R.gh=links.GitHub||links.Github||links.github||R.gh||'';
+  R.skills=(p.skills||[]).length?p.skills.map(x=>x.name):R.skills;
+  if((p.experience||[]).length)R.exp=p.experience.map(x=>({t:x.title||'',co:x.company||'',loc:'',from:x.start_date||'',to:x.end_date||'',cur:!x.end_date,b:x.description||''}));
+  if((p.education||[]).length){R.edu=[];R.m10={inst:'',board:'',yr:'',score:''};R.m12={inst:'',board:'',yr:'',score:''};p.education.forEach(x=>{const level=(x.level||'').toLowerCase(),entry={deg:x.field_of_study||x.level||'',inst:x.institution||'',yr:x.year||'',score:x.percentage_or_cgpa||''};if(level.includes('10th'))R.m10={inst:entry.inst,board:'',yr:entry.yr,score:entry.score};else if(level.includes('12th'))R.m12={inst:entry.inst,board:'',yr:entry.yr,score:entry.score};else R.edu.push(entry)})}
+  if((p.projects||[]).length)R.proj=p.projects.map(x=>({t:x.title||'',d:x.description||'',b:x.technologies||''}));
+  if((p.certificates||[]).length)R.cert=p.certificates.map(x=>({t:x.title||'',iss:x.issuer||'',yr:x.year||''}));
+  if((p.languages||[]).length)R.lang=p.languages.map(x=>({n:typeof x==='string'?x:x.name||'',l:3}));
+  if((p.hobbies||[]).length)R.hob=p.hobbies.join(', ');
+  resumeReady=true;form();draw();
+ }catch(e){$('msg').textContent='Could not load your account details. Refresh the page or sign in again.';resumeReady=true;form();draw()}
+}
+loadUserResume();
+</script>
+{% endblock %}
+ 

@@ -1,0 +1,130 @@
+{
+  "model": "LogisticRegression",
+  "cross_validation_accuracy": {
+    "RandomForest": 0.9797,
+    "DecisionTree": 0.6359,
+    "LogisticRegression": 0.9906
+  },
+  "test_accuracy": 1.0,
+  "weighted_precision": 1.0,
+  "weighted_recall": 1.0,
+  "weighted_f1": 1.0,
+  "per_class": {
+    "Business Analyst": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    },
+    "Data Analyst": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    },
+    "Data Scientist": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    },
+    "Digital Marketing Specialist": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    },
+    "HR Specialist": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    },
+    "Sales Executive": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    },
+    "Software Developer": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    },
+    "Web Developer": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 20
+    }
+  },
+  "synthetic_data": true,
+  "classes": [
+    "Algorithms",
+    "C++",
+    "CRM",
+    "CSS",
+    "Canva",
+    "Communication",
+    "Content Writing",
+    "Customer Service",
+    "DAX",
+    "Data Structures",
+    "Data Visualization",
+    "Deep Learning",
+    "Documentation",
+    "Email Marketing",
+    "Employee Relations",
+    "Excel",
+    "Git",
+    "Google Analytics",
+    "HR Policies",
+    "HTML",
+    "Java",
+    "JavaScript",
+    "Lead Generation",
+    "MS Office",
+    "Machine Learning",
+    "MongoDB",
+    "MySQL",
+    "NLP",
+    "Negotiation",
+    "Node.js",
+    "NumPy",
+    "Onboarding",
+    "PHP",
+    "PPC",
+    "Pandas",
+    "Payroll",
+    "Power BI",
+    "Presentation",
+    "Process Mapping",
+    "Python",
+    "R",
+    "React",
+    "Recruitment",
+    "Requirements Gathering",
+    "SEM",
+    "SEO",
+    "SQL",
+    "Sales",
+    "Social Media",
+    "Spring",
+    "Statistics",
+    "Tableau",
+    "TensorFlow",
+    "Testing",
+    "Training"
+  ],
+  "roles": [
+    "Business Analyst",
+    "Data Analyst",
+    "Data Scientist",
+    "Digital Marketing Specialist",
+    "HR Specialist",
+    "Sales Executive",
+    "Software Developer",
+    "Web Developer"
+  ]
+}

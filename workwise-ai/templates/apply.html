@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block title %}Apply: {{ job.title }}{% endblock %}
+{% block content %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="{{ url_for('jobs') }}">Jobs</a> <span aria-hidden="true">›</span>
+  <a href="{{ url_for('job_details', job_id=job.id) }}">{{ job.title }}</a> <span aria-hidden="true">›</span>
+  <span>Apply</span>
+</nav>
+
+<div class="apply-wrap">
+  <h1>Apply: {{ job.title }}</h1>
+  <p class="muted">{{ job.company }} · {{ job.location }} · {{ job.salary_text() }}</p>
+  <p class="pill pill-sample">SAMPLE DATA — fictional listing</p>
+
+  <div id="apply-errors"></div>
+
+  <form id="apply-form" class="apply-form" novalidate>
+    <section class="panel">
+      <h2>Contact details</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required value="{{ user.email }}">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="10-digit mobile" value="{{ user.profile.phone if user.profile else '' }}">
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Academics</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tenth_percent">10th % *</label>
+          <input type="text" id="tenth_percent" name="tenth_percent" required placeholder="e.g. 88%">
+        </div>
+        <div class="form-group">
+          <label for="twelfth_percent">12th % *</label>
+          <input type="text" id="twelfth_percent" name="twelfth_percent" required placeholder="e.g. 82%">
+        </div>
+        <div class="form-group">
+          <label for="cgpa">Degree CGPA *</label>
+          <input type="text" id="cgpa" name="cgpa" required placeholder="e.g. 8.1">
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>About you</h2>
+      <div class="form-group">
+        <label for="summary">Summary * <span class="muted">(min 20 characters)</span></label>
+        <textarea id="summary" name="summary" rows="4" required
+          placeholder="Tell us about yourself, your strengths and goals..."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="projects">Projects</label>
+        <textarea id="projects" name="projects" rows="3"
+          placeholder="List your projects (title — description — technologies)"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="certificates">Certificates</label>
+        <textarea id="certificates" name="certificates" rows="2"
+          placeholder="e.g. Python for Data Science — Coursera, 2024"></textarea>
+      </div>
+    </section>
+
+    <button type="submit" class="btn btn-primary btn-lg">Submit application</button>
+  </form>
+
+  <div id="apply-success" class="panel success-panel" hidden>
+    <div class="success-icon" aria-hidden="true">✓</div>
+    <h2>Application submitted!</h2>
+    <p>Your application for <strong id="success-job"></strong> has been recorded.
+       Track its progress on your <a href="{{ url_for('dashboard') }}">Dashboard</a>.</p>
+    <div class="timeline-preview">
+      <span class="tl-step active">Applied</span>
+      <span class="tl-step">Under Review</span>
+      <span class="tl-step">Shortlisted</span>
+      <span class="tl-step">Interview</span>
+      <span class="tl-step">Offer</span>
+    </div>
+    <a href="{{ url_for('dashboard') }}" class="btn btn-primary">Go to Dashboard</a>
+  </div>
+</div>
+<p class="disclaimer-inline">{{ disclaimer }}</p>
+{% endblock %}
+{% block scripts %}
+<script>
+  (function () {
+    const jobId = {{ job.id }};
+    const jobTitle = {{ job.title | tojson }};
+
+    document.getElementById('apply-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const errBox = document.getElementById('apply-errors');
+      errBox.innerHTML = '';
+
+      const data = {
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        tenth_percent: document.getElementById('tenth_percent').value.trim(),
+        twelfth_percent: document.getElementById('twelfth_percent').value.trim(),
+        cgpa: document.getElementById('cgpa').value.trim(),
+        summary: document.getElementById('summary').value.trim(),
+        projects: document.getElementById('projects').value.trim(),
+        certificates: document.getElementById('certificates').value.trim(),
+      };
+
+      // Client-side validation first
+      const errors = [];
+      if (!data.email || !data.email.includes('@')) errors.push('A valid email is required.');
+      if (!/^[0-9+ ]{8,15}$/.test(data.phone)) errors.push('A valid phone number is required.');
+      if (!data.tenth_percent || !data.twelfth_percent) errors.push('10th and 12th percentages are required.');
+      if (!data.cgpa) errors.push('Degree CGPA is required.');
+      if (data.summary.length < 20) errors.push('Summary must be at least 20 characters.');
+      if (errors.length) {
+        errBox.innerHTML = '<div class="alert alert-error"><ul class="error-list">' +
+          errors.map(x => '<li>' + x + '</li>').join('') + '</ul></div>';
+        errBox.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      try {
+        const res = await fetch(`/api/jobs/${jobId}/apply`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const result = await res.json();
+        if (!res.ok) {
+          errBox.innerHTML = '<div class="alert alert-error">' + (result.error || 'Submission failed.') + '</div>';
+          return;
+        }
+        document.getElementById('apply-form').hidden = true;
+        document.getElementById('success-job').textContent = jobTitle;
+        document.getElementById('apply-success').hidden = false;
+        document.getElementById('apply-success').scrollIntoView({ behavior: 'smooth' });
+      } catch (err) {
+        errBox.innerHTML = '<div class="alert alert-error">Network error. Please try again.</div>';
+      }
+    });
+  })();
+</script>
+{% endblock %}
