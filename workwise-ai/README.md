@@ -78,7 +78,7 @@ vanilla HTML/CSS/JS (no frontend framework).
   "why they ask" and sample answers, YouTube search links, and a practice
   box with offline AI feedback (clarity, relevance, structure, missing points).
 - **Chatbot** — floating assistant with quick buttons; works **100% offline**
-  with a rule-based intent engine; optional external LLM via `.env`.
+  with a rule-based intent engine.
 - **Design system** — CSS variables, light/dark theme toggle, responsive
   breakpoints, accessible semantic HTML.
 
@@ -91,7 +91,6 @@ vanilla HTML/CSS/JS (no frontend framework).
 | ML | scikit-learn, pandas, numpy, joblib, matplotlib, seaborn |
 | DB | SQLite |
 | Frontend | HTML5, CSS3, vanilla JS, Flexbox/Grid, Chart.js (local), SVG |
-| Optional | OpenAI-compatible LLM via `.env` (never required) |
 
 ## Architecture
 
@@ -118,7 +117,7 @@ workwise-ai/
 ├── content.py              # Roadmaps, interview Q&A, chatbot intents
 ├── requirements.txt        # Pinned dependencies
 ├── README.md
-├── .env.example            # Optional LLM config template
+├── .env.example            # Flask environment config template
 ├── .gitignore
 ├── ml/
 │   ├── __init__.py
@@ -286,7 +285,7 @@ Base URL: `http://127.0.0.1:5000`
 | POST | `/api/predict-role` | — | `{"skills": [...]}` → top 3 roles + probabilities |
 | POST | `/api/predict-wage` | — | `{"trade","city_type","experience"}` → wage + range + verdict |
 | POST | `/api/predict-salary` | — | `{"role","skills","experience","city"}` → salary + range |
-| POST | `/api/chat` | — | `{"message": "..."}` → offline rule-based reply (optional LLM) |
+| POST | `/api/chat` | — | `{"message": "..."}` → offline rule-based reply |
 | POST | `/api/roadmap` | — | `{"role": "..."}` → 5 stages |
 | POST | `/api/interview/questions` | — | `{"role": "..."}` → rounds + 6 questions |
 | POST | `/api/practice` | ✅ | `{"role","question","answer"}` → feedback scores |
@@ -346,8 +345,8 @@ Current model performance is stored in `ml/reports/*_metrics.json`
 - All listings are fictional; models are trained on synthetic data —
   predictions are **not** real market wages or salaries.
 - The status timeline is a demo simulation, not a real recruiter workflow.
-- The chatbot is rule-based (regex intents); the optional LLM requires
-  an API key and network access.
+- The chatbot uses rule-based intent matching; resume summaries use a local
+  template based on the details entered by the user.
 - SQLite is not suitable for production concurrency; use PostgreSQL there.
 - PDF resume export uses the browser's print dialog (choose "Save as PDF").
 

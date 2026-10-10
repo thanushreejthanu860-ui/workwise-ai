@@ -18,7 +18,6 @@ import json
 import os
 import random
 import sys
-import urllib.request
 from datetime import datetime, timedelta
 
 from flask import (Flask, jsonify, redirect, render_template, request,
@@ -32,7 +31,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, "ml"))
 
 from dotenv import load_dotenv
 
-load_dotenv()  # optional .env file (LLM_API_KEY etc.)
+load_dotenv()  # Load local Flask environment variables when present.
 
 import models
 from models import (Application, Certificate, Education, Experience,
@@ -1337,13 +1336,13 @@ def _evaluate_answer(answer):
 # REST API - chatbot
 # ---------------------------------------------------------------------------
 def chatbot_response(message, user=None):
-    """Rule-based intent matching with optional external LLM fallback."""
+    """Return a reply from the offline rule-based intent engine."""
     text = str(message or "").strip().lower()
     if not text:
         return {"reply": "Please type a question first.",
                 "intent": "help"}
 
-    # 1. Try offline intents first (works fully offline)
+    # Try the offline intent rules.
     best_intent = None
     best_hits = 0
     for intent in content.INTENTS:
@@ -1361,17 +1360,6 @@ def chatbot_response(message, user=None):
             response["roadmap_role"] = "Data Analyst"
         return response
 
-    # 2. Optional external LLM (only if configured in .env)
-    api_key = os.environ.get("LLM_API_KEY", "").strip()
-    provider = os.environ.get("LLM_PROVIDER", "").strip().lower()
-    if api_key and provider:
-        try:
-            llm_reply = _call_llm(provider, api_key, message, user)
-            if llm_reply:
-                return {"reply": llm_reply, "intent": "llm"}
-        except Exception as exc:  # noqa: BLE001 - LLM is optional
-            print(f"LLM call failed, using fallback: {exc}")
-
     return {
         "reply": ("I'm not sure about that yet. I can help with jobs, "
                   "resumes, fair wages, roadmaps and interview prep. "
@@ -1380,38 +1368,9 @@ def chatbot_response(message, user=None):
     }
 
 
-def _call_llm(provider, api_key, message, user=None):
-    """Call an OpenAI-compatible LLM API using only the standard library."""
-    base_url = os.environ.get("LLM_BASE_URL",
-                              "https://api.openai.com/v1").rstrip("/")
-    model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
-    system = ("You are WorkWise AI, a helpful career assistant for Indian "
-                  "job seekers. Give concise, practical advice. Mention that "
-                  "WorkWise uses sample data for demonstration.")
-    payload = json.dumps({
-        "model": model,
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": message},
-        ],
-        "max_tokens": 300,
-    }).encode("utf-8")
-
-    req = urllib.request.Request(
-        base_url + "/chat/completions",
-        data=payload,
-        headers={"Content-Type": "application/json",
-                 "Authorization": f"Bearer {api_key}"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        result = json.loads(resp.read().decode("utf-8"))
-    return result["choices"][0]["message"]["content"]
-
-
 @app.route("/api/chat", methods=["POST"])
 def api_chat():
-    """Chatbot endpoint. Offline rule-based first, optional LLM."""
+    """Chatbot endpoint using offline rule-based replies."""
     data, err = require_json()
     if err:
         return err

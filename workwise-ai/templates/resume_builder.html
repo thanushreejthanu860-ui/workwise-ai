@@ -50,7 +50,7 @@ input[type=checkbox]{width:auto}input[type=range]{padding:0}
  <div id="fm"></div>
  <div class="row" style="margin:8px 0 30px"><button class="btn" onclick="clearAll()">Clear resume</button><span id="saved" class="sub" style="margin:0"></span></div>
 </div>
-<div class="stage"><div class="ui bar"><button class="ai" id="aib" onclick="enhance()">✨ Enhance with AI</button><div class="dots" id="dots"></div><button class="btn pri" onclick="printResume()">⬇ Download PDF</button><button class="btn" onclick="dlDoc()">⬇ Word (.doc)</button></div>
+<div class="stage"><div class="ui bar"><button class="ai" id="aib" onclick="enhance()">✨ Create summary</button><div class="dots" id="dots"></div><button class="btn pri" onclick="printResume()">⬇ Download PDF</button><button class="btn" onclick="dlDoc()">⬇ Word (.doc)</button></div>
  <div class="ui sug" id="sug"></div>
  <div class="view" id="view"><div id="fit"><div class="page" id="page"></div></div></div>
  <p class="ui sub" id="msg"></p></div>
@@ -89,7 +89,7 @@ function rmSk(i){R.skills.splice(i,1);form();draw()}
 function photo(el){const f=el.files[0];if(!f)return;if(!/^image\/(png|jpeg)$/.test(f.type)||f.size>2097152){$('msg').textContent='Photo must be a png or jpg under 2 MB.';return}const r=new FileReader();r.onload=()=>{R.photo=r.result;draw()};r.readAsDataURL(f)}
 document.addEventListener('input',e=>{const p=e.target.dataset&&e.target.dataset.p;if(!p)return;set(p,e.target.type==='checkbox'?e.target.checked:e.target.dataset.num?+e.target.value:e.target.value);if(e.target.dataset.num){const b=e.target.closest('label').querySelector('b');if(b)b.textContent=LV[e.target.value-1]}draw()});
 function clearAll(){if(!confirm('Clear all resume details?'))return;R={accent:R.accent,name:'',head:'',email:'',phone:'',loc:'',li:'',gh:'',photo:'',sum:'',skills:[],exp:[],edu:[],m12:{inst:'',board:'',yr:'',score:''},m10:{inst:'',board:'',yr:'',score:''},proj:[],cert:[],lang:[],ach:'',hob:''};form();draw()}
- 
+
 /* ---------- preview ---------- */
 const L=t=>String(t||'').split('\n').map(x=>x.trim()).filter(Boolean),ul=t=>L(t).length?`<ul>${L(t).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
 const pct=s=>{s=String(s||'').trim();if(!s)return'';const n=parseFloat(s);return/^\d+(\.\d+)?$/.test(s)?(n<=10?'CGPA '+s:s+'%'):s};
@@ -115,12 +115,9 @@ addEventListener('resize',fit);addEventListener('beforeprint',()=>{$('view').sty
 /* ---------- AI helpers ---------- */
 const SUG={data:['Analysed datasets using Python and SQL to find trends and prepared weekly reports.','Built dashboards in Excel or Power BI that helped the team track key numbers.','Cleaned and validated data to improve the accuracy of reports.','Presented findings to non-technical team members in simple language.'],web:['Built responsive web pages using HTML, CSS and JavaScript.','Fixed bugs and improved page load speed on existing pages.','Worked with a team using Git and code reviews.','Connected the front end to REST APIs.'],mkt:['Planned and posted content on social media and tracked reach and engagement.','Improved page ranking by researching keywords and optimising content (SEO).','Wrote blog posts, captions and ad copy for campaigns.','Prepared a weekly report on campaign results.'],sup:['Answered customer queries by phone, chat and email within the target time.','Logged and tracked tickets in a CRM and escalated complex issues.','Kept customers informed and handled complaints politely.','Suggested fixes for common problems to the team.'],acc:['Entered vouchers and maintained ledgers in Tally.','Prepared invoices and reconciled bank statements.','Checked GST and expense data for accuracy.','Supported month-end closing with the finance team.'],any:['Completed assigned tasks on time and learned new tools quickly.','Worked with team members to solve problems and share updates.','Prepared clear reports and documentation.','Took feedback from mentors and improved the quality of work.']};
 function role(){const s=(R.head+' '+R.skills.join(' ')).toLowerCase();return/data|python|sql|analy|machine/.test(s)?'data':/web|front|java|react|html|develop/.test(s)?'web':/market|seo|content|social|writ/.test(s)?'mkt':/support|customer|service/.test(s)?'sup':/account|tally|finance/.test(s)?'acc':'any'}
-function suggest(){$('sug').innerHTML='<div class="sub" style="margin:0">AI suggestions — examples only. Edit them so they match what you really did.</div>'+SUG[role()].slice(0,3).map((s,i)=>`<button onclick="useSug(${i})"><b>+</b><span>${esc(s)}</span></button>`).join('')}
+function suggest(){$('sug').innerHTML='<div class="sub" style="margin:0">Example suggestions. Edit them so they match what you really did.</div>'+SUG[role()].slice(0,3).map((s,i)=>`<button onclick="useSug(${i})"><b>+</b><span>${esc(s)}</span></button>`).join('')}
 function useSug(i){const s=SUG[role()][i],t=R.exp[0]||R.proj[0];if(!t){R.exp.push({...BLANK.exp,t:'Intern',b:s})}else t.b=(t.b?t.b+'\n':'')+s;form();draw();$('msg').textContent='Added to your '+(R.exp[0]?'experience':'project')+'. Edit it to match your real work.'}
-async function enhance(){const b=$('aib');b.textContent='Writing…';b.disabled=true;const base=`Write a professional 2-3 sentence resume summary for a fresher. Headline: ${R.head}. Skills: ${R.skills.join(', ')}. Draft: ${R.sum}. Do not invent facts. Output only the summary.`;let out='';
- try{const c=new AbortController();setTimeout(()=>c.abort(),9000);const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:base}),signal:c.signal});if(r.ok){const d=await r.json();out=(d.answer||d.reply||'').trim()}}catch(e){}
- if(!out){const sk=R.skills.slice(0,4).map(tc).join(', ');out=`${R.head||'Motivated fresher'} with skills in ${sk||'a range of tools'}. ${R.proj[0]&&R.proj[0].t?`Built projects such as ${R.proj.filter(p=>p.t).slice(0,2).map(p=>p.t).join(' and ')}. `:''}Eager to learn quickly, work in a team and add value in an entry-level role.`;$('msg').textContent='AI service not connected, so a template summary was used. Edit it to match you.'}
- R.sum=out;form();draw();b.textContent='✨ Enhance with AI';b.disabled=false}
+function enhance(){const b=$('aib');b.textContent='Creating…';b.disabled=true;const sk=R.skills.slice(0,4).map(tc).join(', ');R.sum=`${R.head||'Motivated fresher'} with skills in ${sk||'a range of tools'}. ${R.proj[0]&&R.proj[0].t?`Built projects such as ${R.proj.filter(p=>p.t).slice(0,2).map(p=>p.t).join(' and ')}. `:''}Eager to learn quickly, work in a team and add value in an entry-level role.`;$('msg').textContent='A summary was created from your entered details. Edit it to make sure it accurately describes you.';form();draw();b.textContent='✨ Create summary';b.disabled=false}
  
 /* Print only the resume preview in an isolated document. */
 function printResume(){
@@ -171,4 +168,3 @@ async function loadUserResume(){
 loadUserResume();
 </script>
 {% endblock %}
- 

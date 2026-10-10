@@ -1,6 +1,5 @@
 /* WorkWise AI — chatbot.js
-   Floating offline-first AI assistant with quick buttons and
-   rule-based intent fallback. Optional LLM is server-side only. */
+   Floating offline rule-based assistant with quick buttons. */
 
 (function () {
   "use strict";
