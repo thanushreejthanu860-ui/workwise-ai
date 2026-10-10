@@ -44,7 +44,16 @@ from models import (Application, Certificate, Education, Experience,
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(BASE_DIR, "workwise.db")
+
+# Database: use absolute path, default to project folder, allow override via env var.
+# On Render (and other PaaS), /tmp is writable; on local dev, project folder works.
+db_path = os.environ.get(
+    "DATABASE_PATH",
+    os.path.join(BASE_DIR, "workwise.db")
+)
+# Ensure the directory exists
+os.makedirs(os.path.dirname(os.path.abspath(db_path)), exist_ok=True)
+app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{db_path}"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["MAX_CONTENT_LENGTH"] = 2 * 1024 * 1024  # 2 MB request cap
 
@@ -53,6 +62,12 @@ CORS(app)  # enable CORS for the REST API
 
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MODEL_DIR = os.path.join(BASE_DIR, "ml", "saved_models")
+
+# Ensure database tables exist and seed sample data on import (for gunicorn/Render)
+with app.app_context():
+    db.create_all()
+    if Job.query.first() is None:
+        seed_database()
 
 SYNTHETIC_WARNING = (
     "WARNING: Using SYNTHETIC training data. Results are for "
@@ -250,8 +265,9 @@ app.jinja_env.globals.update(
 def seed_database():
     """Create tables and seed fictional sample jobs + a demo user."""
     with app.app_context():
-        db.drop_all()
         db.create_all()
+        if Job.query.first() is not None:
+            return
         print("Database tables created.")
 
         # --- Seed canonical skills from the training CSV -------------
@@ -408,8 +424,11 @@ def index():
     if user:
         my_skills = user_skills_list(user)
         for j in featured:
-            fit_map[j.id] = ml_predict("skill_match_score", my_skills,
-                                       j.skill_list())
+            try:
+                fit_map[j.id] = ml_predict("skill_match_score", my_skills,
+                                           j.skill_list())
+            except Exception:  # pragma: no cover - graceful fallback
+                fit_map[j.id] = None
     return render_template("index.html", featured=featured,
                            companies=companies, user=user,
                            fit_map=fit_map, disclaimer=DISCLAIMER)
@@ -502,8 +521,11 @@ def job_details(job_id):
     fit, gap = None, None
     if user:
         my_skills = user_skills_list(user)
-        fit = ml_predict("skill_match_score", my_skills, job.skill_list())
-        gap = ml_predict("compute_skill_gap", my_skills, job.skill_list())
+        try:
+            fit = ml_predict("skill_match_score", my_skills, job.skill_list())
+            gap = ml_predict("compute_skill_gap", my_skills, job.skill_list())
+        except Exception:  # pragma: no cover - graceful fallback
+            pass
     saved = bool(user and SavedJob.query.filter_by(
         user_id=user.id, job_id=job.id).first())
     return render_template("job_details.html", job=job, user=user,
@@ -639,8 +661,11 @@ def api_jobs():
     for job in jobs_list:
         fit, gap = None, None
         if my_skills:
-            fit = ml_predict("skill_match_score", my_skills, job.skill_list())
-            gap = ml_predict("compute_skill_gap", my_skills, job.skill_list())
+            try:
+                fit = ml_predict("skill_match_score", my_skills, job.skill_list())
+                gap = ml_predict("compute_skill_gap", my_skills, job.skill_list())
+            except Exception:  # pragma: no cover - graceful fallback
+                pass
         d = job_to_dict(job, fit=fit, gap=gap)
         d["applicants"] = job.applications.count()
         results.append(d)
@@ -668,8 +693,11 @@ def api_job_detail(job_id):
     fit, gap = None, None
     if user:
         my_skills = user_skills_list(user)
-        fit = ml_predict("skill_match_score", my_skills, job.skill_list())
-        gap = ml_predict("compute_skill_gap", my_skills, job.skill_list())
+        try:
+            fit = ml_predict("skill_match_score", my_skills, job.skill_list())
+            gap = ml_predict("compute_skill_gap", my_skills, job.skill_list())
+        except Exception:  # pragma: no cover - graceful fallback
+            pass
     return jsonify(job_to_dict(job, fit=fit, gap=gap,
                                user_skills=user_skills_list(user) if user else []))
 
@@ -778,10 +806,14 @@ def api_match_jobs():
 
     results = []
     for job in Job.query.all():
-        fit = ml_predict("skill_match_score", skills, job.skill_list())
-        gap = ml_predict("compute_skill_gap", skills, job.skill_list())
+        fit, gap = None, None
+        try:
+            fit = ml_predict("skill_match_score", skills, job.skill_list())
+            gap = ml_predict("compute_skill_gap", skills, job.skill_list())
+        except Exception:  # pragma: no cover - graceful fallback
+            pass
         results.append(job_to_dict(job, fit=fit, gap=gap))
-    results.sort(key=lambda j: j["ai_fit"], reverse=True)
+    results.sort(key=lambda j: j["ai_fit"] or 0, reverse=True)
     return jsonify({"skills": skills, "jobs": results[:20],
                     "count": len(results)})
 
@@ -1057,6 +1089,13 @@ def api_dashboard():
         stage_idx = min(days, len(stages) - 1)
         timeline = a.timeline_list()
         current = stages[stage_idx]
+        skill_gap = []
+        if my_skills:
+            try:
+                skill_gap = ml_predict("compute_skill_gap", my_skills,
+                                       a.job.skill_list())
+            except Exception:  # pragma: no cover - graceful fallback
+                pass
         return {
             "id": a.id,
             "job_id": a.job_id,
@@ -1068,8 +1107,7 @@ def api_dashboard():
             "status": current,
             "timeline": timeline,
             "resume_sent": bool(a.summary),
-            "skill_gap": (ml_predict("compute_skill_gap", my_skills,
-                                     a.job.skill_list()) if my_skills else []),
+            "skill_gap": skill_gap,
             "next_steps": _next_steps(current),
         }
 
@@ -1078,8 +1116,12 @@ def api_dashboard():
     saved = []
     for sj in user.saved_jobs.order_by(SavedJob.created_at.desc()).all():
         job = sj.job
-        fit = (ml_predict("skill_match_score", my_skills, job.skill_list())
-               if my_skills else None)
+        fit = None
+        if my_skills:
+            try:
+                fit = ml_predict("skill_match_score", my_skills, job.skill_list())
+            except Exception:  # pragma: no cover - graceful fallback
+                pass
         saved.append(job_to_dict(job, fit=fit))
 
     strength, sections = profile_strength(user)
@@ -1467,6 +1509,7 @@ def forbidden(e):
 @app.errorhandler(500)
 def server_error(e):
     db.session.rollback()
+    app.logger.exception("Internal server error: %s", e)
     if request.path.startswith("/api/"):
         return error_response("Internal server error", 500)
     return render_template("404.html",
