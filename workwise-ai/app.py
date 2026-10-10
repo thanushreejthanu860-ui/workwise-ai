@@ -63,12 +63,6 @@ CORS(app)  # enable CORS for the REST API
 DATA_DIR = os.path.join(BASE_DIR, "data")
 MODEL_DIR = os.path.join(BASE_DIR, "ml", "saved_models")
 
-# Ensure database tables exist and seed sample data on import (for gunicorn/Render)
-with app.app_context():
-    db.create_all()
-    if Job.query.first() is None:
-        seed_database()
-
 SYNTHETIC_WARNING = (
     "WARNING: Using SYNTHETIC training data. Results are for "
     "demonstration only and are not real-world salary or employment "
@@ -410,6 +404,12 @@ def seed_database():
         db.session.commit()
         print("Seeded demo user: demo@workwise.ai / demo1234")
 
+
+# Ensure database tables exist and seed sample data on import (for gunicorn/Render)
+with app.app_context():
+    db.create_all()
+    if Job.query.first() is None:
+        seed_database()
 
 # ---------------------------------------------------------------------------
 # Page routes
